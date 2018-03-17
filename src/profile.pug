@@ -1,0 +1,2746 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    | &#x9;&#x9;
+    meta(charset='utf-8')
+    | &#x9;&#x9;
+    title User Profile Page - Ace Admin
+    | &#x9;&#x9;
+    meta(name='description', content='3 styles with inline editable feature')
+    | &#x9;&#x9;
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    // bootstrap & fontawesome
+    link(rel='stylesheet', href='assets/css/bootstrap.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='assets/font-awesome/4.5.0/css/font-awesome.min.css')
+    // page specific plugin styles
+    link(rel='stylesheet', href='assets/css/jquery-ui.custom.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='assets/css/jquery.gritter.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='assets/css/select2.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='assets/css/bootstrap-datepicker3.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='assets/css/bootstrap-editable.min.css')
+    // text fonts
+    link(rel='stylesheet', href='assets/css/fonts.googleapis.com.css')
+    // ace styles
+    link#main-ace-style.ace-main-stylesheet(rel='stylesheet', href='assets/css/ace.min.css')
+    //if lte IE 9
+      link.ace-main-stylesheet(rel='stylesheet', href='assets/css/ace-part2.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='assets/css/ace-skins.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='assets/css/ace-rtl.min.css')
+    //if lte IE 9
+      link(rel='stylesheet', href='assets/css/ace-ie.min.css')
+    // inline styles related to this page
+    // ace settings handler
+    script(src='assets/js/ace-extra.min.js')
+    // HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries
+    //if lte IE 8
+      script(src='assets/js/html5shiv.min.js')
+      | &#x9;&#x9;
+      script(src='assets/js/respond.min.js')
+  | &#x9;
+  body.no-skin
+    #navbar.navbar.navbar-default.ace-save-state
+      #navbar-container.navbar-container.ace-save-state
+        button#menu-toggler.navbar-toggle.menu-toggler.pull-left(type='button', data-target='#sidebar')
+          span.sr-only Toggle sidebar
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          span.icon-bar
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          span.icon-bar
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          span.icon-bar
+        | &#x9;&#x9;&#x9;&#x9;
+        .navbar-header.pull-left
+          a.navbar-brand(href='index.html')
+            small
+              i.fa.fa-leaf
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ace Admin
+        | &#x9;&#x9;&#x9;&#x9;
+        .navbar-buttons.navbar-header.pull-right(role='navigation')
+          ul.nav.ace-nav
+            li.grey.dropdown-modal
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.ace-icon.fa.fa-tasks
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                span.badge.badge-grey 4
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.dropdown-menu-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-close
+                li.dropdown-header
+                  i.ace-icon.fa.fa-check
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;4 Tasks to complete
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-content
+                  ul.dropdown-menu.dropdown-navbar
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left Software Update
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right 65%
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-mini
+                          .progress-bar(style='width:65%')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left Hardware Upgrade
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right 35%
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-mini
+                          .progress-bar.progress-bar-danger(style='width:35%')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left Unit Testing
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right 15%
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-mini
+                          .progress-bar.progress-bar-warning(style='width:15%')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left Bug Fixes
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right 90%
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-mini.progress-striped.active
+                          .progress-bar.progress-bar-success(style='width:90%')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-footer
+                  a(href='#')
+                    | See tasks with details
+                    i.ace-icon.fa.fa-arrow-right
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            li.purple.dropdown-modal
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.ace-icon.fa.fa-bell.icon-animated-bell
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                span.badge.badge-important 8
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.dropdown-menu-right.dropdown-navbar.navbar-pink.dropdown-menu.dropdown-caret.dropdown-close
+                li.dropdown-header
+                  i.ace-icon.fa.fa-exclamation-triangle
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;8 Notifications
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-content
+                  ul.dropdown-menu.dropdown-navbar.navbar-pink
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left
+                            i.btn.btn-xs.no-hover.btn-pink.fa.fa-comment
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New Comments
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right.badge.badge-info +12
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        i.btn.btn-xs.btn-primary.fa.fa-user
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Bob just signed up as an editor ...
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left
+                            i.btn.btn-xs.no-hover.btn-success.fa.fa-shopping-cart
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New Orders
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right.badge.badge-success +8
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left
+                            i.btn.btn-xs.no-hover.btn-info.fa.fa-twitter
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Followers
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right.badge.badge-info +11
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-footer
+                  a(href='#')
+                    | See all notifications
+                    i.ace-icon.fa.fa-arrow-right
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            li.green.dropdown-modal
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.ace-icon.fa.fa-envelope.icon-animated-vertical
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                span.badge.badge-success 5
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.dropdown-menu-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-close
+                li.dropdown-header
+                  i.ace-icon.fa.fa-envelope-o
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;5 Messages
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-content
+                  ul.dropdown-menu.dropdown-navbar
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar.png', alt="Alex's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Alex:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ciao sociis natoque penatibus et auctor ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span a moment ago
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar3.png', alt="Susan's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Susan:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Vestibulum id ligula porta felis euismod ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span 20 minutes ago
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar4.png', alt="Bob's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Bob:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nullam quis risus eget urna mollis ornare ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span 3:15 pm
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar2.png', alt="Kate's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Kate:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ciao sociis natoque eget urna mollis ornare ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span 1:33 pm
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar5.png', alt="Fred's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Fred:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Vestibulum id penatibus et auctor  ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span 10:09 am
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-footer
+                  a(href='inbox.html')
+                    | See all messages
+                    i.ace-icon.fa.fa-arrow-right
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            li.light-blue.dropdown-modal
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                img.nav-user-photo(src='assets/images/avatars/user.jpg', alt="Jason's Photo")
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                span.user-info
+                  small Welcome,
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Jason
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                i.ace-icon.fa.fa-caret-down
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.user-menu.dropdown-menu-right.dropdown-menu.dropdown-yellow.dropdown-caret.dropdown-close
+                li
+                  a(href='#')
+                    i.ace-icon.fa.fa-cog
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Settings
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  a(href='profile.html')
+                    i.ace-icon.fa.fa-user
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Profile
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.divider
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  a(href='#')
+                    i.ace-icon.fa.fa-power-off
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Logout
+      // /.navbar-container
+    | &#x9;&#x9;
+    #main-container.main-container.ace-save-state
+      script(type='text/javascript').
+        try{ace.settings.loadState('main-container')}catch(e){}
+      | &#x9;&#x9;&#x9;
+      #sidebar.sidebar.responsive.ace-save-state
+        script(type='text/javascript').
+          try{ace.settings.loadState('sidebar')}catch(e){}
+        | &#x9;&#x9;&#x9;&#x9;
+        #sidebar-shortcuts.sidebar-shortcuts
+          #sidebar-shortcuts-large.sidebar-shortcuts-large
+            button.btn.btn-success
+              i.ace-icon.fa.fa-signal
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            button.btn.btn-info
+              i.ace-icon.fa.fa-pencil
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            button.btn.btn-warning
+              i.ace-icon.fa.fa-users
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            button.btn.btn-danger
+              i.ace-icon.fa.fa-cogs
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          #sidebar-shortcuts-mini.sidebar-shortcuts-mini
+            span.btn.btn-success
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            span.btn.btn-info
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            span.btn.btn-warning
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            span.btn.btn-danger
+        // /.sidebar-shortcuts
+        ul.nav.nav-list
+          li
+            a(href='index.html')
+              i.menu-icon.fa.fa-tachometer
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Dashboard 
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-desktop
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text
+                | UI &amp; Elements
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li
+                a.dropdown-toggle(href='#')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Layouts
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  b.arrow.fa.fa-angle-down
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                ul.submenu
+                  li
+                    a(href='top-menu.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Top Menu
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='two-menu-1.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Two Menus 1
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='two-menu-2.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Two Menus 2
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='mobile-menu-1.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Default Mobile Menu
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='mobile-menu-2.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mobile Menu 2
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='mobile-menu-3.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mobile Menu 3
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='typography.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Typography
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='elements.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Elements
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='buttons.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Buttons &amp; Icons
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='content-slider.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Content Sliders
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='treeview.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Treeview
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='jquery-ui.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;jQuery UI
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='nestable-list.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nestable Lists
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a.dropdown-toggle(href='#')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Three Level Menu
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  b.arrow.fa.fa-angle-down
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                ul.submenu
+                  li
+                    a(href='#')
+                      i.menu-icon.fa.fa-leaf.green
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Item #1
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.dropdown-toggle(href='#')
+                      i.menu-icon.fa.fa-pencil.orange
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;4th level
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      b.arrow.fa.fa-angle-down
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    ul.submenu
+                      li
+                        a(href='#')
+                          i.menu-icon.fa.fa-plus.purple
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Add Product
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        b.arrow
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      li
+                        a(href='#')
+                          i.menu-icon.fa.fa-eye.pink
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;View Products
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-list
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Tables 
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li
+                a(href='tables.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Simple &amp; Dynamic
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='jqgrid.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;jqGrid plugin
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-pencil-square-o
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Forms 
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li
+                a(href='form-elements.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Form Elements
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='form-elements-2.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Form Elements 2
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='form-wizard.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Wizard &amp; Validation
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='wysiwyg.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Wysiwyg &amp; Markdown
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='dropzone.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Dropzone File Upload
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a(href='widgets.html')
+              i.menu-icon.fa.fa-list-alt
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Widgets 
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a(href='calendar.html')
+              i.menu-icon.fa.fa-calendar
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text
+                | Calendar
+                span.badge.badge-transparent.tooltip-error(title='2 Important Events')
+                  i.ace-icon.fa.fa-exclamation-triangle.red.bigger-130
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a(href='gallery.html')
+              i.menu-icon.fa.fa-picture-o
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Gallery 
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li.active.open
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-tag
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  More Pages 
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li.active
+                a(href='profile.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;User Profile
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='inbox.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Inbox
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='pricing.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Pricing Tables
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='invoice.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Invoice
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='timeline.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Timeline
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='search.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Search Results
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='email.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Email Templates
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='login.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Login &amp; Register
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-file-o
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text
+                | Other Pages
+                span.badge.badge-primary 5
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li
+                a(href='faq.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;FAQ
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='error-404.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Error 404
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='error-500.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Error 500
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='grid.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Grid
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='blank.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Blank Page
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+        // /.nav-list
+        #sidebar-collapse.sidebar-toggle.sidebar-collapse
+          i#sidebar-toggle-icon.ace-icon.fa.fa-angle-double-left.ace-save-state(data-icon1='ace-icon fa fa-angle-double-left', data-icon2='ace-icon fa fa-angle-double-right')
+      | &#x9;&#x9;&#x9;
+      .main-content
+        .main-content-inner
+          #breadcrumbs.breadcrumbs.ace-save-state
+            ul.breadcrumb
+              li
+                i.ace-icon.fa.fa-home.home-icon
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                a(href='#') Home
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='#') More Pages
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li.active User Profile
+            // /.breadcrumb
+            #nav-search.nav-search
+              form.form-search
+                span.input-icon
+                  input#nav-search-input.nav-search-input(type='text', placeholder='Search ...', autocomplete='off')
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  i.ace-icon.fa.fa-search.nav-search-icon
+            // /.nav-search
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          .page-content
+            #ace-settings-container.ace-settings-container
+              #ace-settings-btn.btn.btn-app.btn-xs.btn-warning.ace-settings-btn
+                i.ace-icon.fa.fa-cog.bigger-130
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              #ace-settings-box.ace-settings-box.clearfix
+                .pull-left.width-50
+                  .ace-settings-item
+                    .pull-left
+                      select#skin-colorpicker.hide
+                        option(data-skin='no-skin', value='#438EB9') #438EB9
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        option(data-skin='skin-1', value='#222A2D') #222A2D
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        option(data-skin='skin-2', value='#C6487E') #C6487E
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        option(data-skin='skin-3', value='#D0D0D0') #D0D0D0
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    span &nbsp; Choose Skin
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-navbar.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-navbar')  Fixed Navbar
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-sidebar.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-sidebar')  Fixed Sidebar
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-breadcrumbs.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-breadcrumbs')  Fixed Breadcrumbs
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-rtl.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-rtl')  Right To Left (rtl)
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-add-container.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-add-container')
+                      | Inside
+                      b .container
+                // /.pull-left
+                .pull-left.width-50
+                  .ace-settings-item
+                    input#ace-settings-hover.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-hover')  Submenu on Hover
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-compact.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-compact')  Compact Sidebar
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-highlight.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-highlight')  Alt. Active Item
+                // /.pull-left
+              // /.ace-settings-box
+            // /.ace-settings-container
+            .page-header
+              h1
+                | User Profile Page
+                small
+                  i.ace-icon.fa.fa-angle-double-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;3 styles with inline editable feature
+            // /.page-header
+            .row
+              .col-xs-12
+                // PAGE CONTENT BEGINS
+                .clearfix
+                  .pull-left.alert.alert-success.no-margin.alert-dismissable
+                    button.close(type='button', data-dismiss='alert')
+                      i.ace-icon.fa.fa-times
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    i.ace-icon.fa.fa-umbrella.bigger-120.blue
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Click on the image below or on profile fields to edit them ...
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .pull-right
+                    span.green.middle.bolder Choose profile: &nbsp;
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .btn-toolbar.inline.middle.no-margin
+                      .btn-group.no-margin(data-toggle='buttons')
+                        label.btn.btn-sm.btn-yellow.active
+                          span.bigger-110 1
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          input(type='radio', value='1')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        label.btn.btn-sm.btn-yellow
+                          span.bigger-110 2
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          input(type='radio', value='2')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        label.btn.btn-sm.btn-yellow
+                          span.bigger-110 3
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          input(type='radio', value='3')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .hr.dotted
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                div
+                  #user-profile-1.user-profile.row
+                    .col-xs-12.col-sm-3.center
+                      div
+                        span.profile-picture
+                          img#avatar.editable.img-responsive(alt="Alex's Avatar", src='assets/images/avatars/profile-pic.jpg')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .space-4
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .width-80.label.label-info.label-xlg.arrowed-in.arrowed-in-right
+                          .inline.position-relative
+                            a.user-title-label.dropdown-toggle(href='#', data-toggle='dropdown')
+                              i.ace-icon.fa.fa-circle.light-green
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp;
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              span.white Alex M. Doe
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            ul.align-left.dropdown-menu.dropdown-caret.dropdown-lighter
+                              li.dropdown-header  Change Status 
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              li
+                                a(href='#')
+                                  i.ace-icon.fa.fa-circle.green
+                                  | &nbsp;
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.green Available
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              li
+                                a(href='#')
+                                  i.ace-icon.fa.fa-circle.red
+                                  | &nbsp;
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.red Busy
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              li
+                                a(href='#')
+                                  i.ace-icon.fa.fa-circle.grey
+                                  | &nbsp;
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.grey Invisible
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .space-6
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .profile-contact-info
+                        .profile-contact-links.align-left
+                          a.btn.btn-link(href='#')
+                            i.ace-icon.fa.fa-plus-circle.bigger-120.green
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Add as a friend
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          a.btn.btn-link(href='#')
+                            i.ace-icon.fa.fa-envelope.bigger-120.pink
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Send a message
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          a.btn.btn-link(href='#')
+                            i.ace-icon.fa.fa-globe.bigger-125.blue
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;www.alexdoe.com
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .space-6
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .profile-social-links.align-center
+                          a.tooltip-info(href='#', title='', data-original-title='Visit my Facebook')
+                            i.middle.ace-icon.fa.fa-facebook-square.fa-2x.blue
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          a.tooltip-info(href='#', title='', data-original-title='Visit my Twitter')
+                            i.middle.ace-icon.fa.fa-twitter-square.fa-2x.light-blue
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          a.tooltip-error(href='#', title='', data-original-title='Visit my Pinterest')
+                            i.middle.ace-icon.fa.fa-pinterest-square.fa-2x.red
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .hr.hr12.dotted
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .clearfix
+                        .grid2
+                          span.bigger-175.blue 25
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          br
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Followers
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .grid2
+                          span.bigger-175.blue 12
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          br
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Following
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .hr.hr16.dotted
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .col-xs-12.col-sm-9
+                      .center
+                        span.btn.btn-app.btn-sm.btn-light.no-hover
+                          span.line-height-1.bigger-170.blue  1,411 
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          br
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.line-height-1.smaller-90  Views 
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.btn.btn-app.btn-sm.btn-yellow.no-hover
+                          span.line-height-1.bigger-170  32 
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          br
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.line-height-1.smaller-90  Followers 
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.btn.btn-app.btn-sm.btn-pink.no-hover
+                          span.line-height-1.bigger-170  4 
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          br
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.line-height-1.smaller-90  Projects 
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.btn.btn-app.btn-sm.btn-grey.no-hover
+                          span.line-height-1.bigger-170  23 
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          br
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.line-height-1.smaller-90  Reviews 
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.btn.btn-app.btn-sm.btn-success.no-hover
+                          span.line-height-1.bigger-170  7 
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          br
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.line-height-1.smaller-90  Albums 
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.btn.btn-app.btn-sm.btn-primary.no-hover
+                          span.line-height-1.bigger-170  55 
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          br
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.line-height-1.smaller-90  Contacts 
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .space-12
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .profile-user-info.profile-user-info-striped
+                        .profile-info-row
+                          .profile-info-name  Username 
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .profile-info-value
+                            span#username.editable alexdoe
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .profile-info-row
+                          .profile-info-name  Location 
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .profile-info-value
+                            i.fa.fa-map-marker.light-orange.bigger-110
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span#country.editable Netherlands
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span#city.editable Amsterdam
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .profile-info-row
+                          .profile-info-name  Age 
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .profile-info-value
+                            span#age.editable 38
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .profile-info-row
+                          .profile-info-name  Joined 
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .profile-info-value
+                            span#signup.editable 2010/06/20
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .profile-info-row
+                          .profile-info-name  Last Online 
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .profile-info-value
+                            span#login.editable 3 hours ago
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .profile-info-row
+                          .profile-info-name  About Me 
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .profile-info-value
+                            span#about.editable Editable as WYSIWYG
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .space-20
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .widget-box.transparent
+                        .widget-header.widget-header-small
+                          h4.widget-title.blue.smaller
+                            i.ace-icon.fa.fa-rss.orange
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Recent Activities
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .widget-toolbar.action-buttons
+                            a(href='#', data-action='reload')
+                              i.ace-icon.fa.fa-refresh.blue
+                            | &nbsp;
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            a.pink(href='#')
+                              i.ace-icon.fa.fa-trash-o
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .widget-body
+                          .widget-main.padding-8
+                            #profile-feed-1.profile-feed
+                              .profile-activity.clearfix
+                                div
+                                  img.pull-left(alt="Alex Doe's avatar", src='assets/images/avatars/avatar5.png')
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;changed his profile photo.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a(href='#') Take a look
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;an hour ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  img.pull-left(alt="Susan Smith's avatar", src='assets/images/avatars/avatar1.png')
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Susan Smith 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;is now friends with Alex Doe.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;2 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  i.pull-left.thumbicon.fa.fa-check.btn-success.no-hover
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;joined
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a(href='#') Country Music
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;group.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;5 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  i.pull-left.thumbicon.fa.fa-picture-o.btn-info.no-hover
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;uploaded a new photo.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a(href='#') Take a look
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;5 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  img.pull-left(alt="David Palms's avatar", src='assets/images/avatars/avatar4.png')
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  David Palms 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;left a comment on Alex&apos;s wall.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;8 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  i.pull-left.thumbicon.fa.fa-pencil-square-o.btn-pink.no-hover
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;published a new blog post.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a(href='#') Read now
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;11 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  img.pull-left(alt="Alex Doe's avatar", src='assets/images/avatars/avatar5.png')
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;upgraded his skills.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;12 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  i.pull-left.thumbicon.fa.fa-key.btn-info.no-hover
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;logged in.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;12 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  i.pull-left.thumbicon.fa.fa-power-off.btn-inverse.no-hover
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;logged out.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;16 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  i.pull-left.thumbicon.fa.fa-key.btn-info.no-hover
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;logged in.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;16 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .hr.hr2.hr-double
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .space-6
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .center
+                        button.btn.btn-sm.btn-primary.btn-white.btn-round(type='button')
+                          i.ace-icon.fa.fa-rss.bigger-150.middle.orange2
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.bigger-110 View more activities
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          i.icon-on-right.ace-icon.fa.fa-arrow-right
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .hide
+                  #user-profile-2.user-profile
+                    .tabbable
+                      ul.nav.nav-tabs.padding-18
+                        li.active
+                          a(data-toggle='tab', href='#home')
+                            i.green.ace-icon.fa.fa-user.bigger-120
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Profile
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(data-toggle='tab', href='#feed')
+                            i.orange.ace-icon.fa.fa-rss.bigger-120
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Activity Feed
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(data-toggle='tab', href='#friends')
+                            i.blue.ace-icon.fa.fa-users.bigger-120
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Friends
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(data-toggle='tab', href='#pictures')
+                            i.pink.ace-icon.fa.fa-picture-o.bigger-120
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Pictures
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .tab-content.no-border.padding-24
+                        #home.tab-pane.in.active
+                          .row
+                            .col-xs-12.col-sm-3.center
+                              span.profile-picture
+                                img#avatar2.editable.img-responsive(alt="Alex's Avatar", src='assets/images/avatars/profile-pic.jpg')
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .space.space-4
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              a.btn.btn-sm.btn-block.btn-success(href='#')
+                                i.ace-icon.fa.fa-plus-circle.bigger-120
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                span.bigger-110 Add as a friend
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              a.btn.btn-sm.btn-block.btn-primary(href='#')
+                                i.ace-icon.fa.fa-envelope-o.bigger-110
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                span.bigger-110 Send a message
+                            // /.col
+                            .col-xs-12.col-sm-9
+                              h4.blue
+                                span.middle Alex M. Doe
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                span.label.label-purple.arrowed-in-right
+                                  i.ace-icon.fa.fa-circle.smaller-80.align-middle
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;online
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-user-info
+                                .profile-info-row
+                                  .profile-info-name  Username 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .profile-info-value
+                                    span alexdoe
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .profile-info-row
+                                  .profile-info-name  Location 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .profile-info-value
+                                    i.fa.fa-map-marker.light-orange.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span Netherlands
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span Amsterdam
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .profile-info-row
+                                  .profile-info-name  Age 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .profile-info-value
+                                    span 38
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .profile-info-row
+                                  .profile-info-name  Joined 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .profile-info-value
+                                    span 2010/06/20
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .profile-info-row
+                                  .profile-info-name  Last Online 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .profile-info-value
+                                    span 3 hours ago
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .hr.hr-8.dotted
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-user-info
+                                .profile-info-row
+                                  .profile-info-name  Website 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .profile-info-value
+                                    a(href='#', target='_blank') www.alexdoe.com
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .profile-info-row
+                                  .profile-info-name
+                                    i.middle.ace-icon.fa.fa-facebook-square.bigger-150.blue
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .profile-info-value
+                                    a(href='#') Find me on Facebook
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .profile-info-row
+                                  .profile-info-name
+                                    i.middle.ace-icon.fa.fa-twitter-square.bigger-150.light-blue
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .profile-info-value
+                                    a(href='#') Follow me on Twitter
+                            // /.col
+                          // /.row
+                          .space-20
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .row
+                            .col-xs-12.col-sm-6
+                              .widget-box.transparent
+                                .widget-header.widget-header-small
+                                  h4.widget-title.smaller
+                                    i.ace-icon.fa.fa-check-square-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Little About Me
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .widget-body
+                                  .widget-main
+                                    p
+                                      | My job is mostly lorem ipsuming and dolor sit ameting as long as consectetur adipiscing elit.
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    p
+                                      | Sometimes quisque commodo massa gets in the way and sed ipsum porttitor facilisis.
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    p
+                                      | The best thing about my job is that vestibulum id ligula porta felis euismod and nullam quis risus eget urna mollis ornare.
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    p
+                                      | Thanks for visiting my profile.
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .col-xs-12.col-sm-6
+                              .widget-box.transparent
+                                .widget-header.widget-header-small.header-color-blue2
+                                  h4.widget-title.smaller
+                                    i.ace-icon.fa.fa-lightbulb-o.bigger-120
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;My Skills
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .widget-body
+                                  .widget-main.padding-16
+                                    .clearfix
+                                      .grid3.center
+                                        .easy-pie-chart.percentage(data-percent='45', data-color='#CA5952')
+                                          span.percent 45
+                                          | %
+                                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                        .space-2
+                                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Graphic Design
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      .grid3.center
+                                        .center.easy-pie-chart.percentage(data-percent='90', data-color='#59A84B')
+                                          span.percent 90
+                                          | %
+                                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                        .space-2
+                                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;HTML5 &amp; CSS3
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      .grid3.center
+                                        .center.easy-pie-chart.percentage(data-percent='80', data-color='#9585BF')
+                                          span.percent 80
+                                          | %
+                                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                        .space-2
+                                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Javascript/jQuery
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .hr.hr-16
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .profile-skills
+                                      .progress
+                                        .progress-bar(style='width:80%')
+                                          span.pull-left HTML5 &amp; CSS3
+                                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                          span.pull-right 80%
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      .progress
+                                        .progress-bar.progress-bar-success(style='width:72%')
+                                          span.pull-left Javascript &amp; jQuery
+                                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                          span.pull-right 72%
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      .progress
+                                        .progress-bar.progress-bar-purple(style='width:70%')
+                                          span.pull-left PHP &amp; MySQL
+                                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                          span.pull-right 70%
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      .progress
+                                        .progress-bar.progress-bar-warning(style='width:50%')
+                                          span.pull-left Wordpress
+                                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                          span.pull-right 50%
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      .progress
+                                        .progress-bar.progress-bar-danger(style='width:38%')
+                                          span.pull-left Photoshop
+                                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                          span.pull-right 38%
+                        // /#home
+                        #feed.tab-pane
+                          .profile-feed.row
+                            .col-sm-6
+                              .profile-activity.clearfix
+                                div
+                                  img.pull-left(alt="Alex Doe's avatar", src='assets/images/avatars/avatar5.png')
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;changed his profile photo.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a(href='#') Take a look
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;an hour ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  img.pull-left(alt="Susan Smith's avatar", src='assets/images/avatars/avatar1.png')
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Susan Smith 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;is now friends with Alex Doe.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;2 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  i.pull-left.thumbicon.fa.fa-check.btn-success.no-hover
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;joined
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a(href='#') Country Music
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;group.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;5 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  i.pull-left.thumbicon.fa.fa-picture-o.btn-info.no-hover
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;uploaded a new photo.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a(href='#') Take a look
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;5 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  img.pull-left(alt="David Palms's avatar", src='assets/images/avatars/avatar4.png')
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  David Palms 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;left a comment on Alex&apos;s wall.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;8 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                            // /.col
+                            .col-sm-6
+                              .profile-activity.clearfix
+                                div
+                                  i.pull-left.thumbicon.fa.fa-pencil-square-o.btn-pink.no-hover
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;published a new blog post.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a(href='#') Read now
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;11 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  img.pull-left(alt="Alex Doe's avatar", src='assets/images/avatars/avatar5.png')
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;upgraded his skills.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;12 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  i.pull-left.thumbicon.fa.fa-key.btn-info.no-hover
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;logged in.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;12 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  i.pull-left.thumbicon.fa.fa-power-off.btn-inverse.no-hover
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;logged out.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;16 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .profile-activity.clearfix
+                                div
+                                  i.pull-left.thumbicon.fa.fa-key.btn-info.no-hover
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.user(href='#')  Alex Doe 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;logged in.
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .time
+                                    i.ace-icon.fa.fa-clock-o.bigger-110
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;16 hours ago
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .tools.action-buttons
+                                  a.blue(href='#')
+                                    i.ace-icon.fa.fa-pencil.bigger-125
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  a.red(href='#')
+                                    i.ace-icon.fa.fa-times.bigger-125
+                            // /.col
+                          // /.row
+                          .space-12
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .center
+                            button.btn.btn-sm.btn-primary.btn-white.btn-round(type='button')
+                              i.ace-icon.fa.fa-rss.bigger-150.middle.orange2
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              span.bigger-110 View more activities
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              i.icon-on-right.ace-icon.fa.fa-arrow-right
+                        // /#feed
+                        #friends.tab-pane
+                          .profile-users.clearfix
+                            .itemdiv.memberdiv
+                              .inline.pos-rel
+                                .user
+                                  a(href='#')
+                                    img(src='assets/images/avatars/avatar4.png', alt="Bob Doe's avatar")
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .body
+                                  .name
+                                    a(href='#')
+                                      span.user-status.status-online
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Bob Doe
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .popover
+                                  .arrow
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .popover-content
+                                    .bolder Content Editor
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .time
+                                      i.ace-icon.fa.fa-clock-o.middle.bigger-120.orange
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      span.green  20 mins ago 
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .hr.dotted.hr-8
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .tools.action-buttons
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-facebook-square.blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-google-plus-square.red.bigger-150
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .itemdiv.memberdiv
+                              .inline.pos-rel
+                                .user
+                                  a(href='#')
+                                    img(src='assets/images/avatars/avatar1.png', alt="Rose Doe's avatar")
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .body
+                                  .name
+                                    a(href='#')
+                                      span.user-status.status-offline
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Rose Doe
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .popover
+                                  .arrow
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .popover-content
+                                    .bolder Graphic Designer
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .time
+                                      i.ace-icon.fa.fa-clock-o.middle.bigger-120.grey
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      span.grey  30 min ago 
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .hr.dotted.hr-8
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .tools.action-buttons
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-facebook-square.blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-google-plus-square.red.bigger-150
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .itemdiv.memberdiv
+                              .inline.pos-rel
+                                .user
+                                  a(href='#')
+                                    img(src='assets/images/avatars/avatar.png', alt="Jim Doe's avatar")
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .body
+                                  .name
+                                    a(href='#')
+                                      span.user-status.status-busy
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Jim Doe
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .popover
+                                  .arrow
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .popover-content
+                                    .bolder SEO &amp; Advertising
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .time
+                                      i.ace-icon.fa.fa-clock-o.middle.bigger-120.red
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      span.grey  1 hour ago 
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .hr.dotted.hr-8
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .tools.action-buttons
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-facebook-square.blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-google-plus-square.red.bigger-150
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .itemdiv.memberdiv
+                              .inline.pos-rel
+                                .user
+                                  a(href='#')
+                                    img(src='assets/images/avatars/avatar5.png', alt="Alex Doe's avatar")
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .body
+                                  .name
+                                    a(href='#')
+                                      span.user-status.status-idle
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Alex Doe
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .popover
+                                  .arrow
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .popover-content
+                                    .bolder Marketing
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .time
+                                      i.ace-icon.fa.fa-clock-o.middle.bigger-120.orange
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      span  40 minutes idle 
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .hr.dotted.hr-8
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .tools.action-buttons
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-facebook-square.blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-google-plus-square.red.bigger-150
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .itemdiv.memberdiv
+                              .inline.pos-rel
+                                .user
+                                  a(href='#')
+                                    img(src='assets/images/avatars/avatar2.png', alt="Phil Doe's avatar")
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .body
+                                  .name
+                                    a(href='#')
+                                      span.user-status.status-online
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Phil Doe
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .popover
+                                  .arrow
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .popover-content
+                                    .bolder Public Relations
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .time
+                                      i.ace-icon.fa.fa-clock-o.middle.bigger-120.orange
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      span.green  2 hours ago 
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .hr.dotted.hr-8
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .tools.action-buttons
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-facebook-square.blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-google-plus-square.red.bigger-150
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .itemdiv.memberdiv
+                              .inline.pos-rel
+                                .user
+                                  a(href='#')
+                                    img(src='assets/images/avatars/avatar3.png', alt="Susan Doe's avatar")
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .body
+                                  .name
+                                    a(href='#')
+                                      span.user-status.status-online
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Susan Doe
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .popover
+                                  .arrow
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .popover-content
+                                    .bolder HR Management
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .time
+                                      i.ace-icon.fa.fa-clock-o.middle.bigger-120.orange
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      span.green  20 mins ago 
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .hr.dotted.hr-8
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .tools.action-buttons
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-facebook-square.blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-google-plus-square.red.bigger-150
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .itemdiv.memberdiv
+                              .inline.pos-rel
+                                .user
+                                  a(href='#')
+                                    img(src='assets/images/avatars/avatar1.png', alt="Jennifer Doe's avatar")
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .body
+                                  .name
+                                    a(href='#')
+                                      span.user-status.status-offline
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Jennifer Doe
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .popover
+                                  .arrow
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .popover-content
+                                    .bolder Graphic Designer
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .time
+                                      i.ace-icon.fa.fa-clock-o.middle.bigger-120.grey
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      span.grey  2 hours ago 
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .hr.dotted.hr-8
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .tools.action-buttons
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-facebook-square.blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-google-plus-square.red.bigger-150
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .itemdiv.memberdiv
+                              .inline.pos-rel
+                                .user
+                                  a(href='#')
+                                    img(src='assets/images/avatars/avatar3.png', alt="Alexa Doe's avatar")
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .body
+                                  .name
+                                    a(href='#')
+                                      span.user-status.status-offline
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Alexa Doe
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .popover
+                                  .arrow
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .popover-content
+                                    .bolder Accounting
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .time
+                                      i.ace-icon.fa.fa-clock-o.middle.bigger-120.grey
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      span.grey  4 hours ago 
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .hr.dotted.hr-8
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .tools.action-buttons
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-facebook-square.blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      a(href='#')
+                                        i.ace-icon.fa.fa-google-plus-square.red.bigger-150
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .hr.hr10.hr-double
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          ul.pager.pull-right
+                            li.previous.disabled
+                              a(href='#') &larr; Prev
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li.next
+                              a(href='#') Next &rarr;
+                        // /#friends
+                        #pictures.tab-pane
+                          ul.ace-thumbnails
+                            li
+                              a(href='#', data-rel='colorbox')
+                                img(alt='150x150', src='assets/images/gallery/thumb-1.jpg')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .text
+                                  .inner Sample Caption on Hover
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .tools.tools-bottom
+                                a(href='#')
+                                  i.ace-icon.fa.fa-link
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-paperclip
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-pencil
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-times.red
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', data-rel='colorbox')
+                                img(alt='150x150', src='assets/images/gallery/thumb-2.jpg')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .text
+                                  .inner Sample Caption on Hover
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .tools.tools-bottom
+                                a(href='#')
+                                  i.ace-icon.fa.fa-link
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-paperclip
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-pencil
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-times.red
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', data-rel='colorbox')
+                                img(alt='150x150', src='assets/images/gallery/thumb-3.jpg')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .text
+                                  .inner Sample Caption on Hover
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .tools.tools-bottom
+                                a(href='#')
+                                  i.ace-icon.fa.fa-link
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-paperclip
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-pencil
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-times.red
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', data-rel='colorbox')
+                                img(alt='150x150', src='assets/images/gallery/thumb-4.jpg')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .text
+                                  .inner Sample Caption on Hover
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .tools.tools-bottom
+                                a(href='#')
+                                  i.ace-icon.fa.fa-link
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-paperclip
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-pencil
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-times.red
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', data-rel='colorbox')
+                                img(alt='150x150', src='assets/images/gallery/thumb-5.jpg')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .text
+                                  .inner Sample Caption on Hover
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .tools.tools-bottom
+                                a(href='#')
+                                  i.ace-icon.fa.fa-link
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-paperclip
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-pencil
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-times.red
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', data-rel='colorbox')
+                                img(alt='150x150', src='assets/images/gallery/thumb-6.jpg')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .text
+                                  .inner Sample Caption on Hover
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .tools.tools-bottom
+                                a(href='#')
+                                  i.ace-icon.fa.fa-link
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-paperclip
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-pencil
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-times.red
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', data-rel='colorbox')
+                                img(alt='150x150', src='assets/images/gallery/thumb-1.jpg')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .text
+                                  .inner Sample Caption on Hover
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .tools.tools-bottom
+                                a(href='#')
+                                  i.ace-icon.fa.fa-link
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-paperclip
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-pencil
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-times.red
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', data-rel='colorbox')
+                                img(alt='150x150', src='assets/images/gallery/thumb-2.jpg')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .text
+                                  .inner Sample Caption on Hover
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .tools.tools-bottom
+                                a(href='#')
+                                  i.ace-icon.fa.fa-link
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-paperclip
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-pencil
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                a(href='#')
+                                  i.ace-icon.fa.fa-times.red
+                        // /#pictures
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .hide
+                  #user-profile-3.user-profile.row
+                    .col-sm-offset-1.col-sm-10
+                      .well.well-sm
+                        //
+                          -
+                          <button type="button" class="close" data-dismiss="alert">&times;</button>
+                          &nbsp;
+                        .inline.middle.blue.bigger-110  Your profile is 70% complete 
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp; &nbsp; &nbsp;
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .inline.middle.no-margin.progress.progress-striped.active.pos-rel(style='width:200px;', data-percent='70%')
+                          .progress-bar.progress-bar-success(style='width:70%')
+                      // /.well
+                      .space
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      form.form-horizontal
+                        .tabbable
+                          ul.nav.nav-tabs.padding-16
+                            li.active
+                              a(data-toggle='tab', href='#edit-basic')
+                                i.green.ace-icon.fa.fa-pencil-square-o.bigger-125
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Basic Info
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(data-toggle='tab', href='#edit-settings')
+                                i.purple.ace-icon.fa.fa-cog.bigger-125
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Settings
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(data-toggle='tab', href='#edit-password')
+                                i.blue.ace-icon.fa.fa-key.bigger-125
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Password
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .tab-content.profile-edit-tab-content
+                            #edit-basic.tab-pane.in.active
+                              h4.header.blue.bolder.smaller General
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .row
+                                .col-xs-12.col-sm-4
+                                  input(type='file')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .vspace-12-sm
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .col-xs-12.col-sm-8
+                                  .form-group
+                                    label.col-sm-4.control-label.no-padding-right(for='form-field-username') Username
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .col-sm-8
+                                      input#form-field-username.col-xs-12.col-sm-10(type='text', placeholder='Username', value='alexdoe')
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .space-4
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .form-group
+                                    label.col-sm-4.control-label.no-padding-right(for='form-field-first') Name
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    .col-sm-8
+                                      input#form-field-first.input-small(type='text', placeholder='First Name', value='Alex')
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      input#form-field-last.input-small(type='text', placeholder='Last Name', value='Doe')
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              hr
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .form-group
+                                label.col-sm-3.control-label.no-padding-right(for='form-field-date') Birth Date
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .col-sm-9
+                                  .input-medium
+                                    .input-group
+                                      input#form-field-date.input-medium.date-picker(type='text', data-date-format='dd-mm-yyyy', placeholder='dd-mm-yyyy')
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      span.input-group-addon
+                                        i.ace-icon.fa.fa-calendar
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .space-4
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .form-group
+                                label.col-sm-3.control-label.no-padding-right Gender
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .col-sm-9
+                                  label.inline
+                                    input.ace(name='form-field-radio', type='radio')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.lbl.middle  Male
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp; &nbsp; &nbsp;
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  label.inline
+                                    input.ace(name='form-field-radio', type='radio')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.lbl.middle  Female
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .space-4
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .form-group
+                                label.col-sm-3.control-label.no-padding-right(for='form-field-comment') Comment
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .col-sm-9
+                                  textarea#form-field-comment
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .space
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              h4.header.blue.bolder.smaller Contact
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .form-group
+                                label.col-sm-3.control-label.no-padding-right(for='form-field-email') Email
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .col-sm-9
+                                  span.input-icon.input-icon-right
+                                    input#form-field-email(type='email', value='alexdoe@gmail.com')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    i.ace-icon.fa.fa-envelope
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .space-4
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .form-group
+                                label.col-sm-3.control-label.no-padding-right(for='form-field-website') Website
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .col-sm-9
+                                  span.input-icon.input-icon-right
+                                    input#form-field-website(type='url', value='http://www.alexdoe.com/')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    i.ace-icon.fa.fa-globe
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .space-4
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .form-group
+                                label.col-sm-3.control-label.no-padding-right(for='form-field-phone') Phone
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .col-sm-9
+                                  span.input-icon.input-icon-right
+                                    input#form-field-phone.input-medium.input-mask-phone(type='text')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    i.ace-icon.fa.fa-phone.fa-flip-horizontal
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .space
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              h4.header.blue.bolder.smaller Social
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .form-group
+                                label.col-sm-3.control-label.no-padding-right(for='form-field-facebook') Facebook
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .col-sm-9
+                                  span.input-icon
+                                    input#form-field-facebook(type='text', value='facebook_alexdoe')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    i.ace-icon.fa.fa-facebook.blue
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .space-4
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .form-group
+                                label.col-sm-3.control-label.no-padding-right(for='form-field-twitter') Twitter
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .col-sm-9
+                                  span.input-icon
+                                    input#form-field-twitter(type='text', value='twitter_alexdoe')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    i.ace-icon.fa.fa-twitter.light-blue
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .space-4
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .form-group
+                                label.col-sm-3.control-label.no-padding-right(for='form-field-gplus') Google+
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .col-sm-9
+                                  span.input-icon
+                                    input#form-field-gplus(type='text', value='google_alexdoe')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    i.ace-icon.fa.fa-google-plus.red
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            #edit-settings.tab-pane
+                              .space-10
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              div
+                                label.inline
+                                  input.ace(type='checkbox', name='form-field-checkbox')
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.lbl  Make my profile public
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .space-8
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              div
+                                label.inline
+                                  input.ace(type='checkbox', name='form-field-checkbox')
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.lbl  Email me new updates
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .space-8
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              div
+                                label
+                                  input.ace(type='checkbox', name='form-field-checkbox')
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.lbl  Keep a history of my conversations
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                label
+                                  span.space-2.block
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;for
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  input.input-mini(type='text', maxlength='3')
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;days
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            #edit-password.tab-pane
+                              .space-10
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .form-group
+                                label.col-sm-3.control-label.no-padding-right(for='form-field-pass1') New Password
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .col-sm-9
+                                  input#form-field-pass1(type='password')
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .space-4
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .form-group
+                                label.col-sm-3.control-label.no-padding-right(for='form-field-pass2') Confirm Password
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .col-sm-9
+                                  input#form-field-pass2(type='password')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .clearfix.form-actions
+                          .col-md-offset-3.col-md-9
+                            button.btn.btn-info(type='button')
+                              i.ace-icon.fa.fa-check.bigger-110
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Save
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp; &nbsp;
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            button.btn(type='reset')
+                              i.ace-icon.fa.fa-undo.bigger-110
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Reset
+                    // /.span
+                  // /.user-profile
+                // PAGE CONTENT ENDS
+              // /.col
+            // /.row
+          // /.page-content
+      // /.main-content
+      .footer
+        .footer-inner
+          .footer-content
+            span.bigger-120
+              span.blue.bolder Ace
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Application &copy; 2013-2014
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp; &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            span.action-buttons
+              a(href='#')
+                i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              a(href='#')
+                i.ace-icon.fa.fa-facebook-square.text-primary.bigger-150
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              a(href='#')
+                i.ace-icon.fa.fa-rss-square.orange.bigger-150
+      | &#x9;&#x9;&#x9;
+      a#btn-scroll-up.btn-scroll-up.btn.btn-sm.btn-inverse(href='#')
+        i.ace-icon.fa.fa-angle-double-up.icon-only.bigger-110
+    // /.main-container
+    // basic scripts
+    //if !IE
+    | &#x9;&#x9;
+    script(src='assets/js/jquery-2.1.4.min.js')
+    // <![endif]
+    //if IE
+      script(src='assets/js/jquery-1.11.3.min.js')
+    | &#x9;&#x9;
+    script(type='text/javascript').
+      if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+    | &#x9;&#x9;
+    script(src='assets/js/bootstrap.min.js')
+    // page specific plugin scripts
+    //if lte IE 8
+      script(src='assets/js/excanvas.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/jquery-ui.custom.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/jquery.ui.touch-punch.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/jquery.gritter.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/bootbox.js')
+    | &#x9;&#x9;
+    script(src='assets/js/jquery.easypiechart.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/bootstrap-datepicker.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/jquery.hotkeys.index.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/bootstrap-wysiwyg.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/select2.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/spinbox.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/bootstrap-editable.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/ace-editable.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/jquery.maskedinput.min.js')
+    // ace scripts
+    script(src='assets/js/ace-elements.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/ace.min.js')
+    // inline scripts related to this page
+    script(type='text/javascript').
+      jQuery(function($) {
+      //editables on first profile page
+      $.fn.editable.defaults.mode = 'inline';
+      $.fn.editableform.loading = "<div class='editableform-loading'><i class='ace-icon fa fa-spinner fa-spin fa-2x light-blue'></i></div>";
+      $.fn.editableform.buttons = '<button type="submit" class="btn btn-info editable-submit"><i class="ace-icon fa fa-check"></i></button>'+
+      '<button type="button" class="btn editable-cancel"><i class="ace-icon fa fa-times"></i></button>';
+      //editables
+      //text editable
+      $('#username')
+      .editable({
+      type: 'text',
+      name: 'username'
+      });
+      //select2 editable
+      var countries = [];
+      $.each({ "CA": "Canada", "IN": "India", "NL": "Netherlands", "TR": "Turkey", "US": "United States"}, function(k, v) {
+      countries.push({id: k, text: v});
+      });
+      var cities = [];
+      cities["CA"] = [];
+      $.each(["Toronto", "Ottawa", "Calgary", "Vancouver"] , function(k, v){
+      cities["CA"].push({id: v, text: v});
+      });
+      cities["IN"] = [];
+      $.each(["Delhi", "Mumbai", "Bangalore"] , function(k, v){
+      cities["IN"].push({id: v, text: v});
+      });
+      cities["NL"] = [];
+      $.each(["Amsterdam", "Rotterdam", "The Hague"] , function(k, v){
+      cities["NL"].push({id: v, text: v});
+      });
+      cities["TR"] = [];
+      $.each(["Ankara", "Istanbul", "Izmir"] , function(k, v){
+      cities["TR"].push({id: v, text: v});
+      });
+      cities["US"] = [];
+      $.each(["New York", "Miami", "Los Angeles", "Chicago", "Wysconsin"] , function(k, v){
+      cities["US"].push({id: v, text: v});
+      });
+      var currentValue = "NL";
+      $('#country').editable({
+      type: 'select2',
+      value : 'NL',
+      //onblur:'ignore',
+      source: countries,
+      select2: {
+      'width': 140
+      },
+      success: function(response, newValue) {
+      if(currentValue == newValue) return;
+      currentValue = newValue;
+      var new_source = (!newValue || newValue == "") ? [] : cities[newValue];
+      //the destroy method is causing errors in x-editable v1.4.6+
+      //it worked fine in v1.4.5
+      /**
+      $('#city').editable('destroy').editable({
+      type: 'select2',
+      source: new_source
+      }).editable('setValue', null);
+      */
+      //so we remove it altogether and create a new element
+      var city = $('#city').removeAttr('id').get(0);
+      $(city).clone().attr('id', 'city').text('Select City').editable({
+      type: 'select2',
+      value : null,
+      //onblur:'ignore',
+      source: new_source,
+      select2: {
+      'width': 140
+      }
+      }).insertAfter(city);//insert it after previous instance
+      $(city).remove();//remove previous instance
+      }
+      });
+      $('#city').editable({
+      type: 'select2',
+      value : 'Amsterdam',
+      //onblur:'ignore',
+      source: cities[currentValue],
+      select2: {
+      'width': 140
+      }
+      });
+      //custom date editable
+      $('#signup').editable({
+      type: 'adate',
+      date: {
+      //datepicker plugin options
+      format: 'yyyy/mm/dd',
+      viewformat: 'yyyy/mm/dd',
+      weekStart: 1
+      //,nativeUI: true//if true and browser support input[type=date], native browser control will be used
+      //,format: 'yyyy-mm-dd',
+      //viewformat: 'yyyy-mm-dd'
+      }
+      })
+      $('#age').editable({
+      type: 'spinner',
+      name : 'age',
+      spinner : {
+      min : 16,
+      max : 99,
+      step: 1,
+      on_sides: true
+      //,nativeUI: true//if true and browser support input[type=number], native browser control will be used
+      }
+      });
+      $('#login').editable({
+      type: 'slider',
+      name : 'login',
+      slider : {
+      min : 1,
+      max: 50,
+      width: 100
+      //,nativeUI: true//if true and browser support input[type=range], native browser control will be used
+      },
+      success: function(response, newValue) {
+      if(parseInt(newValue) == 1)
+      $(this).html(newValue + " hour ago");
+      else $(this).html(newValue + " hours ago");
+      }
+      });
+      $('#about').editable({
+      mode: 'inline',
+      type: 'wysiwyg',
+      name : 'about',
+      wysiwyg : {
+      //css : {'max-width':'300px'}
+      },
+      success: function(response, newValue) {
+      }
+      });
+      // *** editable avatar *** //
+      try {//ie8 throws some harmless exceptions, so let's catch'em
+      //first let's add a fake appendChild method for Image element for browsers that have a problem with this
+      //because editable plugin calls appendChild, and it causes errors on IE at unpredicted points
+      try {
+      document.createElement('IMG').appendChild(document.createElement('B'));
+      } catch(e) {
+      Image.prototype.appendChild = function(el){}
+      }
+      var last_gritter
+      $('#avatar').editable({
+      type: 'image',
+      name: 'avatar',
+      value: null,
+      //onblur: 'ignore',  //don't reset or hide editable onblur?!
+      image: {
+      //specify ace file input plugin's options here
+      btn_choose: 'Change Avatar',
+      droppable: true,
+      maxSize: 110000,//~100Kb
+      //and a few extra ones here
+      name: 'avatar',//put the field name here as well, will be used inside the custom plugin
+      on_error : function(error_type) {//on_error function will be called when the selected file has a problem
+      if(last_gritter) $.gritter.remove(last_gritter);
+      if(error_type == 1) {//file format error
+      last_gritter = $.gritter.add({
+      title: 'File is not an image!',
+      text: 'Please choose a jpg|gif|png image!',
+      class_name: 'gritter-error gritter-center'
+      });
+      } else if(error_type == 2) {//file size rror
+      last_gritter = $.gritter.add({
+      title: 'File too big!',
+      text: 'Image size should not exceed 100Kb!',
+      class_name: 'gritter-error gritter-center'
+      });
+      }
+      else {//other error
+      }
+      },
+      on_success : function() {
+      $.gritter.removeAll();
+      }
+      },
+      url: function(params) {
+      // ***UPDATE AVATAR HERE*** //
+      //for a working upload example you can replace the contents of this function with
+      //examples/profile-avatar-update.js
+      var deferred = new $.Deferred
+      var value = $('#avatar').next().find('input[type=hidden]:eq(0)').val();
+      if(!value || value.length == 0) {
+      deferred.resolve();
+      return deferred.promise();
+      }
+      //dummy upload
+      setTimeout(function(){
+      if("FileReader" in window) {
+      //for browsers that have a thumbnail of selected image
+      var thumb = $('#avatar').next().find('img').data('thumb');
+      if(thumb) $('#avatar').get(0).src = thumb;
+      }
+      deferred.resolve({'status':'OK'});
+      if(last_gritter) $.gritter.remove(last_gritter);
+      last_gritter = $.gritter.add({
+      title: 'Avatar Updated!',
+      text: 'Uploading to server can be easily implemented. A working example is included with the template.',
+      class_name: 'gritter-info gritter-center'
+      });
+      } , parseInt(Math.random() * 800 + 800))
+      return deferred.promise();
+      // ***END OF UPDATE AVATAR HERE*** //
+      },
+      success: function(response, newValue) {
+      }
+      })
+      }catch(e) {}
+      /**
+      //let's display edit mode by default?
+      var blank_image = true;//somehow you determine if image is initially blank or not, or you just want to display file input at first
+      if(blank_image) {
+      $('#avatar').editable('show').on('hidden', function(e, reason) {
+      if(reason == 'onblur') {
+      $('#avatar').editable('show');
+      return;
+      }
+      $('#avatar').off('hidden');
+      })
+      }
+      */
+      //another option is using modals
+      $('#avatar2').on('click', function(){
+      var modal =
+      '<div class="modal fade">\\
+      <div class="modal-dialog">\\
+      <div class="modal-content">\\
+      <div class="modal-header">\\
+      <button type="button" class="close" data-dismiss="modal">&times;</button>\\
+      <h4 class="blue">Change Avatar</h4>\\
+      </div>\\
+      \\
+      <form class="no-margin">\\
+      <div class="modal-body">\\
+      <div class="space-4"></div>\\
+      <div style="width:75%;margin-left:12%;"><input type="file" name="file-input" /></div>\\
+      </div>\\
+      \\
+      <div class="modal-footer center">\\
+      <button type="submit" class="btn btn-sm btn-success"><i class="ace-icon fa fa-check"></i> Submit</button>\\
+      <button type="button" class="btn btn-sm" data-dismiss="modal"><i class="ace-icon fa fa-times"></i> Cancel</button>\\
+      </div>\\
+      </form>\\
+      </div>\\
+      </div>\\
+      </div>';
+      var modal = $(modal);
+      modal.modal("show").on("hidden", function(){
+      modal.remove();
+      });
+      var working = false;
+      var form = modal.find('form:eq(0)');
+      var file = form.find('input[type=file]').eq(0);
+      file.ace_file_input({
+      style:'well',
+      btn_choose:'Click to choose new avatar',
+      btn_change:null,
+      no_icon:'ace-icon fa fa-picture-o',
+      thumbnail:'small',
+      before_remove: function() {
+      //don't remove/reset files while being uploaded
+      return !working;
+      },
+      allowExt: ['jpg', 'jpeg', 'png', 'gif'],
+      allowMime: ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
+      });
+      form.on('submit', function(){
+      if(!file.data('ace_input_files')) return false;
+      file.ace_file_input('disable');
+      form.find('button').attr('disabled', 'disabled');
+      form.find('.modal-body').append("<div class='center'><i class='ace-icon fa fa-spinner fa-spin bigger-150 orange'></i></div>");
+      var deferred = new $.Deferred;
+      working = true;
+      deferred.done(function() {
+      form.find('button').removeAttr('disabled');
+      form.find('input[type=file]').ace_file_input('enable');
+      form.find('.modal-body > :last-child').remove();
+      modal.modal("hide");
+      var thumb = file.next().find('img').data('thumb');
+      if(thumb) $('#avatar2').get(0).src = thumb;
+      working = false;
+      });
+      setTimeout(function(){
+      deferred.resolve();
+      } , parseInt(Math.random() * 800 + 800));
+      return false;
+      });
+      });
+      //////////////////////////////
+      $('#profile-feed-1').ace_scroll({
+      height: '250px',
+      mouseWheelLock: true,
+      alwaysVisible : true
+      });
+      $('a[ data-original-title]').tooltip();
+      $('.easy-pie-chart.percentage').each(function(){
+      var barColor = $(this).data('color') || '#555';
+      var trackColor = '#E2E2E2';
+      var size = parseInt($(this).data('size')) || 72;
+      $(this).easyPieChart({
+      barColor: barColor,
+      trackColor: trackColor,
+      scaleColor: false,
+      lineCap: 'butt',
+      lineWidth: parseInt(size/10),
+      animate:false,
+      size: size
+      }).css('color', barColor);
+      });
+      ///////////////////////////////////////////
+      //right & left position
+      //show the user info on right or left depending on its position
+      $('#user-profile-2 .memberdiv').on('mouseenter touchstart', function(){
+      var $this = $(this);
+      var $parent = $this.closest('.tab-pane');
+      var off1 = $parent.offset();
+      var w1 = $parent.width();
+      var off2 = $this.offset();
+      var w2 = $this.width();
+      var place = 'left';
+      if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) place = 'right';
+      $this.find('.popover').removeClass('right left').addClass(place);
+      }).on('click', function(e) {
+      e.preventDefault();
+      });
+      ///////////////////////////////////////////
+      $('#user-profile-3')
+      .find('input[type=file]').ace_file_input({
+      style:'well',
+      btn_choose:'Change avatar',
+      btn_change:null,
+      no_icon:'ace-icon fa fa-picture-o',
+      thumbnail:'large',
+      droppable:true,
+      allowExt: ['jpg', 'jpeg', 'png', 'gif'],
+      allowMime: ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
+      })
+      .end().find('button[type=reset]').on(ace.click_event, function(){
+      $('#user-profile-3 input[type=file]').ace_file_input('reset_input');
+      })
+      .end().find('.date-picker').datepicker().next().on(ace.click_event, function(){
+      $(this).prev().focus();
+      })
+      $('.input-mask-phone').mask('(999) 999-9999');
+      $('#user-profile-3').find('input[type=file]').ace_file_input('show_file_list', [{type: 'image', name: $('#avatar').attr('src')}]);
+      ////////////////////
+      //change profile
+      $('[data-toggle="buttons"] .btn').on('click', function(e){
+      var target = $(this).find('input[type=radio]');
+      var which = parseInt(target.val());
+      $('.user-profile').parent().addClass('hide');
+      $('#user-profile-'+which).parent().removeClass('hide');
+      });
+      /////////////////////////////////////
+      $(document).one('ajaxloadstart.page', function(e) {
+      //in ajax mode, remove remaining elements before leaving page
+      try {
+      $('.editable').editable('destroy');
+      } catch(e) {}
+      $('[class*=select2]').remove();
+      });
+      });

@@ -1,0 +1,1843 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    | &#x9;&#x9;
+    meta(charset='utf-8')
+    | &#x9;&#x9;
+    title Inbox - Ace Admin
+    | &#x9;&#x9;
+    meta(name='description', content='Mailbox with some customizations as described in docs')
+    | &#x9;&#x9;
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    // bootstrap & fontawesome
+    link(rel='stylesheet', href='assets/css/bootstrap.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='assets/font-awesome/4.5.0/css/font-awesome.min.css')
+    // page specific plugin styles
+    // text fonts
+    link(rel='stylesheet', href='assets/css/fonts.googleapis.com.css')
+    // ace styles
+    link#main-ace-style.ace-main-stylesheet(rel='stylesheet', href='assets/css/ace.min.css')
+    //if lte IE 9
+      link.ace-main-stylesheet(rel='stylesheet', href='assets/css/ace-part2.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='assets/css/ace-skins.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='assets/css/ace-rtl.min.css')
+    //if lte IE 9
+      link(rel='stylesheet', href='assets/css/ace-ie.min.css')
+    // inline styles related to this page
+    // ace settings handler
+    script(src='assets/js/ace-extra.min.js')
+    // HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries
+    //if lte IE 8
+      script(src='assets/js/html5shiv.min.js')
+      | &#x9;&#x9;
+      script(src='assets/js/respond.min.js')
+  | &#x9;
+  body.no-skin
+    #navbar.navbar.navbar-default.ace-save-state
+      #navbar-container.navbar-container.ace-save-state
+        button#menu-toggler.navbar-toggle.menu-toggler.pull-left(type='button', data-target='#sidebar')
+          span.sr-only Toggle sidebar
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          span.icon-bar
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          span.icon-bar
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          span.icon-bar
+        | &#x9;&#x9;&#x9;&#x9;
+        .navbar-header.pull-left
+          a.navbar-brand(href='index.html')
+            small
+              i.fa.fa-leaf
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ace Admin
+        | &#x9;&#x9;&#x9;&#x9;
+        .navbar-buttons.navbar-header.pull-right(role='navigation')
+          ul.nav.ace-nav
+            li.grey.dropdown-modal
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.ace-icon.fa.fa-tasks
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                span.badge.badge-grey 4
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.dropdown-menu-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-close
+                li.dropdown-header
+                  i.ace-icon.fa.fa-check
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;4 Tasks to complete
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-content
+                  ul.dropdown-menu.dropdown-navbar
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left Software Update
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right 65%
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-mini
+                          .progress-bar(style='width:65%')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left Hardware Upgrade
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right 35%
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-mini
+                          .progress-bar.progress-bar-danger(style='width:35%')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left Unit Testing
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right 15%
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-mini
+                          .progress-bar.progress-bar-warning(style='width:15%')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left Bug Fixes
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right 90%
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-mini.progress-striped.active
+                          .progress-bar.progress-bar-success(style='width:90%')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-footer
+                  a(href='#')
+                    | See tasks with details
+                    i.ace-icon.fa.fa-arrow-right
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            li.purple.dropdown-modal
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.ace-icon.fa.fa-bell.icon-animated-bell
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                span.badge.badge-important 8
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.dropdown-menu-right.dropdown-navbar.navbar-pink.dropdown-menu.dropdown-caret.dropdown-close
+                li.dropdown-header
+                  i.ace-icon.fa.fa-exclamation-triangle
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;8 Notifications
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-content
+                  ul.dropdown-menu.dropdown-navbar.navbar-pink
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left
+                            i.btn.btn-xs.no-hover.btn-pink.fa.fa-comment
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New Comments
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right.badge.badge-info +12
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        i.btn.btn-xs.btn-primary.fa.fa-user
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Bob just signed up as an editor ...
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left
+                            i.btn.btn-xs.no-hover.btn-success.fa.fa-shopping-cart
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New Orders
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right.badge.badge-success +8
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left
+                            i.btn.btn-xs.no-hover.btn-info.fa.fa-twitter
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Followers
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right.badge.badge-info +11
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-footer
+                  a(href='#')
+                    | See all notifications
+                    i.ace-icon.fa.fa-arrow-right
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            li.green.dropdown-modal
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.ace-icon.fa.fa-envelope.icon-animated-vertical
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                span.badge.badge-success 5
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.dropdown-menu-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-close
+                li.dropdown-header
+                  i.ace-icon.fa.fa-envelope-o
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;5 Messages
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-content
+                  ul.dropdown-menu.dropdown-navbar
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar.png', alt="Alex's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Alex:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ciao sociis natoque penatibus et auctor ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span a moment ago
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar3.png', alt="Susan's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Susan:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Vestibulum id ligula porta felis euismod ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span 20 minutes ago
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar4.png', alt="Bob's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Bob:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nullam quis risus eget urna mollis ornare ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span 3:15 pm
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar2.png', alt="Kate's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Kate:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ciao sociis natoque eget urna mollis ornare ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span 1:33 pm
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar5.png', alt="Fred's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Fred:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Vestibulum id penatibus et auctor  ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span 10:09 am
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-footer
+                  a(href='inbox.html')
+                    | See all messages
+                    i.ace-icon.fa.fa-arrow-right
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            li.light-blue.dropdown-modal
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                img.nav-user-photo(src='assets/images/avatars/user.jpg', alt="Jason's Photo")
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                span.user-info
+                  small Welcome,
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Jason
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                i.ace-icon.fa.fa-caret-down
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.user-menu.dropdown-menu-right.dropdown-menu.dropdown-yellow.dropdown-caret.dropdown-close
+                li
+                  a(href='#')
+                    i.ace-icon.fa.fa-cog
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Settings
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  a(href='profile.html')
+                    i.ace-icon.fa.fa-user
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Profile
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.divider
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  a(href='#')
+                    i.ace-icon.fa.fa-power-off
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Logout
+      // /.navbar-container
+    | &#x9;&#x9;
+    #main-container.main-container.ace-save-state
+      script(type='text/javascript').
+        try{ace.settings.loadState('main-container')}catch(e){}
+      | &#x9;&#x9;&#x9;
+      #sidebar.sidebar.responsive.ace-save-state
+        script(type='text/javascript').
+          try{ace.settings.loadState('sidebar')}catch(e){}
+        | &#x9;&#x9;&#x9;&#x9;
+        #sidebar-shortcuts.sidebar-shortcuts
+          #sidebar-shortcuts-large.sidebar-shortcuts-large
+            button.btn.btn-success
+              i.ace-icon.fa.fa-signal
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            button.btn.btn-info
+              i.ace-icon.fa.fa-pencil
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            button.btn.btn-warning
+              i.ace-icon.fa.fa-users
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            button.btn.btn-danger
+              i.ace-icon.fa.fa-cogs
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          #sidebar-shortcuts-mini.sidebar-shortcuts-mini
+            span.btn.btn-success
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            span.btn.btn-info
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            span.btn.btn-warning
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            span.btn.btn-danger
+        // /.sidebar-shortcuts
+        ul.nav.nav-list
+          li
+            a(href='index.html')
+              i.menu-icon.fa.fa-tachometer
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Dashboard 
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-desktop
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text
+                | UI &amp; Elements
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li
+                a.dropdown-toggle(href='#')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Layouts
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  b.arrow.fa.fa-angle-down
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                ul.submenu
+                  li
+                    a(href='top-menu.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Top Menu
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='two-menu-1.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Two Menus 1
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='two-menu-2.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Two Menus 2
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='mobile-menu-1.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Default Mobile Menu
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='mobile-menu-2.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mobile Menu 2
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='mobile-menu-3.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mobile Menu 3
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='typography.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Typography
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='elements.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Elements
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='buttons.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Buttons &amp; Icons
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='content-slider.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Content Sliders
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='treeview.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Treeview
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='jquery-ui.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;jQuery UI
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='nestable-list.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nestable Lists
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a.dropdown-toggle(href='#')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Three Level Menu
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  b.arrow.fa.fa-angle-down
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                ul.submenu
+                  li
+                    a(href='#')
+                      i.menu-icon.fa.fa-leaf.green
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Item #1
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.dropdown-toggle(href='#')
+                      i.menu-icon.fa.fa-pencil.orange
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;4th level
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      b.arrow.fa.fa-angle-down
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    ul.submenu
+                      li
+                        a(href='#')
+                          i.menu-icon.fa.fa-plus.purple
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Add Product
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        b.arrow
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      li
+                        a(href='#')
+                          i.menu-icon.fa.fa-eye.pink
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;View Products
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-list
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Tables 
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li
+                a(href='tables.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Simple &amp; Dynamic
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='jqgrid.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;jqGrid plugin
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-pencil-square-o
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Forms 
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li
+                a(href='form-elements.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Form Elements
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='form-elements-2.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Form Elements 2
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='form-wizard.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Wizard &amp; Validation
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='wysiwyg.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Wysiwyg &amp; Markdown
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='dropzone.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Dropzone File Upload
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a(href='widgets.html')
+              i.menu-icon.fa.fa-list-alt
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Widgets 
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a(href='calendar.html')
+              i.menu-icon.fa.fa-calendar
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text
+                | Calendar
+                span.badge.badge-transparent.tooltip-error(title='2 Important Events')
+                  i.ace-icon.fa.fa-exclamation-triangle.red.bigger-130
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a(href='gallery.html')
+              i.menu-icon.fa.fa-picture-o
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Gallery 
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li.active.open
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-tag
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  More Pages 
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li
+                a(href='profile.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;User Profile
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li.active
+                a(href='inbox.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Inbox
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='pricing.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Pricing Tables
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='invoice.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Invoice
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='timeline.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Timeline
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='search.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Search Results
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='email.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Email Templates
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='login.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Login &amp; Register
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-file-o
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text
+                | Other Pages
+                span.badge.badge-primary 5
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li
+                a(href='faq.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;FAQ
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='error-404.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Error 404
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='error-500.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Error 500
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='grid.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Grid
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='blank.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Blank Page
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+        // /.nav-list
+        #sidebar-collapse.sidebar-toggle.sidebar-collapse
+          i#sidebar-toggle-icon.ace-icon.fa.fa-angle-double-left.ace-save-state(data-icon1='ace-icon fa fa-angle-double-left', data-icon2='ace-icon fa fa-angle-double-right')
+      | &#x9;&#x9;&#x9;
+      .main-content
+        .main-content-inner
+          #breadcrumbs.breadcrumbs.ace-save-state
+            ul.breadcrumb
+              li
+                i.ace-icon.fa.fa-home.home-icon
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                a(href='#') Home
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='#') More Pages
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li.active Inbox
+            // /.breadcrumb
+            #nav-search.nav-search
+              form.form-search
+                span.input-icon
+                  input#nav-search-input.nav-search-input(type='text', placeholder='Search ...', autocomplete='off')
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  i.ace-icon.fa.fa-search.nav-search-icon
+            // /.nav-search
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          .page-content
+            #ace-settings-container.ace-settings-container
+              #ace-settings-btn.btn.btn-app.btn-xs.btn-warning.ace-settings-btn
+                i.ace-icon.fa.fa-cog.bigger-130
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              #ace-settings-box.ace-settings-box.clearfix
+                .pull-left.width-50
+                  .ace-settings-item
+                    .pull-left
+                      select#skin-colorpicker.hide
+                        option(data-skin='no-skin', value='#438EB9') #438EB9
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        option(data-skin='skin-1', value='#222A2D') #222A2D
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        option(data-skin='skin-2', value='#C6487E') #C6487E
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        option(data-skin='skin-3', value='#D0D0D0') #D0D0D0
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    span &nbsp; Choose Skin
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-navbar.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-navbar')  Fixed Navbar
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-sidebar.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-sidebar')  Fixed Sidebar
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-breadcrumbs.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-breadcrumbs')  Fixed Breadcrumbs
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-rtl.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-rtl')  Right To Left (rtl)
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-add-container.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-add-container')
+                      | Inside
+                      b .container
+                // /.pull-left
+                .pull-left.width-50
+                  .ace-settings-item
+                    input#ace-settings-hover.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-hover')  Submenu on Hover
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-compact.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-compact')  Compact Sidebar
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-highlight.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-highlight')  Alt. Active Item
+                // /.pull-left
+              // /.ace-settings-box
+            // /.ace-settings-container
+            .page-header
+              h1
+                | Inbox
+                small
+                  i.ace-icon.fa.fa-angle-double-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mailbox with some customizations as described in docs
+            // /.page-header
+            .row
+              .col-xs-12
+                // PAGE CONTENT BEGINS
+                .row
+                  .col-xs-12
+                    .tabbable
+                      ul#inbox-tabs.inbox-tabs.nav.nav-tabs.padding-16.tab-size-bigger.tab-space-1
+                        li.li-new-mail.pull-right
+                          a.btn-new-mail(data-toggle='tab', href='#write', data-target='write')
+                            span.btn.btn-purple.no-border
+                              i.ace-icon.fa.fa-envelope.bigger-130
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              span.bigger-110 Write Mail
+                        // /.li-new-mail
+                        li.active
+                          a(data-toggle='tab', href='#inbox', data-target='inbox')
+                            i.blue.ace-icon.fa.fa-inbox.bigger-130
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span.bigger-110 Inbox
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(data-toggle='tab', href='#sent', data-target='sent')
+                            i.orange.ace-icon.fa.fa-location-arrow.bigger-130
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span.bigger-110 Sent
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(data-toggle='tab', href='#draft', data-target='draft')
+                            i.green.ace-icon.fa.fa-pencil.bigger-130
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span.bigger-110 Draft
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li.dropdown
+                          a.dropdown-toggle(data-toggle='dropdown', href='#')
+                            i.pink.ace-icon.fa.fa-tags.bigger-130
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span.bigger-110
+                              | Tags
+                              i.ace-icon.fa.fa-caret-down
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          ul.dropdown-menu.dropdown-light-blue.dropdown-125
+                            li
+                              a(data-toggle='tab', href='#tag-1')
+                                span.mail-tag.badge.badge-pink
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                span.pink Tag#1
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(data-toggle='tab', href='#tag-family')
+                                span.mail-tag.badge.badge-success
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                span.green Family
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(data-toggle='tab', href='#tag-friends')
+                                span.mail-tag.badge.badge-info
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                span.blue Friends
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(data-toggle='tab', href='#tag-work')
+                                span.mail-tag.badge.badge-grey
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                span.grey Work
+                        // /.dropdown
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .tab-content.no-border.no-padding
+                        #inbox.tab-pane.in.active
+                          .message-container
+                            #id-message-list-navbar.message-navbar.clearfix
+                              .message-bar
+                                #id-message-infobar.message-infobar
+                                  span.blue.bigger-150 Inbox
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.grey.bigger-110 (2 unread messages)
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .message-toolbar.hide
+                                  .inline.position-relative.align-left
+                                    button.btn-white.btn-primary.btn.btn-xs.dropdown-toggle(type='button', data-toggle='dropdown')
+                                      span.bigger-110 Action
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      i.ace-icon.fa.fa-caret-down.icon-on-right
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    ul.dropdown-menu.dropdown-lighter.dropdown-caret.dropdown-125
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-mail-reply.blue
+                                          | &nbsp; Reply
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-mail-forward.green
+                                          | &nbsp; Forward
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-folder-open.orange
+                                          | &nbsp; Archive
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li.divider
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-eye.blue
+                                          | &nbsp; Mark as read
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-eye-slash.green
+                                          | &nbsp; Mark unread
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-flag-o.red
+                                          | &nbsp; Flag
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li.divider
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-trash-o.red.bigger-110
+                                          | &nbsp; Delete
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .inline.position-relative.align-left
+                                    button.btn-white.btn-primary.btn.btn-xs.dropdown-toggle(type='button', data-toggle='dropdown')
+                                      i.ace-icon.fa.fa-folder-o.bigger-110.blue
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      span.bigger-110 Move to
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      i.ace-icon.fa.fa-caret-down.icon-on-right
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    ul.dropdown-menu.dropdown-lighter.dropdown-caret.dropdown-125
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-stop.pink2
+                                          | &nbsp; Tag#1
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-stop.blue
+                                          | &nbsp; Family
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-stop.green
+                                          | &nbsp; Friends
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-stop.grey
+                                          | &nbsp; Work
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  button.btn.btn-xs.btn-white.btn-primary(type='button')
+                                    i.ace-icon.fa.fa-trash-o.bigger-125.orange
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.bigger-110 Delete
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              div
+                                .messagebar-item-left
+                                  label.inline.middle
+                                    input#id-toggle-all.ace(type='checkbox')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.lbl
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp;
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .inline.position-relative
+                                    a.dropdown-toggle(href='#', data-toggle='dropdown')
+                                      i.ace-icon.fa.fa-caret-down.bigger-125.middle
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    ul.dropdown-menu.dropdown-lighter.dropdown-100
+                                      li
+                                        a#id-select-message-all(href='#') All
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a#id-select-message-none(href='#') None
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li.divider
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a#id-select-message-unread(href='#') Unread
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a#id-select-message-read(href='#') Read
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .messagebar-item-right
+                                  .inline.position-relative
+                                    a.dropdown-toggle(href='#', data-toggle='dropdown')
+                                      | Sort &nbsp;
+                                      i.ace-icon.fa.fa-caret-down.bigger-125
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    ul.dropdown-menu.dropdown-lighter.dropdown-menu-right.dropdown-100
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-check.green
+                                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Date
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-check.invisible
+                                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;From
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-check.invisible
+                                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Subject
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .nav-search.minimized
+                                  form.form-search
+                                    span.input-icon
+                                      input.input-small.nav-search-input(type='text', autocomplete='off', placeholder='Search inbox ...')
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      i.ace-icon.fa.fa-search.nav-search-icon
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            #id-message-item-navbar.hide.message-navbar.clearfix
+                              .message-bar
+                                .message-toolbar
+                                  .inline.position-relative.align-left
+                                    button.btn-white.btn-primary.btn.btn-xs.dropdown-toggle(type='button', data-toggle='dropdown')
+                                      span.bigger-110 Action
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      i.ace-icon.fa.fa-caret-down.icon-on-right
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    ul.dropdown-menu.dropdown-lighter.dropdown-caret.dropdown-125
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-mail-reply.blue
+                                          | &nbsp; Reply
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-mail-forward.green
+                                          | &nbsp; Forward
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-folder-open.orange
+                                          | &nbsp; Archive
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li.divider
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-eye.blue
+                                          | &nbsp; Mark as read
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-eye-slash.green
+                                          | &nbsp; Mark unread
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-flag-o.red
+                                          | &nbsp; Flag
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li.divider
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-trash-o.red.bigger-110
+                                          | &nbsp; Delete
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  .inline.position-relative.align-left
+                                    button.btn-white.btn-primary.btn.btn-xs.dropdown-toggle(type='button', data-toggle='dropdown')
+                                      i.ace-icon.fa.fa-folder-o.bigger-110.blue
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      span.bigger-110 Move to
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      i.ace-icon.fa.fa-caret-down.icon-on-right
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    ul.dropdown-menu.dropdown-lighter.dropdown-caret.dropdown-125
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-stop.pink2
+                                          | &nbsp; Tag#1
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-stop.blue
+                                          | &nbsp; Family
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-stop.green
+                                          | &nbsp; Friends
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      li
+                                        a(href='#')
+                                          i.ace-icon.fa.fa-stop.grey
+                                          | &nbsp; Work
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  button.btn.btn-xs.btn-white.btn-primary(type='button')
+                                    i.ace-icon.fa.fa-trash-o.bigger-125.orange
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.bigger-110 Delete
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              div
+                                .messagebar-item-left
+                                  a.btn-back-message-list(href='#')
+                                    i.ace-icon.fa.fa-arrow-left.blue.bigger-110.middle
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    b.bigger-110.middle Back
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .messagebar-item-right
+                                  i.ace-icon.fa.fa-clock-o.bigger-110.orange
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.grey Today, 7:15 pm
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            #id-message-new-navbar.hide.message-navbar.clearfix
+                              .message-bar
+                                .message-toolbar
+                                  button.btn.btn-xs.btn-white.btn-primary(type='button')
+                                    i.ace-icon.fa.fa-floppy-o.bigger-125
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.bigger-110 Save Draft
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  button.btn.btn-xs.btn-white.btn-primary(type='button')
+                                    i.ace-icon.fa.fa-times.bigger-125.orange2
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.bigger-110 Discard
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              div
+                                .messagebar-item-left
+                                  a.btn-back-message-list(href='#')
+                                    i.ace-icon.fa.fa-arrow-left.bigger-110.middle.blue
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    b.middle.bigger-110 Back
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .messagebar-item-right
+                                  span.inline.btn-send-message
+                                    button.btn.btn-sm.btn-primary.no-border.btn-white.btn-round(type='button')
+                                      span.bigger-110 Send
+                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                      i.ace-icon.fa.fa-arrow-right.icon-on-right
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .message-list-container
+                              #message-list.message-list
+                                .message-item.message-unread
+                                  label.inline
+                                    input.ace(type='checkbox')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.lbl
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  i.message-star.ace-icon.fa.fa-star.orange2
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.sender(title='Alex John Red Smith') Alex John Red Smith 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.time 1:33 pm
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.summary
+                                    span.text
+                                      | Click to open this message
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .message-item.message-unread
+                                  label.inline
+                                    input.ace(type='checkbox')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.lbl
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  i.message-star.ace-icon.fa.fa-star-o.light-grey
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.sender(title='John Doe')
+                                    | John Doe
+                                    span.light-grey (4)
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.time 7:15 pm
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.attachment
+                                    i.ace-icon.fa.fa-paperclip
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.summary
+                                    span.badge.badge-pink.mail-tag
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.text
+                                      | Clik to open this message right here
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .message-item
+                                  label.inline
+                                    input.ace(type='checkbox')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.lbl
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  i.message-star.ace-icon.fa.fa-star-o.light-grey
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.sender(title='Philip Markov') Philip Markov 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.time 10:15 am
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.attachment
+                                    i.ace-icon.fa.fa-paperclip
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.summary
+                                    span.message-flags
+                                      i.ace-icon.fa.fa-reply.light-grey
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.text
+                                      | Photo booth beard raw denim letterpress vegan
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .message-item
+                                  label.inline
+                                    input.ace(type='checkbox')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.lbl
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  i.message-star.ace-icon.fa.fa-star.orange2
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.sender(title='Sabrina') Sabrina 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.time Yesterday
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.summary
+                                    span.text
+                                      | Nullam quis risus eget urna mollis ornare
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .message-item
+                                  label.inline
+                                    input.ace(type='checkbox')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.lbl
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  i.message-star.ace-icon.fa.fa-star-o.light-grey
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.sender(title='Philip Markov') Philip Markov 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.time Yesterday
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.attachment
+                                    i.ace-icon.fa.fa-paperclip
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.summary
+                                    span.badge.badge-success.mail-tag
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.text
+                                      | Vestibulum id ligula porta felis euismod
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .message-item
+                                  label.inline
+                                    input.ace(type='checkbox')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.lbl
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  i.message-star.ace-icon.fa.fa-star-o.light-grey
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.sender(title='Doctor Gomenz') Doctor Gomenz 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.time April 5
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.summary
+                                    span.text
+                                      | Vim te vivendo convenire, summo fuisset
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .message-item
+                                  label.inline
+                                    input.ace(type='checkbox')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.lbl
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  i.message-star.ace-icon.fa.fa-star-o.light-grey
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.sender(title='Robin Hood') Robin Hood 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.time April 4
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.summary
+                                    span.message-flags
+                                      i.ace-icon.fa.fa-reply.light-grey
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.text
+                                      | No eos veniam equidem mentitum, his porro
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .message-item
+                                  label.inline
+                                    input.ace(type='checkbox')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.lbl
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  i.message-star.ace-icon.fa.fa-star-o.light-grey
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.sender(title='Google Inc') Google Inc 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.time April 3
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.summary
+                                    span.badge.badge-grey.mail-tag
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.text
+                                      | Convallis facilisis euismod urna sodales
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .message-item
+                                  label.inline
+                                    input.ace(type='checkbox')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.lbl
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  i.message-star.ace-icon.fa.fa-star-o.light-grey
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.sender(title='Shrek') Shrek 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.time March 28
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.attachment
+                                    i.ace-icon.fa.fa-paperclip
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.summary
+                                    span.message-flags
+                                      i.ace-icon.fa.fa-flag.fa-flip-horizontal.light-grey
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.text
+                                      | Photo booth beard raw denim letterpress vegan messenger
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                .message-item
+                                  label.inline
+                                    input.ace(type='checkbox')
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.lbl
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  i.message-star.ace-icon.fa.fa-star-o.light-grey
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.sender(title='Yahoo!') Yahoo! 
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.time March 27
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  span.summary
+                                    span.message-flags
+                                      i.ace-icon.fa.fa-mail-forward.light-grey
+                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    span.text
+                                      | Tofu biodiesel williamsburg marfa, four loko mcsweeney
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .message-footer.clearfix
+                              .pull-left  151 messages total 
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .pull-right
+                                .inline.middle  page 1 of 16 
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp; &nbsp;
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                ul.pagination.middle
+                                  li.disabled
+                                    span
+                                      i.ace-icon.fa.fa-step-backward.middle
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  li.disabled
+                                    span
+                                      i.ace-icon.fa.fa-caret-left.bigger-140.middle
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  li
+                                    span
+                                      input(value='1', maxlength='3', type='text')
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  li
+                                    a(href='#')
+                                      i.ace-icon.fa.fa-caret-right.bigger-140.middle
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  li
+                                    a(href='#')
+                                      i.ace-icon.fa.fa-step-forward.middle
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .hide.message-footer.message-footer-style2.clearfix
+                              .pull-left  simpler footer 
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              .pull-right
+                                .inline.middle  message 1 of 151 
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp; &nbsp;
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                ul.pagination.middle
+                                  li.disabled
+                                    span
+                                      i.ace-icon.fa.fa-angle-left.bigger-150
+                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  li
+                                    a(href='#')
+                                      i.ace-icon.fa.fa-angle-right.bigger-150
+                      // /.tab-content
+                    // /.tabbable
+                  // /.col
+                // /.row
+                form#id-message-form.hide.form-horizontal.message-form.col-xs-12
+                  div
+                    .form-group
+                      label.col-sm-3.control-label.no-padding-right(for='form-field-recipient') Recipient:
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .col-sm-9
+                        span.input-icon
+                          input#form-field-recipient(type='email', name='recipient', data-value='alex@doe.com', value='alex@doe.com', placeholder='Recipient(s)')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          i.ace-icon.fa.fa-user
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .hr.hr-18.dotted
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .form-group
+                      label.col-sm-3.control-label.no-padding-right(for='form-field-subject') Subject:
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .col-sm-6.col-xs-12
+                        .input-icon.block.col-xs-12.no-padding
+                          input#form-field-subject.col-xs-12(maxlength='100', type='text', name='subject', placeholder='Subject')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          i.ace-icon.fa.fa-comment-o
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .hr.hr-18.dotted
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .form-group
+                      label.col-sm-3.control-label.no-padding-right
+                        span.inline.space-24.hidden-480
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Message:
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .col-sm-9
+                        .wysiwyg-editor
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .hr.hr-18.dotted
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .form-group.no-margin-bottom
+                      label.col-sm-3.control-label.no-padding-right Attachments:
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .col-sm-9
+                        #form-attachments
+                          input(type='file', name='attachment[]')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .align-right
+                      button#id-add-attachment.btn.btn-sm.btn-danger(type='button')
+                        i.ace-icon.fa.fa-paperclip.bigger-140
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Add Attachment
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .space
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                #id-message-content.hide.message-content
+                  .message-header.clearfix
+                    .pull-left
+                      span.blue.bigger-125  Clik to open this message 
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .space-4
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      i.ace-icon.fa.fa-star.orange2
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp;
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      img.middle(alt="John's Avatar", src='assets/images/avatars/avatar.png', width='32')
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp;
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a.sender(href='#') John Doe
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp;
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      i.ace-icon.fa.fa-clock-o.bigger-110.orange.middle
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      span.time.grey Today, 7:15 pm
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .pull-right.action-buttons
+                      a(href='#')
+                        i.ace-icon.fa.fa-reply.green.icon-only.bigger-130
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a(href='#')
+                        i.ace-icon.fa.fa-mail-forward.blue.icon-only.bigger-130
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a(href='#')
+                        i.ace-icon.fa.fa-trash-o.red.icon-only.bigger-130
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .hr.hr-double
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .message-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    p
+                      | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    p
+                      | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    p
+                      | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    p
+                      | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    p
+                      | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .hr.hr-double
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .message-attachment.clearfix
+                    .attachment-title
+                      span.blue.bolder.bigger-110 Attachments
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp;
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      span.grey (2 files, 4.5 MB)
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .inline.position-relative
+                        a.dropdown-toggle(href='#', data-toggle='dropdown')
+                          i.ace-icon.fa.fa-caret-down.bigger-125.middle
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        ul.dropdown-menu.dropdown-lighter
+                          li
+                            a(href='#') Download all as zip
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          li
+                            a(href='#') Display in slideshow
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp;
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    ul.attachment-list.pull-left.list-unstyled
+                      li
+                        a.attached-file(href='#')
+                          i.ace-icon.fa.fa-file-o.bigger-110
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.attached-name Document1.pdf
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.action-buttons
+                          a(href='#')
+                            i.ace-icon.fa.fa-download.bigger-125.blue
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          a(href='#')
+                            i.ace-icon.fa.fa-trash-o.bigger-125.red
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      li
+                        a.attached-file(href='#')
+                          i.ace-icon.fa.fa-film.bigger-110
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.attached-name Sample.mp4
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.action-buttons
+                          a(href='#')
+                            i.ace-icon.fa.fa-download.bigger-125.blue
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          a(href='#')
+                            i.ace-icon.fa.fa-trash-o.bigger-125.red
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .attachment-images.pull-right
+                      .vspace-4-sm
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      div
+                        img(width='36', alt='image 4', src='assets/images/gallery/thumb-4.jpg')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        img(width='36', alt='image 3', src='assets/images/gallery/thumb-3.jpg')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        img(width='36', alt='image 2', src='assets/images/gallery/thumb-2.jpg')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        img(width='36', alt='image 1', src='assets/images/gallery/thumb-1.jpg')
+                // /.message-content
+                // PAGE CONTENT ENDS
+              // /.col
+            // /.row
+          // /.page-content
+      // /.main-content
+      .footer
+        .footer-inner
+          .footer-content
+            span.bigger-120
+              span.blue.bolder Ace
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Application &copy; 2013-2014
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp; &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            span.action-buttons
+              a(href='#')
+                i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              a(href='#')
+                i.ace-icon.fa.fa-facebook-square.text-primary.bigger-150
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              a(href='#')
+                i.ace-icon.fa.fa-rss-square.orange.bigger-150
+      | &#x9;&#x9;&#x9;
+      a#btn-scroll-up.btn-scroll-up.btn.btn-sm.btn-inverse(href='#')
+        i.ace-icon.fa.fa-angle-double-up.icon-only.bigger-110
+    // /.main-container
+    // basic scripts
+    //if !IE
+    | &#x9;&#x9;
+    script(src='assets/js/jquery-2.1.4.min.js')
+    // <![endif]
+    //if IE
+      script(src='assets/js/jquery-1.11.3.min.js')
+    | &#x9;&#x9;
+    script(type='text/javascript').
+      if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+    | &#x9;&#x9;
+    script(src='assets/js/bootstrap.min.js')
+    // page specific plugin scripts
+    script(src='assets/js/bootstrap-tag.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/jquery.hotkeys.index.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/bootstrap-wysiwyg.min.js')
+    // ace scripts
+    script(src='assets/js/ace-elements.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/ace.min.js')
+    // inline scripts related to this page
+    script(type='text/javascript').
+      jQuery(function($){
+      //handling tabs and loading/displaying relevant messages and forms
+      //not needed if using the alternative view, as described in docs
+      $('#inbox-tabs a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+      var currentTab = $(e.target).data('target');
+      if(currentTab == 'write') {
+      Inbox.show_form();
+      }
+      else if(currentTab == 'inbox') {
+      Inbox.show_list();
+      }
+      })
+      //basic initializations
+      $('.message-list .message-item input[type=checkbox]').removeAttr('checked');
+      $('.message-list').on('click', '.message-item input[type=checkbox]' , function() {
+      $(this).closest('.message-item').toggleClass('selected');
+      if(this.checked) Inbox.display_bar(1);//display action toolbar when a message is selected
+      else {
+      Inbox.display_bar($('.message-list input[type=checkbox]:checked').length);
+      //determine number of selected messages and display/hide action toolbar accordingly
+      }
+      });
+      //check/uncheck all messages
+      $('#id-toggle-all').removeAttr('checked').on('click', function(){
+      if(this.checked) {
+      Inbox.select_all();
+      } else Inbox.select_none();
+      });
+      //select all
+      $('#id-select-message-all').on('click', function(e) {
+      e.preventDefault();
+      Inbox.select_all();
+      });
+      //select none
+      $('#id-select-message-none').on('click', function(e) {
+      e.preventDefault();
+      Inbox.select_none();
+      });
+      //select read
+      $('#id-select-message-read').on('click', function(e) {
+      e.preventDefault();
+      Inbox.select_read();
+      });
+      //select unread
+      $('#id-select-message-unread').on('click', function(e) {
+      e.preventDefault();
+      Inbox.select_unread();
+      });
+      /////////
+      //display first message in a new area
+      $('.message-list .message-item:eq(0) .text').on('click', function() {
+      //show the loading icon
+      $('.message-container').append('<div class="message-loading-overlay"><i class="fa-spin ace-icon fa fa-spinner orange2 bigger-160"></i></div>');
+      $('.message-inline-open').removeClass('message-inline-open').find('.message-content').remove();
+      var message_list = $(this).closest('.message-list');
+      $('#inbox-tabs a[href="#inbox"]').parent().removeClass('active');
+      //some waiting
+      setTimeout(function() {
+      //hide everything that is after .message-list (which is either .message-content or .message-form)
+      message_list.next().addClass('hide');
+      $('.message-container').find('.message-loading-overlay').remove();
+      //close and remove the inline opened message if any!
+      //hide all navbars
+      $('.message-navbar').addClass('hide');
+      //now show the navbar for single message item
+      $('#id-message-item-navbar').removeClass('hide');
+      //hide all footers
+      $('.message-footer').addClass('hide');
+      //now show the alternative footer
+      $('.message-footer-style2').removeClass('hide');
+      //move .message-content next to .message-list and hide .message-list
+      $('.message-content').removeClass('hide').insertAfter(message_list.addClass('hide'));
+      //add scrollbars to .message-body
+      $('.message-content .message-body').ace_scroll({
+      size: 150,
+      mouseWheelLock: true,
+      styleClass: 'scroll-visible'
+      });
+      }, 500 + parseInt(Math.random() * 500));
+      });
+      //display second message right inside the message list
+      $('.message-list .message-item:eq(1) .text').on('click', function(){
+      var message = $(this).closest('.message-item');
+      //if message is open, then close it
+      if(message.hasClass('message-inline-open')) {
+      message.removeClass('message-inline-open').find('.message-content').remove();
+      return;
+      }
+      $('.message-container').append('<div class="message-loading-overlay"><i class="fa-spin ace-icon fa fa-spinner orange2 bigger-160"></i></div>');
+      setTimeout(function() {
+      $('.message-container').find('.message-loading-overlay').remove();
+      message
+      .addClass('message-inline-open')
+      .append('<div class="message-content" />')
+      var content = message.find('.message-content:last').html( $('#id-message-content').html() );
+      //remove scrollbar elements
+      content.find('.scroll-track').remove();
+      content.find('.scroll-content').children().unwrap();
+      content.find('.message-body').ace_scroll({
+      size: 150,
+      mouseWheelLock: true,
+      styleClass: 'scroll-visible'
+      });
+      }, 500 + parseInt(Math.random() * 500));
+      });
+      //back to message list
+      $('.btn-back-message-list').on('click', function(e) {
+      e.preventDefault();
+      $('#inbox-tabs a[href="#inbox"]').tab('show');
+      });
+      //hide message list and display new message form
+      /**
+      $('.btn-new-mail').on('click', function(e){
+      e.preventDefault();
+      Inbox.show_form();
+      });
+      */
+      var Inbox = {
+      //displays a toolbar according to the number of selected messages
+      display_bar : function (count) {
+      if(count == 0) {
+      $('#id-toggle-all').removeAttr('checked');
+      $('#id-message-list-navbar .message-toolbar').addClass('hide');
+      $('#id-message-list-navbar .message-infobar').removeClass('hide');
+      }
+      else {
+      $('#id-message-list-navbar .message-infobar').addClass('hide');
+      $('#id-message-list-navbar .message-toolbar').removeClass('hide');
+      }
+      }
+      ,
+      select_all : function() {
+      var count = 0;
+      $('.message-item input[type=checkbox]').each(function(){
+      this.checked = true;
+      $(this).closest('.message-item').addClass('selected');
+      count++;
+      });
+      $('#id-toggle-all').get(0).checked = true;
+      Inbox.display_bar(count);
+      }
+      ,
+      select_none : function() {
+      $('.message-item input[type=checkbox]').removeAttr('checked').closest('.message-item').removeClass('selected');
+      $('#id-toggle-all').get(0).checked = false;
+      Inbox.display_bar(0);
+      }
+      ,
+      select_read : function() {
+      $('.message-unread input[type=checkbox]').removeAttr('checked').closest('.message-item').removeClass('selected');
+      var count = 0;
+      $('.message-item:not(.message-unread) input[type=checkbox]').each(function(){
+      this.checked = true;
+      $(this).closest('.message-item').addClass('selected');
+      count++;
+      });
+      Inbox.display_bar(count);
+      }
+      ,
+      select_unread : function() {
+      $('.message-item:not(.message-unread) input[type=checkbox]').removeAttr('checked').closest('.message-item').removeClass('selected');
+      var count = 0;
+      $('.message-unread input[type=checkbox]').each(function(){
+      this.checked = true;
+      $(this).closest('.message-item').addClass('selected');
+      count++;
+      });
+      Inbox.display_bar(count);
+      }
+      }
+      //show message list (back from writing mail or reading a message)
+      Inbox.show_list = function() {
+      $('.message-navbar').addClass('hide');
+      $('#id-message-list-navbar').removeClass('hide');
+      $('.message-footer').addClass('hide');
+      $('.message-footer:not(.message-footer-style2)').removeClass('hide');
+      $('.message-list').removeClass('hide').next().addClass('hide');
+      //hide the message item / new message window and go back to list
+      }
+      //show write mail form
+      Inbox.show_form = function() {
+      if($('.message-form').is(':visible')) return;
+      if(!form_initialized) {
+      initialize_form();
+      }
+      var message = $('.message-list');
+      $('.message-container').append('<div class="message-loading-overlay"><i class="fa-spin ace-icon fa fa-spinner orange2 bigger-160"></i></div>');
+      setTimeout(function() {
+      message.next().addClass('hide');
+      $('.message-container').find('.message-loading-overlay').remove();
+      $('.message-list').addClass('hide');
+      $('.message-footer').addClass('hide');
+      $('.message-form').removeClass('hide').insertAfter('.message-list');
+      $('.message-navbar').addClass('hide');
+      $('#id-message-new-navbar').removeClass('hide');
+      //reset form??
+      $('.message-form .wysiwyg-editor').empty();
+      $('.message-form .ace-file-input').closest('.file-input-container:not(:first-child)').remove();
+      $('.message-form input[type=file]').ace_file_input('reset_input');
+      $('.message-form').get(0).reset();
+      }, 300 + parseInt(Math.random() * 300));
+      }
+      var form_initialized = false;
+      function initialize_form() {
+      if(form_initialized) return;
+      form_initialized = true;
+      //intialize wysiwyg editor
+      $('.message-form .wysiwyg-editor').ace_wysiwyg({
+      toolbar:
+      [
+      'bold',
+      'italic',
+      'strikethrough',
+      'underline',
+      null,
+      'justifyleft',
+      'justifycenter',
+      'justifyright',
+      null,
+      'createLink',
+      'unlink',
+      null,
+      'undo',
+      'redo'
+      ]
+      }).prev().addClass('wysiwyg-style1');
+      //file input
+      $('.message-form input[type=file]').ace_file_input()
+      .closest('.ace-file-input')
+      .addClass('width-90 inline')
+      .wrap('<div class="form-group file-input-container"><div class="col-sm-7"></div></div>');
+      //Add Attachment
+      //the button to add a new file input
+      $('#id-add-attachment')
+      .on('click', function(){
+      var file = $('<input type="file" name="attachment[]" />').appendTo('#form-attachments');
+      file.ace_file_input();
+      file.closest('.ace-file-input')
+      .addClass('width-90 inline')
+      .wrap('<div class="form-group file-input-container"><div class="col-sm-7"></div></div>')
+      .parent().append('<div class="action-buttons pull-right col-xs-1">\\
+      <a href="#" data-action="delete" class="middle">\\
+      <i class="ace-icon fa fa-trash-o red bigger-130 middle"></i>\\
+      </a>\\
+      </div>')
+      .find('a[data-action=delete]').on('click', function(e){
+      //the button that removes the newly inserted file input
+      e.preventDefault();
+      $(this).closest('.file-input-container').hide(300, function(){ $(this).remove() });
+      });
+      });
+      }//initialize_form
+      //turn the recipient field into a tag input field!
+      /**
+      var tag_input = $('#form-field-recipient');
+      try {
+      tag_input.tag({placeholder:tag_input.attr('placeholder')});
+      } catch(e) {}
+      //and add form reset functionality
+      $('#id-message-form').on('reset', function(){
+      $('.message-form .message-body').empty();
+      $('.message-form .ace-file-input:not(:first-child)').remove();
+      $('.message-form input[type=file]').ace_file_input('reset_input_ui');
+      var val = tag_input.data('value');
+      tag_input.parent().find('.tag').remove();
+      $(val.split(',')).each(function(k,v){
+      tag_input.before('<span class="tag">'+v+'<button class="close" type="button">&times;</button></span>');
+      });
+      });
+      */
+      });

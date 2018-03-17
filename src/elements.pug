@@ -1,0 +1,1762 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    | &#x9;&#x9;
+    meta(charset='utf-8')
+    | &#x9;&#x9;
+    title UI Elements - Ace Admin
+    | &#x9;&#x9;
+    meta(name='description', content='Common UI Features & Elements')
+    | &#x9;&#x9;
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    // bootstrap & fontawesome
+    link(rel='stylesheet', href='assets/css/bootstrap.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='assets/font-awesome/4.5.0/css/font-awesome.min.css')
+    // page specific plugin styles
+    link(rel='stylesheet', href='assets/css/jquery-ui.custom.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='assets/css/jquery.gritter.min.css')
+    // text fonts
+    link(rel='stylesheet', href='assets/css/fonts.googleapis.com.css')
+    // ace styles
+    link#main-ace-style.ace-main-stylesheet(rel='stylesheet', href='assets/css/ace.min.css')
+    //if lte IE 9
+      link.ace-main-stylesheet(rel='stylesheet', href='assets/css/ace-part2.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='assets/css/ace-skins.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='assets/css/ace-rtl.min.css')
+    //if lte IE 9
+      link(rel='stylesheet', href='assets/css/ace-ie.min.css')
+    // inline styles related to this page
+    style.
+      /* some elements used in demo only */
+      .spinner-preview {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      margin-top: 60px;
+      }
+      .dropdown-preview {
+      margin: 0 5px;
+      display: inline-block;
+      }
+      .dropdown-preview  > .dropdown-menu {
+      display: block;
+      position: static;
+      margin-bottom: 5px;
+      }
+    // ace settings handler
+    script(src='assets/js/ace-extra.min.js')
+    // HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries
+    //if lte IE 8
+      script(src='assets/js/html5shiv.min.js')
+      | &#x9;&#x9;
+      script(src='assets/js/respond.min.js')
+  | &#x9;
+  body.no-skin
+    #navbar.navbar.navbar-default.ace-save-state
+      #navbar-container.navbar-container.ace-save-state
+        button#menu-toggler.navbar-toggle.menu-toggler.pull-left(type='button', data-target='#sidebar')
+          span.sr-only Toggle sidebar
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          span.icon-bar
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          span.icon-bar
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          span.icon-bar
+        | &#x9;&#x9;&#x9;&#x9;
+        .navbar-header.pull-left
+          a.navbar-brand(href='index.html')
+            small
+              i.fa.fa-leaf
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ace Admin
+        | &#x9;&#x9;&#x9;&#x9;
+        .navbar-buttons.navbar-header.pull-right(role='navigation')
+          ul.nav.ace-nav
+            li.grey.dropdown-modal
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.ace-icon.fa.fa-tasks
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                span.badge.badge-grey 4
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.dropdown-menu-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-close
+                li.dropdown-header
+                  i.ace-icon.fa.fa-check
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;4 Tasks to complete
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-content
+                  ul.dropdown-menu.dropdown-navbar
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left Software Update
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right 65%
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-mini
+                          .progress-bar(style='width:65%')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left Hardware Upgrade
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right 35%
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-mini
+                          .progress-bar.progress-bar-danger(style='width:35%')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left Unit Testing
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right 15%
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-mini
+                          .progress-bar.progress-bar-warning(style='width:15%')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left Bug Fixes
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right 90%
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-mini.progress-striped.active
+                          .progress-bar.progress-bar-success(style='width:90%')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-footer
+                  a(href='#')
+                    | See tasks with details
+                    i.ace-icon.fa.fa-arrow-right
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            li.purple.dropdown-modal
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.ace-icon.fa.fa-bell.icon-animated-bell
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                span.badge.badge-important 8
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.dropdown-menu-right.dropdown-navbar.navbar-pink.dropdown-menu.dropdown-caret.dropdown-close
+                li.dropdown-header
+                  i.ace-icon.fa.fa-exclamation-triangle
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;8 Notifications
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-content
+                  ul.dropdown-menu.dropdown-navbar.navbar-pink
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left
+                            i.btn.btn-xs.no-hover.btn-pink.fa.fa-comment
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New Comments
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right.badge.badge-info +12
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        i.btn.btn-xs.btn-primary.fa.fa-user
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Bob just signed up as an editor ...
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left
+                            i.btn.btn-xs.no-hover.btn-success.fa.fa-shopping-cart
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New Orders
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right.badge.badge-success +8
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a(href='#')
+                        .clearfix
+                          span.pull-left
+                            i.btn.btn-xs.no-hover.btn-info.fa.fa-twitter
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Followers
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.pull-right.badge.badge-info +11
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-footer
+                  a(href='#')
+                    | See all notifications
+                    i.ace-icon.fa.fa-arrow-right
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            li.green.dropdown-modal
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.ace-icon.fa.fa-envelope.icon-animated-vertical
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                span.badge.badge-success 5
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.dropdown-menu-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-close
+                li.dropdown-header
+                  i.ace-icon.fa.fa-envelope-o
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;5 Messages
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-content
+                  ul.dropdown-menu.dropdown-navbar
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar.png', alt="Alex's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Alex:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ciao sociis natoque penatibus et auctor ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span a moment ago
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar3.png', alt="Susan's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Susan:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Vestibulum id ligula porta felis euismod ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span 20 minutes ago
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar4.png', alt="Bob's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Bob:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nullam quis risus eget urna mollis ornare ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span 3:15 pm
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar2.png', alt="Kate's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Kate:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ciao sociis natoque eget urna mollis ornare ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span 1:33 pm
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li
+                      a.clearfix(href='#')
+                        img.msg-photo(src='assets/images/avatars/avatar5.png', alt="Fred's Avatar")
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.msg-body
+                          span.msg-title
+                            span.blue Fred:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Vestibulum id penatibus et auctor  ...
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.msg-time
+                            i.ace-icon.fa.fa-clock-o
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span 10:09 am
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.dropdown-footer
+                  a(href='inbox.html')
+                    | See all messages
+                    i.ace-icon.fa.fa-arrow-right
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            li.light-blue.dropdown-modal
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                img.nav-user-photo(src='assets/images/avatars/user.jpg', alt="Jason's Photo")
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                span.user-info
+                  small Welcome,
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Jason
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                i.ace-icon.fa.fa-caret-down
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.user-menu.dropdown-menu-right.dropdown-menu.dropdown-yellow.dropdown-caret.dropdown-close
+                li
+                  a(href='#')
+                    i.ace-icon.fa.fa-cog
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Settings
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  a(href='profile.html')
+                    i.ace-icon.fa.fa-user
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Profile
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.divider
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  a(href='#')
+                    i.ace-icon.fa.fa-power-off
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Logout
+      // /.navbar-container
+    | &#x9;&#x9;
+    #main-container.main-container.ace-save-state
+      script(type='text/javascript').
+        try{ace.settings.loadState('main-container')}catch(e){}
+      | &#x9;&#x9;&#x9;
+      #sidebar.sidebar.responsive.ace-save-state
+        script(type='text/javascript').
+          try{ace.settings.loadState('sidebar')}catch(e){}
+        | &#x9;&#x9;&#x9;&#x9;
+        #sidebar-shortcuts.sidebar-shortcuts
+          #sidebar-shortcuts-large.sidebar-shortcuts-large
+            button.btn.btn-success
+              i.ace-icon.fa.fa-signal
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            button.btn.btn-info
+              i.ace-icon.fa.fa-pencil
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            button.btn.btn-warning
+              i.ace-icon.fa.fa-users
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            button.btn.btn-danger
+              i.ace-icon.fa.fa-cogs
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          #sidebar-shortcuts-mini.sidebar-shortcuts-mini
+            span.btn.btn-success
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            span.btn.btn-info
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            span.btn.btn-warning
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            span.btn.btn-danger
+        // /.sidebar-shortcuts
+        ul.nav.nav-list
+          li
+            a(href='index.html')
+              i.menu-icon.fa.fa-tachometer
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Dashboard 
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li.active.open
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-desktop
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text
+                | UI &amp; Elements
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li
+                a.dropdown-toggle(href='#')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Layouts
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  b.arrow.fa.fa-angle-down
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                ul.submenu
+                  li
+                    a(href='top-menu.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Top Menu
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='two-menu-1.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Two Menus 1
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='two-menu-2.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Two Menus 2
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='mobile-menu-1.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Default Mobile Menu
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='mobile-menu-2.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mobile Menu 2
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href='mobile-menu-3.html')
+                      i.menu-icon.fa.fa-caret-right
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mobile Menu 3
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='typography.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Typography
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li.active
+                a(href='elements.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Elements
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='buttons.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Buttons &amp; Icons
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='content-slider.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Content Sliders
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='treeview.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Treeview
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='jquery-ui.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;jQuery UI
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='nestable-list.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nestable Lists
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a.dropdown-toggle(href='#')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Three Level Menu
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  b.arrow.fa.fa-angle-down
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                ul.submenu
+                  li
+                    a(href='#')
+                      i.menu-icon.fa.fa-leaf.green
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Item #1
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.dropdown-toggle(href='#')
+                      i.menu-icon.fa.fa-pencil.orange
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;4th level
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      b.arrow.fa.fa-angle-down
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    b.arrow
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    ul.submenu
+                      li
+                        a(href='#')
+                          i.menu-icon.fa.fa-plus.purple
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Add Product
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        b.arrow
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      li
+                        a(href='#')
+                          i.menu-icon.fa.fa-eye.pink
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;View Products
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-list
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Tables 
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li
+                a(href='tables.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Simple &amp; Dynamic
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='jqgrid.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;jqGrid plugin
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-pencil-square-o
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Forms 
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li
+                a(href='form-elements.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Form Elements
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='form-elements-2.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Form Elements 2
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='form-wizard.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Wizard &amp; Validation
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='wysiwyg.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Wysiwyg &amp; Markdown
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='dropzone.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Dropzone File Upload
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a(href='widgets.html')
+              i.menu-icon.fa.fa-list-alt
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Widgets 
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a(href='calendar.html')
+              i.menu-icon.fa.fa-calendar
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text
+                | Calendar
+                span.badge.badge-transparent.tooltip-error(title='2 Important Events')
+                  i.ace-icon.fa.fa-exclamation-triangle.red.bigger-130
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a(href='gallery.html')
+              i.menu-icon.fa.fa-picture-o
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  Gallery 
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-tag
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text  More Pages 
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li
+                a(href='profile.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;User Profile
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='inbox.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Inbox
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='pricing.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Pricing Tables
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='invoice.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Invoice
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='timeline.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Timeline
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='search.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Search Results
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='email.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Email Templates
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='login.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Login &amp; Register
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a.dropdown-toggle(href='#')
+              i.menu-icon.fa.fa-file-o
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              span.menu-text
+                | Other Pages
+                span.badge.badge-primary 5
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              b.arrow.fa.fa-angle-down
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            b.arrow
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul.submenu
+              li
+                a(href='faq.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;FAQ
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='error-404.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Error 404
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='error-500.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Error 500
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='grid.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Grid
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='blank.html')
+                  i.menu-icon.fa.fa-caret-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Blank Page
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                b.arrow
+        // /.nav-list
+        #sidebar-collapse.sidebar-toggle.sidebar-collapse
+          i#sidebar-toggle-icon.ace-icon.fa.fa-angle-double-left.ace-save-state(data-icon1='ace-icon fa fa-angle-double-left', data-icon2='ace-icon fa fa-angle-double-right')
+      | &#x9;&#x9;&#x9;
+      .main-content
+        .main-content-inner
+          #breadcrumbs.breadcrumbs.ace-save-state
+            ul.breadcrumb
+              li
+                i.ace-icon.fa.fa-home.home-icon
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                a(href='#') Home
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href='#') UI &amp; Elements
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li.active Elements
+            // /.breadcrumb
+            #nav-search.nav-search
+              form.form-search
+                span.input-icon
+                  input#nav-search-input.nav-search-input(type='text', placeholder='Search ...', autocomplete='off')
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  i.ace-icon.fa.fa-search.nav-search-icon
+            // /.nav-search
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          .page-content
+            #ace-settings-container.ace-settings-container
+              #ace-settings-btn.btn.btn-app.btn-xs.btn-warning.ace-settings-btn
+                i.ace-icon.fa.fa-cog.bigger-130
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              #ace-settings-box.ace-settings-box.clearfix
+                .pull-left.width-50
+                  .ace-settings-item
+                    .pull-left
+                      select#skin-colorpicker.hide
+                        option(data-skin='no-skin', value='#438EB9') #438EB9
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        option(data-skin='skin-1', value='#222A2D') #222A2D
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        option(data-skin='skin-2', value='#C6487E') #C6487E
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        option(data-skin='skin-3', value='#D0D0D0') #D0D0D0
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    span &nbsp; Choose Skin
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-navbar.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-navbar')  Fixed Navbar
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-sidebar.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-sidebar')  Fixed Sidebar
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-breadcrumbs.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-breadcrumbs')  Fixed Breadcrumbs
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-rtl.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-rtl')  Right To Left (rtl)
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-add-container.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-add-container')
+                      | Inside
+                      b .container
+                // /.pull-left
+                .pull-left.width-50
+                  .ace-settings-item
+                    input#ace-settings-hover.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-hover')  Submenu on Hover
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-compact.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-compact')  Compact Sidebar
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .ace-settings-item
+                    input#ace-settings-highlight.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    label.lbl(for='ace-settings-highlight')  Alt. Active Item
+                // /.pull-left
+              // /.ace-settings-box
+            // /.ace-settings-container
+            .page-header
+              h1
+                | UI Elements
+                small
+                  i.ace-icon.fa.fa-angle-double-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Common UI Features &amp; Elements
+            // /.page-header
+            .row
+              .col-xs-12
+                // PAGE CONTENT BEGINS
+                .row
+                  .col-sm-6
+                    .tabbable
+                      ul#myTab.nav.nav-tabs
+                        li.active
+                          a(data-toggle='tab', href='#home')
+                            i.green.ace-icon.fa.fa-home.bigger-120
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Home
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(data-toggle='tab', href='#messages')
+                            | Messages
+                            span.badge.badge-danger 4
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li.dropdown
+                          a.dropdown-toggle(data-toggle='dropdown', href='#')
+                            | Dropdown &nbsp;
+                            i.ace-icon.fa.fa-caret-down.bigger-110.width-auto
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          ul.dropdown-menu.dropdown-info
+                            li
+                              a(data-toggle='tab', href='#dropdown1') @fat
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(data-toggle='tab', href='#dropdown2') @mdo
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .tab-content
+                        #home.tab-pane.fade.in.active
+                          p Raw denim you probably haven&apos;t heard of them jean shorts Austin.
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        #messages.tab-pane.fade
+                          p
+                            | Food truck fixie locavore, accusamus mcsweeney&apos;s marfa nulla single-origin coffee squid.
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        #dropdown1.tab-pane.fade
+                          p
+                            | Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney&apos;s organic lomo retro fanny pack lo-fi farm-to-table readymade.
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        #dropdown2.tab-pane.fade
+                          p
+                            | Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin.
+                  // /.col
+                  .vspace-6-sm
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .col-sm-6
+                    .tabbable.tabs-below
+                      .tab-content
+                        #home2.tab-pane.in.active
+                          p Raw denim you probably haven&apos;t heard of them jean shorts Austin.
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        #profile2.tab-pane
+                          p
+                            | Food truck fixie locavore, accusamus mcsweeney&apos;s marfa nulla single-origin coffee squid.
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        #dropdown12.tab-pane
+                          p
+                            | Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney&apos;s organic lomo retro fanny pack lo-fi farm-to-table readymade.
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      ul#myTab2.nav.nav-tabs
+                        li.active
+                          a(data-toggle='tab', href='#home2') Home
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(data-toggle='tab', href='#profile2') Profile
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(data-toggle='tab', href='#dropdown12') More
+                // /.row
+                .space
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .row
+                  .col-sm-6
+                    .tabbable.tabs-left
+                      ul#myTab3.nav.nav-tabs
+                        li.active
+                          a(data-toggle='tab', href='#home3')
+                            i.pink.ace-icon.fa.fa-tachometer.bigger-110
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Home
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(data-toggle='tab', href='#profile3')
+                            i.blue.ace-icon.fa.fa-user.bigger-110
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Profile
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(data-toggle='tab', href='#dropdown13')
+                            i.ace-icon.fa.fa-rocket
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;More
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .tab-content
+                        #home3.tab-pane.in.active
+                          p Raw denim you probably haven&apos;t heard of them jean shorts Austin.
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          p Raw denim you probably haven&apos;t heard of them jean shorts Austin.
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        #profile3.tab-pane
+                          p
+                            | Food truck fixie locavore, accusamus mcsweeney&apos;s marfa nulla single-origin coffee squid.
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          p Raw denim you probably haven&apos;t heard of them jean shorts Austin.
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        #dropdown13.tab-pane
+                          p
+                            | Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney&apos;s organic lomo retro fanny pack lo-fi farm-to-table readymade.
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          p Raw denim you probably haven&apos;t heard of them jean shorts Austin.
+                  // /.col
+                  .vspace-6-sm
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .col-sm-6
+                    .tabbable
+                      ul#myTab4.nav.nav-tabs.padding-12.tab-color-blue.background-blue
+                        li.active
+                          a(data-toggle='tab', href='#home4') Home
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(data-toggle='tab', href='#profile4') Profile
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(data-toggle='tab', href='#dropdown14') More
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .tab-content
+                        #home4.tab-pane.in.active
+                          p Raw denim you probably haven&apos;t heard of them jean shorts Austin.
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        #profile4.tab-pane
+                          p
+                            | Food truck fixie locavore, accusamus mcsweeney&apos;s marfa nulla single-origin coffee squid.
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        #dropdown14.tab-pane
+                          p
+                            | Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney&apos;s organic lomo retro fanny pack lo-fi farm-to-table readymade.
+                  // /.col
+                // /.row
+                .hr.hr-double.hr-dotted.hr18
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .row
+                  .col-sm-6
+                    h3.row.header.smaller.lighter.blue
+                      span.col-xs-6  Accordion 
+                      // /.col
+                      span.col-xs-6
+                        span.pull-right.inline
+                          span.grey.smaller-80.bolder style:
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.btn-toolbar.inline.middle.no-margin
+                            span#accordion-style.btn-group.no-margin(data-toggle='buttons')
+                              label.btn.btn-xs.btn-yellow.active
+                                input(type='radio', value='1')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;1
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              label.btn.btn-xs.btn-yellow
+                                input(type='radio', value='2')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;2
+                      // /.col
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    #accordion.accordion-style1.panel-group
+                      .panel.panel-default
+                        .panel-heading
+                          h4.panel-title
+                            a.accordion-toggle(data-toggle='collapse', data-parent='#accordion', href='#collapseOne')
+                              i.ace-icon.fa.fa-angle-down.bigger-110(data-icon-hide='ace-icon fa fa-angle-down', data-icon-show='ace-icon fa fa-angle-right')
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp;Group Item #1
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        #collapseOne.panel-collapse.collapse.in
+                          .panel-body
+                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .panel.panel-default
+                        .panel-heading
+                          h4.panel-title
+                            a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo')
+                              i.ace-icon.fa.fa-angle-right.bigger-110(data-icon-hide='ace-icon fa fa-angle-down', data-icon-show='ace-icon fa fa-angle-right')
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp;Group Item #2
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        #collapseTwo.panel-collapse.collapse
+                          .panel-body
+                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .panel.panel-default
+                        .panel-heading
+                          h4.panel-title
+                            a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseThree')
+                              i.ace-icon.fa.fa-angle-right.bigger-110(data-icon-hide='ace-icon fa fa-angle-down', data-icon-show='ace-icon fa fa-angle-right')
+                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp;Group Item #3
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        #collapseThree.panel-collapse.collapse
+                          .panel-body
+                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                  // /.col
+                  .col-sm-6
+                    h3.header.smaller.lighter.green Progress Bar
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .row
+                      .col-xs-8
+                        .progress.pos-rel(data-percent='66%')
+                          .progress-bar(style='width:66%;')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-striped.pos-rel
+                          .progress-bar.progress-bar-success(style='width: 25%;')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-small.progress-striped.active
+                          .progress-bar.progress-bar-warning(style='width: 40%;')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-mini
+                          .progress-bar.progress-danger(style='width: 35%;')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress
+                          .progress-bar.progress-bar-success(style='width: 35%;')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .progress-bar.progress-bar-warning(style='width: 20%;')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .progress-bar.progress-bar-danger(style='width: 10%;')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-striped
+                          .progress-bar.progress-bar-purple(style='width: 65%')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-striped
+                          .progress-bar.progress-bar-pink(style='width: 40%')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-striped.active
+                          .progress-bar.progress-bar-yellow(style='width: 60%')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .progress.progress-striped
+                          .progress-bar.progress-bar-inverse(style='width: 80%')
+                      // /.col
+                      .col-xs-4.center
+                        .easy-pie-chart.percentage(data-percent='20', data-color='#D15B47')
+                          span.percent 20
+                          | %
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        hr
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .easy-pie-chart.percentage(data-percent='55', data-color='#87CEEB')
+                          span.percent 55
+                          | %
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        hr
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        .easy-pie-chart.percentage(data-percent='90', data-color='#87B87F')
+                          span.percent 90
+                          | %
+                      // /.col
+                    // /.row
+                  // /.col
+                // /.row
+                hr
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .row
+                  .col-sm-6
+                    .widget-box
+                      .widget-header
+                        h4.smaller
+                          | Tooltips
+                          small different directions and colors
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .widget-body
+                        .widget-main
+                          p.muted
+                            | Tight pants next level keffiyeh
+                            a(title='Default tooltip', data-rel='tooltip', href='#') you probably
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;haven&apos;t heard of them. Farm-to-table seitan, mcsweeney&apos;s fixie sustainable quinoa 8-bit american apparel
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            a(title='Another tooltip', data-rel='tooltip', href='#') have a
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;terry richardson vinyl chambray. A really ironic artisan
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            a(data-rel='tooltip', href='#', data-original-title='Another one here too') whatever
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;keytar, scenester farm-to-table banksy Austin
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            a(title='The last tip!', data-rel='tooltip', href='#') twitter
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;handle.
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          hr
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          p
+                            span.btn.btn-sm(data-rel='tooltip', title='Default') Default
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span.btn.btn-warning.btn-sm.tooltip-warning(data-rel='tooltip', data-placement='left', title='Left Warning') Left
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span.btn.btn-success.btn-sm.tooltip-success(data-rel='tooltip', data-placement='right', title='Right Success') Right
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span.btn.btn-danger.btn-sm.tooltip-error(data-rel='tooltip', data-placement='top', title='Top Danger') Top
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span.btn.btn-info.btn-sm.tooltip-info(data-rel='tooltip', data-placement='bottom', title='Bottm Info') Bottom
+                  // /.col
+                  .col-sm-6
+                    .widget-box
+                      .widget-header
+                        h4.smaller Popovers
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .widget-body
+                        .widget-main
+                          p
+                            span.btn.btn-sm(data-rel='popover', title='Default', data-content="Heads up! This alert needs your attention, but it's not super important.") Default
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span.btn.btn-success.btn-sm.popover-success(data-rel='popover', data-placement='right', title="<i class='ace-icon fa fa-check green'></i> Right Success", data-content='Well done! You successfully read this important alert message.') Right
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span.btn.btn-warning.btn-sm.popover-warning(data-rel='popover', data-placement='left', title="<i class='ace-icon fa fa-exclamation-triangle orange'></i> Left Warning", data-content="Warning! Best check yo self, you're not looking too good.") Left
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          p
+                            span.btn.btn-danger.btn-sm.popover-error(data-rel='popover', data-placement='top', data-original-title="<i class='ace-icon fa fa-bolt red'></i> Top Danger", data-content='Oh snap! Change a few things up and try submitting again.') Top
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span.btn.btn-info.btn-sm.popover-info(data-rel='popover', data-placement='bottom', title='Some Info', data-content="Heads up! This alert needs your attention, but it's not super important.") Bottom
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            span.btn.btn-inverse.btn-sm.popover-notitle(data-rel='popover', data-placement='bottom', data-content='Popover without a title!') No Title
+                  // /.col
+                // /.row
+                hr
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .row
+                  .col-sm-6
+                    h3.header.smaller.lighter.green
+                      i.ace-icon.fa.fa-bullhorn
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Alerts
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .alert.alert-danger
+                      button.close(type='button', data-dismiss='alert')
+                        i.ace-icon.fa.fa-times
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      strong
+                        i.ace-icon.fa.fa-times
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Oh snap!
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Change a few things up and try submitting again.
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      br
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .alert.alert-warning
+                      button.close(type='button', data-dismiss='alert')
+                        i.ace-icon.fa.fa-times
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      strong Warning!
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Best check yo self, you&apos;re not looking too good.
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      br
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .alert.alert-block.alert-success
+                      button.close(type='button', data-dismiss='alert')
+                        i.ace-icon.fa.fa-times
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p
+                        strong
+                          i.ace-icon.fa.fa-check
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Well done!
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;You successfully read this important alert message.
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p
+                        button.btn.btn-sm.btn-success Do This
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        button.btn.btn-sm Or This One
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .alert.alert-info
+                      button.close(type='button', data-dismiss='alert')
+                        i.ace-icon.fa.fa-times
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      strong Heads up!
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;This alert needs your attention, but it&apos;s not super important.
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      br
+                  // /.col
+                  .col-sm-6
+                    h3.row.header.smaller.lighter.orange
+                      span.col-sm-8
+                        i.ace-icon.fa.fa-bell
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Gritter Notifications
+                      // /.col
+                      span.col-sm-4
+                        label.pull-right.inline
+                          small.muted Dark:
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          input#gritter-light.ace.ace-switch.ace-switch-5(checked='', type='checkbox')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.lbl.middle
+                      // /.col
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    p
+                      i Click to see
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    p
+                      button#gritter-regular.btn Regular
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      button#gritter-sticky.btn.btn-info Sticky
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      button#gritter-without-image.btn.btn-success Without Image
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    p
+                      button#gritter-error.btn.btn-danger Error
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      button#gritter-max3.btn.btn-warning Max 3
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      button#gritter-center.btn.btn-primary Center
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      button#gritter-remove.btn.btn-inverse Remove
+                  // /.col
+                // /.row
+                hr
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .row
+                  .col-sm-6
+                    div
+                      h3.header.smaller.lighter.purple
+                        | Bootstrap Modals
+                        small (Bootbox.js)
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p
+                        button#bootbox-regular.btn Regular Dialog
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        button#bootbox-confirm.btn.btn-info Confirm
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        button#bootbox-options.btn.btn-success More Options
+                    // /.row
+                    .space-24
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .row
+                      .col-xs-12
+                        h3.header.smaller.lighter.grey
+                          i.ace-icon.fa.fa-spinner.fa-spin.orange.bigger-125
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Imageless Spinner
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          small (spin.js)
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .col-xs-12
+                        i Change a value to begin
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        #spinner-preview.pull-right.center.spinner-preview
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        form#spinner-opts.form-horizontal
+                          label.inline
+                            small.lighter Lines:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            input.hidden(type='text', name='lines', data-min='5', data-max='16', data-step='2', value='12')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .space-0
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          label.inline
+                            small.lighter Length:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            input.hidden(type='text', name='length', data-min='0', data-max='30', value='7')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .space-0
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          label.inline
+                            small.lighter Width:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            input.hidden(type='text', name='width', data-min='2', data-max='20', value='4')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .space-0
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          label.inline
+                            small.lighter Radius:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            input.hidden(type='text', name='radius', data-min='0', data-max='40', value='10')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .space-0
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          label.inline
+                            small.lighter Corners:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            input.hidden(type='text', name='corners', data-min='0', data-max='1', data-step='0.1', value='1')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .space-0
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          label.inline
+                            small.lighter Rotate:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            input.hidden(type='text', name='rotate', data-min='0', data-max='90', value='0')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .space-0
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          label.inline
+                            small.lighter Trail:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            input.hidden(type='text', name='trail', data-min='10', data-max='100', value='60')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .space-0
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          label.inline
+                            small.lighter Speed:
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            input.hidden(type='text', name='speed', data-min='0.5', data-max='2.2', data-step='0.1', value='1')
+                      // /.row
+                    // /.row
+                  // /.col
+                  .col-sm-6
+                    h3.header.smaller.lighter.red Bootstrap Wells
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .well
+                      h4.green.smaller.lighter Normal Well
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Use the well as a simple effect on an element to give it an inset effect.
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .well.well-lg
+                      h4.blue Large Well
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Control padding and rounded corners with two optional modifier classes.
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .well.well-sm  This is a small well 
+                  // /.col
+                // /.row
+                .row
+                  .col-sm-6
+                    h3.header.smaller.lighter.green Dropdowns
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .dropdown.dropdown-preview
+                      ul.dropdown-menu
+                        li
+                          a(href='#', tabindex='-1') Action
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='#', tabindex='-1') Another action
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='#', tabindex='-1') Something else here
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li.divider
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='#', tabindex='-1') Separated link
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .dropdown.dropdown-preview
+                      ul.dropdown-menu.dropdown-danger
+                        li
+                          a(href='#', tabindex='-1') Action
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='#', tabindex='-1') Another action
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='#', tabindex='-1') Something else here
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li.divider
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li.dropdown-hover
+                          a.clearfix(href='#', tabindex='-1')
+                            span.pull-left More options
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            i.ace-icon.fa.fa-caret-right.pull-right
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          ul.dropdown-menu.dropdown-danger
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .dropup.dropdown-preview
+                      ul.dropdown-menu.dropdown-light
+                        li
+                          a(href='#', tabindex='-1') Action
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='#', tabindex='-1') Another action
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='#', tabindex='-1') Something else here
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li.divider
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li.dropup.dropdown-hover
+                          a.clearfix(href='#', tabindex='-1')
+                            span.pull-left More options
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            i.ace-icon.fa.fa-caret-right.pull-right
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          ul.dropdown-menu.dropdown-light
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .dropup.dropdown-preview
+                      ul.dropdown-menu.dropdown-purple
+                        li
+                          a(href='#', tabindex='-1') Action
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='#', tabindex='-1') Another action
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='#', tabindex='-1') Something else here
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li.divider
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li.dropdown-hover.dropup
+                          a.clearfix(href='#', tabindex='-1')
+                            span.pull-left More options
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            i.ace-icon.fa.fa-caret-left.pull-right
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          ul.dropdown-menu.dropdown-purple.dropdown-menu-right
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            li
+                              a(href='#', tabindex='-1') Second level link
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .dropdown.dropdown-preview
+                      ul.dropdown-menu.dropdown-icon-only.dropdown-50.dropdown-light
+                        li.action-buttons
+                          a.center(href='#', tabindex='-1')
+                            i.fa.fa-flag.blue.bigger-130
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li.action-buttons
+                          a.center(href='#', tabindex='-1')
+                            i.fa.fa-flag.red.bigger-130
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li.action-buttons
+                          a.center(href='#', tabindex='-1')
+                            i.fa.fa-flag.green.bigger-130
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li.action-buttons
+                          a.center(href='#', tabindex='-1')
+                            i.fa.fa-flag.orange.bigger-130
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .col-sm-6
+                    h3.row.header.smaller.lighter.blue
+                      span.col-sm-7
+                        i.ace-icon.fa.fa-th-large
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Pills
+                      // /.col
+                      span.col-sm-5
+                        label.pull-right.inline
+                          small.muted Stacked:
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          input#id-pills-stacked.ace.ace-switch.ace-switch-5(type='checkbox')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.lbl.middle
+                      // /.col
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    ul.nav.nav-pills
+                      li.active
+                        a(href='#') Home
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      li.disabled
+                        a(href='#') Profile
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      li
+                        a(href='#') Messages
+                // PAGE CONTENT ENDS
+              // /.col
+            // /.row
+          // /.page-content
+      // /.main-content
+      .footer
+        .footer-inner
+          .footer-content
+            span.bigger-120
+              span.blue.bolder Ace
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Application &copy; 2013-2014
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp; &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            span.action-buttons
+              a(href='#')
+                i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              a(href='#')
+                i.ace-icon.fa.fa-facebook-square.text-primary.bigger-150
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              a(href='#')
+                i.ace-icon.fa.fa-rss-square.orange.bigger-150
+      | &#x9;&#x9;&#x9;
+      a#btn-scroll-up.btn-scroll-up.btn.btn-sm.btn-inverse(href='#')
+        i.ace-icon.fa.fa-angle-double-up.icon-only.bigger-110
+    // /.main-container
+    // basic scripts
+    //if !IE
+    | &#x9;&#x9;
+    script(src='assets/js/jquery-2.1.4.min.js')
+    // <![endif]
+    //if IE
+      script(src='assets/js/jquery-1.11.3.min.js')
+    | &#x9;&#x9;
+    script(type='text/javascript').
+      if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+    | &#x9;&#x9;
+    script(src='assets/js/bootstrap.min.js')
+    // page specific plugin scripts
+    //if lte IE 8
+      script(src='assets/js/excanvas.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/jquery-ui.custom.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/jquery.ui.touch-punch.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/bootbox.js')
+    | &#x9;&#x9;
+    script(src='assets/js/jquery.easypiechart.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/jquery.gritter.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/spin.js')
+    // ace scripts
+    script(src='assets/js/ace-elements.min.js')
+    | &#x9;&#x9;
+    script(src='assets/js/ace.min.js')
+    // inline scripts related to this page
+    script(type='text/javascript').
+      jQuery(function($) {
+      /**
+      $('#myTab a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      //console.log(e.target.getAttribute("href"));
+      })
+      $('#accordion').on('shown.bs.collapse', function (e) {
+      //console.log($(e.target).is('#collapseTwo'))
+      });
+      */
+      $('#myTab a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      //if($(e.target).attr('href') == "#home") doSomethingNow();
+      })
+      /**
+      //go to next tab, without user clicking
+      $('#myTab > .active').next().find('> a').trigger('click');
+      */
+      $('#accordion-style').on('click', function(ev){
+      var target = $('input', ev.target);
+      var which = parseInt(target.val());
+      if(which == 2) $('#accordion').addClass('accordion-style2');
+      else $('#accordion').removeClass('accordion-style2');
+      });
+      //$('[href="#collapseTwo"]').trigger('click');
+      $('.easy-pie-chart.percentage').each(function(){
+      $(this).easyPieChart({
+      barColor: $(this).data('color'),
+      trackColor: '#EEEEEE',
+      scaleColor: false,
+      lineCap: 'butt',
+      lineWidth: 8,
+      animate: ace.vars['old_ie'] ? false : 1000,
+      size:75
+      }).css('color', $(this).data('color'));
+      });
+      $('[data-rel=tooltip]').tooltip();
+      $('[data-rel=popover]').popover({html:true});
+      $('#gritter-regular').on(ace.click_event, function(){
+      $.gritter.add({
+      title: 'This is a regular notice!',
+      text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="blue">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+      image: 'assets/images/avatars/avatar1.png', //in Ace demo ./dist will be replaced by correct assets path
+      sticky: false,
+      time: '',
+      class_name: (!$('#gritter-light').get(0).checked ? 'gritter-light' : '')
+      });
+      return false;
+      });
+      $('#gritter-sticky').on(ace.click_event, function(){
+      var unique_id = $.gritter.add({
+      title: 'This is a sticky notice!',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="red">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+      image: 'assets/images/avatars/avatar.png',
+      sticky: true,
+      time: '',
+      class_name: 'gritter-info' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+      });
+      return false;
+      });
+      $('#gritter-without-image').on(ace.click_event, function(){
+      $.gritter.add({
+      // (string | mandatory) the heading of the notification
+      title: 'This is a notice without an image!',
+      // (string | mandatory) the text inside the notification
+      text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="orange">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+      class_name: 'gritter-success' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+      });
+      return false;
+      });
+      $('#gritter-max3').on(ace.click_event, function(){
+      $.gritter.add({
+      title: 'This is a notice with a max of 3 on screen at one time!',
+      text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="green">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+      image: 'assets/images/avatars/avatar3.png', //in Ace demo ./dist will be replaced by correct assets path
+      sticky: false,
+      before_open: function(){
+      if($('.gritter-item-wrapper').length >= 3)
+      {
+      return false;
+      }
+      },
+      class_name: 'gritter-warning' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+      });
+      return false;
+      });
+      $('#gritter-center').on(ace.click_event, function(){
+      $.gritter.add({
+      title: 'This is a centered notification',
+      text: 'Just add a "gritter-center" class_name to your $.gritter.add or globally to $.gritter.options.class_name',
+      class_name: 'gritter-info gritter-center' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+      });
+      return false;
+      });
+      $('#gritter-error').on(ace.click_event, function(){
+      $.gritter.add({
+      title: 'This is a warning notification',
+      text: 'Just add a "gritter-light" class_name to your $.gritter.add or globally to $.gritter.options.class_name',
+      class_name: 'gritter-error' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+      });
+      return false;
+      });
+      $("#gritter-remove").on(ace.click_event, function(){
+      $.gritter.removeAll();
+      return false;
+      });
+      ///////
+      $("#bootbox-regular").on(ace.click_event, function() {
+      bootbox.prompt("What is your name?", function(result) {
+      if (result === null) {
+      } else {
+      }
+      });
+      });
+      $("#bootbox-confirm").on(ace.click_event, function() {
+      bootbox.confirm("Are you sure?", function(result) {
+      if(result) {
+      //
+      }
+      });
+      });
+      /**
+      $("#bootbox-confirm").on(ace.click_event, function() {
+      bootbox.confirm({
+      message: "Are you sure?",
+      buttons: {
+      confirm: {
+      label: "OK",
+      className: "btn-primary btn-sm",
+      },
+      cancel: {
+      label: "Cancel",
+      className: "btn-sm",
+      }
+      },
+      callback: function(result) {
+      if(result) alert(1)
+      }
+      }
+      );
+      });
+      **/
+      $("#bootbox-options").on(ace.click_event, function() {
+      bootbox.dialog({
+      message: "<span class='bigger-110'>I am a custom dialog with smaller buttons</span>",
+      buttons:
+      {
+      "success" :
+      {
+      "label" : "<i class='ace-icon fa fa-check'></i> Success!",
+      "className" : "btn-sm btn-success",
+      "callback": function() {
+      //Example.show("great success");
+      }
+      },
+      "danger" :
+      {
+      "label" : "Danger!",
+      "className" : "btn-sm btn-danger",
+      "callback": function() {
+      //Example.show("uh oh, look out!");
+      }
+      },
+      "click" :
+      {
+      "label" : "Click ME!",
+      "className" : "btn-sm btn-primary",
+      "callback": function() {
+      //Example.show("Primary button");
+      }
+      },
+      "button" :
+      {
+      "label" : "Just a button...",
+      "className" : "btn-sm"
+      }
+      }
+      });
+      });
+      $('#spinner-opts small').css({display:'inline-block', width:'60px'})
+      var slide_styles = ['', 'green','red','purple','orange', 'dark'];
+      var ii = 0;
+      $("#spinner-opts input[type=text]").each(function() {
+      var $this = $(this);
+      $this.hide().after('<span />');
+      $this.next().addClass('ui-slider-small').
+      addClass("inline ui-slider-"+slide_styles[ii++ % slide_styles.length]).
+      css('width','125px').slider({
+      value:parseInt($this.val()),
+      range: "min",
+      animate:true,
+      min: parseInt($this.attr('data-min')),
+      max: parseInt($this.attr('data-max')),
+      step: parseFloat($this.attr('data-step')) || 1,
+      slide: function( event, ui ) {
+      $this.val(ui.value);
+      spinner_update();
+      }
+      });
+      });
+      //CSS3 spinner
+      $.fn.spin = function(opts) {
+      this.each(function() {
+      var $this = $(this),
+      data = $this.data();
+      if (data.spinner) {
+      data.spinner.stop();
+      delete data.spinner;
+      }
+      if (opts !== false) {
+      data.spinner = new Spinner($.extend({color: $this.css('color')}, opts)).spin(this);
+      }
+      });
+      return this;
+      };
+      function spinner_update() {
+      var opts = {};
+      $('#spinner-opts input[type=text]').each(function() {
+      opts[this.name] = parseFloat(this.value);
+      });
+      opts['left'] = 'auto';
+      $('#spinner-preview').spin(opts);
+      }
+      $('#id-pills-stacked').removeAttr('checked').on('click', function(){
+      $('.nav-pills').toggleClass('nav-stacked');
+      });
+      ///////////
+      $(document).one('ajaxloadstart.page', function(e) {
+      $.gritter.removeAll();
+      $('.modal').modal('hide');
+      });
+      });
