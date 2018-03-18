@@ -1,27 +1,33 @@
-<b>Warning!</b> It`s only copy of <a href="http://wrapbootstrap.com/preview/WB0B30DGR">ace demo-template</a> from wrapbootstrap.
-Repo contains minified ace js/css files.
-You can read more about the license <a href="https://wrapbootstrap.com/theme/ace-responsive-admin-template-WB0B30DGR">here</a>.
-
-<h3>I`m not developer of this theme.</h3>
-
-<h2>Twitter bootstrap 3 admin template</h2>
+# Pug version Twitter bootstrap3 admin template 
+shamelessly stolen from [github.com:bopoda/ace.git](github.com:bopoda/ace.git)
 
 see example http://ace.jeka.by/
 
+## Build 
+```
+ git clone https://github.com/cacoch/pugace.git
+ npm start (this compile pug files, copy assets and open browser)
+```
+## To Do
+### External libraries
+* Identifi external libraries and its version
+* Remove it from source and include as externar dependencies
 
-Try:
-- git clone git@github.com:bopoda/ace.git
-- open ace/index.html in your desktop or mobile browser
+### Pug File
+* Clean
+* Modularize
 
+### CSS
+* Uncompress
+* Comment
+* Convert to scss
 
-Простой и многофункциональный Twitter bootstrap 3 шаблон для админки. Responsive дизайн.
+### JS
+* Uncompress
+* Comment 
+ 
+### Bug
+* Fix if any
 
-Browsers:
-- Internet Explorer 10
-- Internet Explorer 11
-- Internet Explorer 8
-- Internet Explorer 9
-- Latest Chrome
-- Latest Firefox
-- Latest Opera
-- Latest Safari
+### Update external dependencies
+* if is possible, update to latest
