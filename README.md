@@ -7,7 +7,13 @@ see example http://ace.jeka.by/
 ```
  git clone https://github.com/cacoch/pugace.git
  npm start (this compile pug files, copy assets and open browser)
+ dist directory contain files
 ```
+
+## Dependecies
+ * awesome-font@4.5.0
+ * ( to be continued ..)
+
 ## To Do
 ### External libraries
 * Identifi external libraries and its version
