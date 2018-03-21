@@ -753,24 +753,24 @@ html(lang='en')
       eventClick: function(calEvent, jsEvent, view) {
       //display a modal
       var modal =
-      '<div class="modal fade">\\
-      <div class="modal-dialog">\\
-      <div class="modal-content">\\
-      <div class="modal-body">\\
-      <button type="button" class="close" data-dismiss="modal" style="margin-top:-10px;">&times;</button>\\
-      <form class="no-margin">\\
-      <label>Change event name &nbsp;</label>\\
-      <input class="middle" autocomplete="off" type="text" value="' + calEvent.title + '" />\\
-      <button type="submit" class="btn btn-sm btn-success"><i class="ace-icon fa fa-check"></i> Save</button>\\
-      </form>\\
-      </div>\\
-      <div class="modal-footer">\\
-      <button type="button" class="btn btn-sm btn-danger" data-action="delete"><i class="ace-icon fa fa-trash-o"></i> Delete Event</button>\\
-      <button type="button" class="btn btn-sm" data-dismiss="modal"><i class="ace-icon fa fa-times"></i> Cancel</button>\\
-      </div>\\
-      </div>\\
-      </div>\\
-      </div>';
+      [ '<div class="modal fade">',
+          '<div class="modal-dialog">',
+            '<div class="modal-content">',
+               '<div class="modal-body">',
+                 '<button type="button" class="close" data-dismiss="modal" style="margin-top:-10px;">&times;</button>',
+                 '<form class="no-margin">',
+                    '<label>Change event name &nbsp;</label>',
+                    '<input class="middle" autocomplete="off" type="text" value="' + calEvent.title + '" />',
+                    '<button type="submit" class="btn btn-sm btn-success"><i class="ace-icon fa fa-check"></i> Save</button>',
+                 '</form>',
+               '</div>',
+               '<div class="modal-footer">',
+                 '<button type="button" class="btn btn-sm btn-danger" data-action="delete"><i class="ace-icon fa fa-trash-o"></i> Delete Event</button>',
+                 '<button type="button" class="btn btn-sm" data-dismiss="modal"><i class="ace-icon fa fa-times"></i> Cancel</button>',
+               '</div>',
+            '</div>',
+          '</div>',
+        '</div>'].join(' ');
       var modal = $(modal).appendTo('body');
       modal.find('form').on('submit', function(ev){
       ev.preventDefault();
