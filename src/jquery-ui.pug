@@ -2,17 +2,12 @@ doctype html
 html(lang='en')
   head
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    | &#x9;&#x9;
     meta(charset='utf-8')
-    | &#x9;&#x9;
     title jQuery UI - Ace Admin
-    | &#x9;&#x9;
     meta(name='description', content='Restyling jQuery UI Widgets and Elements')
-    | &#x9;&#x9;
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
     // bootstrap & fontawesome
     link(rel='stylesheet', href='assets/css/bootstrap.min.css')
-    | &#x9;&#x9;
     link(rel='stylesheet', href='assets/font-awesome/4.5.0/css/font-awesome.min.css')
     // page specific plugin styles
     link(rel='stylesheet', href='assets/css/jquery-ui.min.css')
@@ -22,9 +17,7 @@ html(lang='en')
     link#main-ace-style.ace-main-stylesheet(rel='stylesheet', href='assets/css/ace.min.css')
     //if lte IE 9
       link.ace-main-stylesheet(rel='stylesheet', href='assets/css/ace-part2.min.css')
-    | &#x9;&#x9;
     link(rel='stylesheet', href='assets/css/ace-skins.min.css')
-    | &#x9;&#x9;
     link(rel='stylesheet', href='assets/css/ace-rtl.min.css')
     //if lte IE 9
       link(rel='stylesheet', href='assets/css/ace-ie.min.css')
@@ -34,98 +27,72 @@ html(lang='en')
     // HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries
     //if lte IE 8
       script(src='assets/js/html5shiv.min.js')
-      | &#x9;&#x9;
       script(src='assets/js/respond.min.js')
-  | &#x9;
   body.no-skin
     #navbar.navbar.navbar-default.ace-save-state
       #navbar-container.navbar-container.ace-save-state
         button#menu-toggler.navbar-toggle.menu-toggler.pull-left(type='button', data-target='#sidebar')
           span.sr-only Toggle sidebar
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           span.icon-bar
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           span.icon-bar
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           span.icon-bar
-        | &#x9;&#x9;&#x9;&#x9;
         .navbar-header.pull-left
           a.navbar-brand(href='index.html')
             small
               i.fa.fa-leaf
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ace Admin
-        | &#x9;&#x9;&#x9;&#x9;
+              | Ace Admin
         .navbar-buttons.navbar-header.pull-right(role='navigation')
           ul.nav.ace-nav
             li.grey.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 i.ace-icon.fa.fa-tasks
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.badge.badge-grey 4
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.dropdown-menu-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-close
                 li.dropdown-header
                   i.ace-icon.fa.fa-check
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;4 Tasks to complete
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | 4 Tasks to complete
                 li.dropdown-content
                   ul.dropdown-menu.dropdown-navbar
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Software Update
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 65%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini
                           .progress-bar(style='width:65%')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Hardware Upgrade
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 35%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini
                           .progress-bar.progress-bar-danger(style='width:35%')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Unit Testing
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 15%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini
                           .progress-bar.progress-bar-warning(style='width:15%')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Bug Fixes
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 90%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini.progress-striped.active
                           .progress-bar.progress-bar-success(style='width:90%')
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li.dropdown-footer
                   a(href='#')
                     | See tasks with details
                     i.ace-icon.fa.fa-arrow-right
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             li.purple.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 i.ace-icon.fa.fa-bell.icon-animated-bell
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.badge.badge-important 8
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.dropdown-menu-right.dropdown-navbar.navbar-pink.dropdown-menu.dropdown-caret.dropdown-close
                 li.dropdown-header
                   i.ace-icon.fa.fa-exclamation-triangle
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;8 Notifications
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | 8 Notifications
                 li.dropdown-content
                   ul.dropdown-menu.dropdown-navbar.navbar-pink
                     li
@@ -133,630 +100,449 @@ html(lang='en')
                         .clearfix
                           span.pull-left
                             i.btn.btn-xs.no-hover.btn-pink.fa.fa-comment
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New Comments
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | New Comments
                           span.pull-right.badge.badge-info +12
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         i.btn.btn-xs.btn-primary.fa.fa-user
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Bob just signed up as an editor ...
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | Bob just signed up as an editor ...
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left
                             i.btn.btn-xs.no-hover.btn-success.fa.fa-shopping-cart
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New Orders
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | New Orders
                           span.pull-right.badge.badge-success +8
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left
                             i.btn.btn-xs.no-hover.btn-info.fa.fa-twitter
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Followers
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Followers
                           span.pull-right.badge.badge-info +11
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li.dropdown-footer
                   a(href='#')
                     | See all notifications
                     i.ace-icon.fa.fa-arrow-right
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             li.green.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 i.ace-icon.fa.fa-envelope.icon-animated-vertical
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.badge.badge-success 5
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.dropdown-menu-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-close
                 li.dropdown-header
                   i.ace-icon.fa.fa-envelope-o
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;5 Messages
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | 5 Messages
                 li.dropdown-content
                   ul.dropdown-menu.dropdown-navbar
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar.png', alt="Alex's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Alex:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ciao sociis natoque penatibus et auctor ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Ciao sociis natoque penatibus et auctor ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span a moment ago
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar3.png', alt="Susan's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Susan:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Vestibulum id ligula porta felis euismod ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Vestibulum id ligula porta felis euismod ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 20 minutes ago
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar4.png', alt="Bob's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Bob:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nullam quis risus eget urna mollis ornare ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Nullam quis risus eget urna mollis ornare ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 3:15 pm
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar2.png', alt="Kate's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Kate:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ciao sociis natoque eget urna mollis ornare ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Ciao sociis natoque eget urna mollis ornare ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 1:33 pm
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar5.png', alt="Fred's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Fred:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Vestibulum id penatibus et auctor  ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Vestibulum id penatibus et auctor  ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 10:09 am
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li.dropdown-footer
                   a(href='inbox.html')
                     | See all messages
                     i.ace-icon.fa.fa-arrow-right
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             li.light-blue.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 img.nav-user-photo(src='assets/images/avatars/user.jpg', alt="Jason's Photo")
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.user-info
                   small Welcome,
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Jason
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Jason
                 i.ace-icon.fa.fa-caret-down
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.user-menu.dropdown-menu-right.dropdown-menu.dropdown-yellow.dropdown-caret.dropdown-close
                 li
                   a(href='#')
                     i.ace-icon.fa.fa-cog
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Settings
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    | Settings
                 li
                   a(href='profile.html')
                     i.ace-icon.fa.fa-user
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Profile
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    | Profile
                 li.divider
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li
                   a(href='#')
                     i.ace-icon.fa.fa-power-off
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Logout
+                    | Logout
       // /.navbar-container
-    | &#x9;&#x9;
     #main-container.main-container.ace-save-state
       script(type='text/javascript').
         try{ace.settings.loadState('main-container')}catch(e){}
-      | &#x9;&#x9;&#x9;
       #sidebar.sidebar.responsive.ace-save-state
         script(type='text/javascript').
           try{ace.settings.loadState('sidebar')}catch(e){}
-        | &#x9;&#x9;&#x9;&#x9;
         #sidebar-shortcuts.sidebar-shortcuts
           #sidebar-shortcuts-large.sidebar-shortcuts-large
             button.btn.btn-success
               i.ace-icon.fa.fa-signal
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             button.btn.btn-info
               i.ace-icon.fa.fa-pencil
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             button.btn.btn-warning
               i.ace-icon.fa.fa-users
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             button.btn.btn-danger
               i.ace-icon.fa.fa-cogs
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           #sidebar-shortcuts-mini.sidebar-shortcuts-mini
             span.btn.btn-success
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             span.btn.btn-info
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             span.btn.btn-warning
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             span.btn.btn-danger
         // /.sidebar-shortcuts
         ul.nav.nav-list
           li
             a(href='index.html')
               i.menu-icon.fa.fa-tachometer
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Dashboard 
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li.active.open
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-desktop
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text
                 | UI &amp; Elements
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a.dropdown-toggle(href='#')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Layouts
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Layouts
                   b.arrow.fa.fa-angle-down
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 b.arrow
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 ul.submenu
                   li
                     a(href='top-menu.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Top Menu
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Top Menu
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='two-menu-1.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Two Menus 1
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Two Menus 1
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='two-menu-2.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Two Menus 2
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Two Menus 2
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='mobile-menu-1.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Default Mobile Menu
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Default Mobile Menu
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='mobile-menu-2.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mobile Menu 2
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Mobile Menu 2
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='mobile-menu-3.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mobile Menu 3
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Mobile Menu 3
                     b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='typography.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Typography
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Typography
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='elements.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Elements
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Elements
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='buttons.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Buttons &amp; Icons
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Buttons &amp; Icons
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='content-slider.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Content Sliders
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Content Sliders
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='treeview.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Treeview
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Treeview
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li.active
                 a(href='jquery-ui.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;jQuery UI
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | jQuery UI
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='nestable-list.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nestable Lists
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Nestable Lists
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a.dropdown-toggle(href='#')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Three Level Menu
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Three Level Menu
                   b.arrow.fa.fa-angle-down
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 b.arrow
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 ul.submenu
                   li
                     a(href='#')
                       i.menu-icon.fa.fa-leaf.green
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Item #1
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Item #1
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a.dropdown-toggle(href='#')
                       i.menu-icon.fa.fa-pencil.orange
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;4th level
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | 4th level
                       b.arrow.fa.fa-angle-down
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     b.arrow
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     ul.submenu
                       li
                         a(href='#')
                           i.menu-icon.fa.fa-plus.purple
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Add Product
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          | Add Product
                         b.arrow
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       li
                         a(href='#')
                           i.menu-icon.fa.fa-eye.pink
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;View Products
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          | View Products
                         b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-list
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Tables 
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='tables.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Simple &amp; Dynamic
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Simple &amp; Dynamic
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='jqgrid.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;jqGrid plugin
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | jqGrid plugin
                 b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-pencil-square-o
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Forms 
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='form-elements.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Form Elements
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Form Elements
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='form-elements-2.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Form Elements 2
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Form Elements 2
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='form-wizard.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Wizard &amp; Validation
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Wizard &amp; Validation
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='wysiwyg.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Wysiwyg &amp; Markdown
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Wysiwyg &amp; Markdown
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='dropzone.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Dropzone File Upload
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Dropzone File Upload
                 b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a(href='widgets.html')
               i.menu-icon.fa.fa-list-alt
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Widgets 
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a(href='calendar.html')
               i.menu-icon.fa.fa-calendar
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text
                 | Calendar
                 span.badge.badge-transparent.tooltip-error(title='2 Important Events')
                   i.ace-icon.fa.fa-exclamation-triangle.red.bigger-130
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a(href='gallery.html')
               i.menu-icon.fa.fa-picture-o
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Gallery 
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-tag
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  More Pages 
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='profile.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;User Profile
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | User Profile
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='inbox.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Inbox
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Inbox
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='pricing.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Pricing Tables
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Pricing Tables
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='invoice.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Invoice
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Invoice
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='timeline.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Timeline
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Timeline
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='search.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Search Results
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Search Results
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='email.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Email Templates
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Email Templates
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='login.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Login &amp; Register
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Login &amp; Register
                 b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-file-o
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text
                 | Other Pages
                 span.badge.badge-primary 5
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='faq.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;FAQ
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | FAQ
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='error-404.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Error 404
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Error 404
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='error-500.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Error 500
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Error 500
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='grid.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Grid
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Grid
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='blank.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Blank Page
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Blank Page
                 b.arrow
         // /.nav-list
         #sidebar-collapse.sidebar-toggle.sidebar-collapse
           i#sidebar-toggle-icon.ace-icon.fa.fa-angle-double-left.ace-save-state(data-icon1='ace-icon fa fa-angle-double-left', data-icon2='ace-icon fa fa-angle-double-right')
-      | &#x9;&#x9;&#x9;
       .main-content
         .main-content-inner
           #breadcrumbs.breadcrumbs.ace-save-state
             ul.breadcrumb
               li
                 i.ace-icon.fa.fa-home.home-icon
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 a(href='#') Home
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='#') UI &amp; Elements
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li.active jQuery UI
             // /.breadcrumb
             #nav-search.nav-search
               form.form-search
                 span.input-icon
                   input#nav-search-input.nav-search-input(type='text', placeholder='Search ...', autocomplete='off')
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   i.ace-icon.fa.fa-search.nav-search-icon
             // /.nav-search
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           .page-content
             #ace-settings-container.ace-settings-container
               #ace-settings-btn.btn.btn-app.btn-xs.btn-warning.ace-settings-btn
                 i.ace-icon.fa.fa-cog.bigger-130
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               #ace-settings-box.ace-settings-box.clearfix
                 .pull-left.width-50
                   .ace-settings-item
                     .pull-left
                       select#skin-colorpicker.hide
                         option(data-skin='no-skin', value='#438EB9') #438EB9
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         option(data-skin='skin-1', value='#222A2D') #222A2D
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         option(data-skin='skin-2', value='#C6487E') #C6487E
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         option(data-skin='skin-3', value='#D0D0D0') #D0D0D0
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     span &nbsp; Choose Skin
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-navbar.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-navbar')  Fixed Navbar
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-sidebar.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-sidebar')  Fixed Sidebar
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-breadcrumbs.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-breadcrumbs')  Fixed Breadcrumbs
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-rtl.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-rtl')  Right To Left (rtl)
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-add-container.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-add-container')
                       | Inside
                       b .container
@@ -764,17 +550,12 @@ html(lang='en')
                 .pull-left.width-50
                   .ace-settings-item
                     input#ace-settings-hover.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-hover')  Submenu on Hover
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-compact.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-compact')  Compact Sidebar
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-highlight.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-highlight')  Alt. Active Item
                 // /.pull-left
               // /.ace-settings-box
@@ -784,7 +565,7 @@ html(lang='en')
                 | jQuery UI
                 small
                   i.ace-icon.fa.fa-angle-double-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Restyling jQuery UI Widgets and Elements
+                  | Restyling jQuery UI Widgets and Elements
             // /.page-header
             .row
               .col-xs-12
@@ -793,31 +574,24 @@ html(lang='en')
                   .col-sm-6
                     h3.header.blue.lighter.smaller
                       i.ace-icon.fa.fa-calendar-o.smaller-90
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Datepicker
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Datepicker
                     .row
                       .col-xs-6
                         .input-group.input-group-sm
                           input#datepicker.form-control(type='text')
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.input-group-addon
                             i.ace-icon.fa.fa-calendar
                   // ./span
                   .col-sm-6
                     h3.header.blue.lighter.smaller
                       i.ace-icon.fa.fa-list-alt.smaller-90
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Dialogs
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Dialogs
                     a#id-btn-dialog2.btn.btn-info.btn-sm(href='#') Confirm Dialog
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     a#id-btn-dialog1.btn.btn-purple.btn-sm(href='#') Modal Dialog
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     #dialog-message.hide
                       p
                         | This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the &apos;x&apos; icon.
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       .hr.hr-12.hr-double
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       p
                         | Currently using
                         b 36% of your storage space
@@ -826,79 +600,60 @@ html(lang='en')
                     #dialog-confirm.hide
                       .alert.alert-info.bigger-110
                         | These items will be permanently deleted and cannot be recovered.
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       .space-6
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       p.bigger-110.bolder.center.grey
                         i.ace-icon.fa.fa-hand-o-right.blue.bigger-120
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Are you sure?
+                        | Are you sure?
                     // #dialog-confirm
                   // ./span
                 // ./row
                 .space-12
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 .row
                   .col-sm-6
                     h3.header.blue.lighter.smaller
                       i.ace-icon.fa.fa-terminal.smaller-90
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Autocomplete
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Autocomplete
                     .row
                       .col-sm-8.col-md-7
                         input#tags.form-control(type='text')
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .space-4
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         input#search.form-control(type='text', placeholder="Type 'a' or 'h'")
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .row
                       .col-xs-12
                         h3.header.blue.lighter.smaller
                           i.ace-icon.fa.fa-info.smaller-90
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Tooltip
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          | Tooltip
                         .bigger-110
                           p
                             a#show-option.grey(href='#', title='slide down on show')
                               i.ace-icon.fa.fa-hand-o-right
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;slide down on show
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              | slide down on show
                           p
                             a#hide-option.blue(href='#', title='explode on hide')
                               i.ace-icon.fa.fa-hand-o-right
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;explode on hide
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              | explode on hide
                           p
                             a#open-event.pink(href='#', title='move down on show')
                               i.ace-icon.fa.fa-hand-o-right
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;move down on show
+                              | move down on show
                     // ./row
                   // ./col
                   .col-sm-6
                     h3.header.blue.lighter.smaller
                       i.ace-icon.fa.fa-bars.smaller-90
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Menu
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Menu
                     ul#menu
                       li.ui-state-disabled Aberdeen
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       li Ada
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       li Adamsville
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       li Addyston
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       li
                         | Delphi
                         ul
                           li.ui-state-disabled Ada
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li Saarland
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li Salzburg
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       li Saarland
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       li
                         | Salzburg
                         ul
@@ -906,152 +661,116 @@ html(lang='en')
                             | Delphi
                             ul
                               li Ada
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               li Saarland
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               li Salzburg
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             | Delphi
                             ul
                               li Ada
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               li Saarland
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               li Salzburg
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li Perch
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       li.ui-state-disabled Amesville
                   // ./col
                 // ./row
                 .space-12
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 .row
                   .col-sm-6
                     h3.header.blue.lighter.smaller
                       i.ace-icon.fa.fa-retweet.smaller-90
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Spinner
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Spinner
                     input#spinner(name='value', type='text')
                   // ./span
                   .col-sm-6
                     h3.header.blue.lighter.smaller
                       i.ace-icon.fa.fa-arrows-h.smaller-90
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Slider
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Slider
                     p
                       | Please see
                       a(href='form-elements.html') form elements page
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;for more slider examples.
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | for more slider examples.
                     .space-4
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     #slider
                   // ./col
                 // ./row
                 .space-12
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 .row
                   .col-sm-6
                     h3.header.blue.lighter.smaller
                       i.ace-icon.fa.fa-list.smaller-90
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Sortable Accordion
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Sortable Accordion
                     #accordion.accordion-style2
                       .group
                         h3.accordion-header Section 1
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         div
                           p
                             | Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
                             | ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
                             | amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
                             | odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       .group
                         h3.accordion-header Section 2
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         div
                           p
                             | Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
                             | purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
                             | velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
                             | suscipit faucibus urna.
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       .group
                         h3.accordion-header Section 3
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         div
                           p
                             | Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
                             | Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
                             | ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
                             | lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           ul
                             li List item one
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             li List item two
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             li List item three
                     // #accordion
                   // ./span
                   .col-sm-6
                     h3.header.blue.lighter.smaller
                       i.ace-icon.fa.fa-folder-o.smaller-90
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Tabs
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Tabs
                     #tabs
                       ul
                         li
                           a(href='#tabs-1') Nunc tincidunt
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         li
                           a(href='#tabs-2') Proin dolor
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         li
                           a(href='#tabs-3') Aenean lacinia
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       #tabs-1
                         p
                           | Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Duis orci. Aliquam sodales tortor vitae ipsum. Ut et mauris vel pede varius sollicitudin.
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       #tabs-2
                         p
                           | Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla..
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       #tabs-3
                         p
                           | Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Praesent eu risus hendrerit ligula tempus pretium.
                   // ./col
                 // ./row
                 .space-12
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 .row
                   .col-sm-6
                     h3.header.blue.lighter.smaller
                       i.ace-icon.fa.fa-spinner
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Progressbar
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Progressbar
                     #progressbar
                   // ./col
                   .col-sm-6
                     h3.header.blue.lighter.smaller
                       i.ace-icon.fa.fa-spinner
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Selectmenu
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Selectmenu
                     label.block(for='number') Select a number
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     select#number(name='number')
                       option 1
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       option(selected='selected') 2
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       option 3
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       option 4
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       option 5
                 // ./row
                 // PAGE CONTENT ENDS
@@ -1064,41 +783,32 @@ html(lang='en')
           .footer-content
             span.bigger-120
               span.blue.bolder Ace
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Application &copy; 2013-2014
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp; &nbsp;
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              | Application &copy; 2013-2014
+            | &nbsp; &nbsp;
             span.action-buttons
               a(href='#')
                 i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               a(href='#')
                 i.ace-icon.fa.fa-facebook-square.text-primary.bigger-150
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               a(href='#')
                 i.ace-icon.fa.fa-rss-square.orange.bigger-150
-      | &#x9;&#x9;&#x9;
       a#btn-scroll-up.btn-scroll-up.btn.btn-sm.btn-inverse(href='#')
         i.ace-icon.fa.fa-angle-double-up.icon-only.bigger-110
     // /.main-container
     // basic scripts
     //if !IE
-    | &#x9;&#x9;
     script(src='assets/js/jquery-2.1.4.min.js')
     // <![endif]
     //if IE
       script(src='assets/js/jquery-1.11.3.min.js')
-    | &#x9;&#x9;
     script(type='text/javascript').
       if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-    | &#x9;&#x9;
     script(src='assets/js/bootstrap.min.js')
     // page specific plugin scripts
     script(src='assets/js/jquery-ui.min.js')
-    | &#x9;&#x9;
     script(src='assets/js/jquery.ui.touch-punch.min.js')
     // ace scripts
     script(src='assets/js/ace-elements.min.js')
-    | &#x9;&#x9;
     script(src='assets/js/ace.min.js')
     // inline scripts related to this page
     script(type='text/javascript').

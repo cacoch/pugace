@@ -2,17 +2,12 @@ doctype html
 html(lang='en')
   head
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    | &#x9;&#x9;
     meta(charset='utf-8')
-    | &#x9;&#x9;
     title Buttons &amp; Icon - Ace Admin
-    | &#x9;&#x9;
     meta(name='description', content='Common Buttons & Icons')
-    | &#x9;&#x9;
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
     // bootstrap & fontawesome
     link(rel='stylesheet', href='assets/css/bootstrap.min.css')
-    | &#x9;&#x9;
     link(rel='stylesheet', href='assets/font-awesome/4.5.0/css/font-awesome.min.css')
     // page specific plugin styles
     // text fonts
@@ -21,9 +16,7 @@ html(lang='en')
     link#main-ace-style.ace-main-stylesheet(rel='stylesheet', href='assets/css/ace.min.css')
     //if lte IE 9
       link.ace-main-stylesheet(rel='stylesheet', href='assets/css/ace-part2.min.css')
-    | &#x9;&#x9;
     link(rel='stylesheet', href='assets/css/ace-skins.min.css')
-    | &#x9;&#x9;
     link(rel='stylesheet', href='assets/css/ace-rtl.min.css')
     //if lte IE 9
       link(rel='stylesheet', href='assets/css/ace-ie.min.css')
@@ -33,98 +26,72 @@ html(lang='en')
     // HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries
     //if lte IE 8
       script(src='assets/js/html5shiv.min.js')
-      | &#x9;&#x9;
       script(src='assets/js/respond.min.js')
-  | &#x9;
   body.no-skin
     #navbar.navbar.navbar-default.ace-save-state
       #navbar-container.navbar-container.ace-save-state
         button#menu-toggler.navbar-toggle.menu-toggler.pull-left(type='button', data-target='#sidebar')
           span.sr-only Toggle sidebar
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           span.icon-bar
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           span.icon-bar
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           span.icon-bar
-        | &#x9;&#x9;&#x9;&#x9;
         .navbar-header.pull-left
           a.navbar-brand(href='index.html')
             small
               i.fa.fa-leaf
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ace Admin
-        | &#x9;&#x9;&#x9;&#x9;
+              | Ace Admin
         .navbar-buttons.navbar-header.pull-right(role='navigation')
           ul.nav.ace-nav
             li.grey.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 i.ace-icon.fa.fa-tasks
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.badge.badge-grey 4
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.dropdown-menu-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-close
                 li.dropdown-header
                   i.ace-icon.fa.fa-check
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;4 Tasks to complete
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | 4 Tasks to complete
                 li.dropdown-content
                   ul.dropdown-menu.dropdown-navbar
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Software Update
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 65%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini
                           .progress-bar(style='width:65%')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Hardware Upgrade
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 35%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini
                           .progress-bar.progress-bar-danger(style='width:35%')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Unit Testing
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 15%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini
                           .progress-bar.progress-bar-warning(style='width:15%')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Bug Fixes
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 90%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini.progress-striped.active
                           .progress-bar.progress-bar-success(style='width:90%')
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li.dropdown-footer
                   a(href='#')
                     | See tasks with details
                     i.ace-icon.fa.fa-arrow-right
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             li.purple.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 i.ace-icon.fa.fa-bell.icon-animated-bell
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.badge.badge-important 8
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.dropdown-menu-right.dropdown-navbar.navbar-pink.dropdown-menu.dropdown-caret.dropdown-close
                 li.dropdown-header
                   i.ace-icon.fa.fa-exclamation-triangle
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;8 Notifications
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | 8 Notifications
                 li.dropdown-content
                   ul.dropdown-menu.dropdown-navbar.navbar-pink
                     li
@@ -132,630 +99,449 @@ html(lang='en')
                         .clearfix
                           span.pull-left
                             i.btn.btn-xs.no-hover.btn-pink.fa.fa-comment
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New Comments
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | New Comments
                           span.pull-right.badge.badge-info +12
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         i.btn.btn-xs.btn-primary.fa.fa-user
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Bob just signed up as an editor ...
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | Bob just signed up as an editor ...
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left
                             i.btn.btn-xs.no-hover.btn-success.fa.fa-shopping-cart
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New Orders
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | New Orders
                           span.pull-right.badge.badge-success +8
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left
                             i.btn.btn-xs.no-hover.btn-info.fa.fa-twitter
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Followers
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Followers
                           span.pull-right.badge.badge-info +11
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li.dropdown-footer
                   a(href='#')
                     | See all notifications
                     i.ace-icon.fa.fa-arrow-right
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             li.green.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 i.ace-icon.fa.fa-envelope.icon-animated-vertical
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.badge.badge-success 5
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.dropdown-menu-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-close
                 li.dropdown-header
                   i.ace-icon.fa.fa-envelope-o
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;5 Messages
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | 5 Messages
                 li.dropdown-content
                   ul.dropdown-menu.dropdown-navbar
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar.png', alt="Alex's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Alex:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ciao sociis natoque penatibus et auctor ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Ciao sociis natoque penatibus et auctor ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span a moment ago
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar3.png', alt="Susan's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Susan:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Vestibulum id ligula porta felis euismod ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Vestibulum id ligula porta felis euismod ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 20 minutes ago
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar4.png', alt="Bob's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Bob:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nullam quis risus eget urna mollis ornare ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Nullam quis risus eget urna mollis ornare ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 3:15 pm
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar2.png', alt="Kate's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Kate:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ciao sociis natoque eget urna mollis ornare ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Ciao sociis natoque eget urna mollis ornare ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 1:33 pm
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar5.png', alt="Fred's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Fred:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Vestibulum id penatibus et auctor  ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Vestibulum id penatibus et auctor  ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 10:09 am
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li.dropdown-footer
                   a(href='inbox.html')
                     | See all messages
                     i.ace-icon.fa.fa-arrow-right
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             li.light-blue.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 img.nav-user-photo(src='assets/images/avatars/user.jpg', alt="Jason's Photo")
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.user-info
                   small Welcome,
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Jason
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Jason
                 i.ace-icon.fa.fa-caret-down
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.user-menu.dropdown-menu-right.dropdown-menu.dropdown-yellow.dropdown-caret.dropdown-close
                 li
                   a(href='#')
                     i.ace-icon.fa.fa-cog
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Settings
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    | Settings
                 li
                   a(href='profile.html')
                     i.ace-icon.fa.fa-user
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Profile
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    | Profile
                 li.divider
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li
                   a(href='#')
                     i.ace-icon.fa.fa-power-off
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Logout
+                    | Logout
       // /.navbar-container
-    | &#x9;&#x9;
     #main-container.main-container.ace-save-state
       script(type='text/javascript').
         try{ace.settings.loadState('main-container')}catch(e){}
-      | &#x9;&#x9;&#x9;
       #sidebar.sidebar.responsive.ace-save-state
         script(type='text/javascript').
           try{ace.settings.loadState('sidebar')}catch(e){}
-        | &#x9;&#x9;&#x9;&#x9;
         #sidebar-shortcuts.sidebar-shortcuts
           #sidebar-shortcuts-large.sidebar-shortcuts-large
             button.btn.btn-success
               i.ace-icon.fa.fa-signal
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             button.btn.btn-info
               i.ace-icon.fa.fa-pencil
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             button.btn.btn-warning
               i.ace-icon.fa.fa-users
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             button.btn.btn-danger
               i.ace-icon.fa.fa-cogs
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           #sidebar-shortcuts-mini.sidebar-shortcuts-mini
             span.btn.btn-success
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             span.btn.btn-info
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             span.btn.btn-warning
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             span.btn.btn-danger
         // /.sidebar-shortcuts
         ul.nav.nav-list
           li
             a(href='index.html')
               i.menu-icon.fa.fa-tachometer
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Dashboard 
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li.active.open
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-desktop
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text
                 | UI &amp; Elements
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a.dropdown-toggle(href='#')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Layouts
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Layouts
                   b.arrow.fa.fa-angle-down
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 b.arrow
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 ul.submenu
                   li
                     a(href='top-menu.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Top Menu
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Top Menu
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='two-menu-1.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Two Menus 1
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Two Menus 1
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='two-menu-2.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Two Menus 2
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Two Menus 2
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='mobile-menu-1.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Default Mobile Menu
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Default Mobile Menu
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='mobile-menu-2.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mobile Menu 2
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Mobile Menu 2
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='mobile-menu-3.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mobile Menu 3
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Mobile Menu 3
                     b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='typography.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Typography
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Typography
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='elements.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Elements
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Elements
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li.active
                 a(href='buttons.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Buttons &amp; Icons
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Buttons &amp; Icons
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='content-slider.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Content Sliders
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Content Sliders
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='treeview.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Treeview
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Treeview
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='jquery-ui.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;jQuery UI
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | jQuery UI
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='nestable-list.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nestable Lists
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Nestable Lists
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a.dropdown-toggle(href='#')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Three Level Menu
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Three Level Menu
                   b.arrow.fa.fa-angle-down
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 b.arrow
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 ul.submenu
                   li
                     a(href='#')
                       i.menu-icon.fa.fa-leaf.green
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Item #1
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Item #1
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a.dropdown-toggle(href='#')
                       i.menu-icon.fa.fa-pencil.orange
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;4th level
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | 4th level
                       b.arrow.fa.fa-angle-down
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     b.arrow
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     ul.submenu
                       li
                         a(href='#')
                           i.menu-icon.fa.fa-plus.purple
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Add Product
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          | Add Product
                         b.arrow
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       li
                         a(href='#')
                           i.menu-icon.fa.fa-eye.pink
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;View Products
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          | View Products
                         b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-list
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Tables 
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='tables.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Simple &amp; Dynamic
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Simple &amp; Dynamic
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='jqgrid.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;jqGrid plugin
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | jqGrid plugin
                 b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-pencil-square-o
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Forms 
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='form-elements.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Form Elements
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Form Elements
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='form-elements-2.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Form Elements 2
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Form Elements 2
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='form-wizard.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Wizard &amp; Validation
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Wizard &amp; Validation
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='wysiwyg.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Wysiwyg &amp; Markdown
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Wysiwyg &amp; Markdown
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='dropzone.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Dropzone File Upload
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Dropzone File Upload
                 b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a(href='widgets.html')
               i.menu-icon.fa.fa-list-alt
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Widgets 
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a(href='calendar.html')
               i.menu-icon.fa.fa-calendar
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text
                 | Calendar
                 span.badge.badge-transparent.tooltip-error(title='2 Important Events')
                   i.ace-icon.fa.fa-exclamation-triangle.red.bigger-130
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a(href='gallery.html')
               i.menu-icon.fa.fa-picture-o
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Gallery 
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-tag
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  More Pages 
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='profile.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;User Profile
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | User Profile
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='inbox.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Inbox
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Inbox
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='pricing.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Pricing Tables
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Pricing Tables
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='invoice.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Invoice
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Invoice
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='timeline.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Timeline
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Timeline
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='search.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Search Results
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Search Results
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='email.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Email Templates
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Email Templates
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='login.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Login &amp; Register
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Login &amp; Register
                 b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-file-o
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text
                 | Other Pages
                 span.badge.badge-primary 5
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='faq.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;FAQ
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | FAQ
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='error-404.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Error 404
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Error 404
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='error-500.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Error 500
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Error 500
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='grid.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Grid
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Grid
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='blank.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Blank Page
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Blank Page
                 b.arrow
         // /.nav-list
         #sidebar-collapse.sidebar-toggle.sidebar-collapse
           i#sidebar-toggle-icon.ace-icon.fa.fa-angle-double-left.ace-save-state(data-icon1='ace-icon fa fa-angle-double-left', data-icon2='ace-icon fa fa-angle-double-right')
-      | &#x9;&#x9;&#x9;
       .main-content
         .main-content-inner
           #breadcrumbs.breadcrumbs.ace-save-state
             ul.breadcrumb
               li
                 i.ace-icon.fa.fa-home.home-icon
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 a(href='#') Home
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='#') UI &amp; Elements
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li.active Buttons &amp; Icons
             // /.breadcrumb
             #nav-search.nav-search
               form.form-search
                 span.input-icon
                   input#nav-search-input.nav-search-input(type='text', placeholder='Search ...', autocomplete='off')
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   i.ace-icon.fa.fa-search.nav-search-icon
             // /.nav-search
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           .page-content
             #ace-settings-container.ace-settings-container
               #ace-settings-btn.btn.btn-app.btn-xs.btn-warning.ace-settings-btn
                 i.ace-icon.fa.fa-cog.bigger-130
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               #ace-settings-box.ace-settings-box.clearfix
                 .pull-left.width-50
                   .ace-settings-item
                     .pull-left
                       select#skin-colorpicker.hide
                         option(data-skin='no-skin', value='#438EB9') #438EB9
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         option(data-skin='skin-1', value='#222A2D') #222A2D
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         option(data-skin='skin-2', value='#C6487E') #C6487E
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         option(data-skin='skin-3', value='#D0D0D0') #D0D0D0
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     span &nbsp; Choose Skin
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-navbar.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-navbar')  Fixed Navbar
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-sidebar.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-sidebar')  Fixed Sidebar
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-breadcrumbs.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-breadcrumbs')  Fixed Breadcrumbs
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-rtl.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-rtl')  Right To Left (rtl)
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-add-container.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-add-container')
                       | Inside
                       b .container
@@ -763,17 +549,12 @@ html(lang='en')
                 .pull-left.width-50
                   .ace-settings-item
                     input#ace-settings-hover.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-hover')  Submenu on Hover
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-compact.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-compact')  Compact Sidebar
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-highlight.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-highlight')  Alt. Active Item
                 // /.pull-left
               // /.ace-settings-box
@@ -783,7 +564,7 @@ html(lang='en')
                 | Buttons &amp; Icon
                 small
                   i.ace-icon.fa.fa-angle-double-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Common Buttons &amp; Icons
+                  | Common Buttons &amp; Icons
             // /.page-header
             .row
               .col-xs-12
@@ -791,92 +572,66 @@ html(lang='en')
                 .row
                   .col-xs-12
                     h3.header.smaller.lighter.green Application Buttons
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     a.btn.btn-default.btn-app.radius-4(href='#')
                       i.ace-icon.fa.fa-cog.bigger-230
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Default
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Default
                       span.badge.badge-pink +3
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     a.btn.btn-app.btn-primary.no-radius(href='#')
                       i.ace-icon.fa.fa-pencil-square-o.bigger-230
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Edit
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Edit
                       span.badge.badge-warning.badge-left 11
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     a.btn.btn-app.btn-success(href='#')
                       i.ace-icon.fa.fa-refresh.bigger-230
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Reload
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Reload
                     button.btn.btn-app.btn-warning
                       i.ace-icon.fa.fa-undo.bigger-230
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Undo
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Undo
                     a.btn.btn-app.btn-info.btn-sm.no-radius(href='#')
                       i.ace-icon.fa.fa-envelope.bigger-200
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mailbox
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Mailbox
                       span.label.label-inverse.arrowed-in 6+
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     button.btn.btn-app.btn-danger.btn-sm
                       i.ace-icon.fa.fa-trash-o.bigger-200
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Delete
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Delete
                     button.btn.btn-app.btn-purple.btn-sm
                       i.ace-icon.fa.fa-cloud-upload.bigger-200
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Upload
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Upload
                     button.btn.btn-app.btn-pink.btn-sm
                       i.ace-icon.fa.fa-share.bigger-200
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Share
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Share
                     button.btn.btn-app.btn-inverse.btn-xs
                       i.ace-icon.fa.fa-lock.bigger-160
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Lock
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Lock
                     button.btn.btn-app.btn-grey.btn-xs.radius-4
                       i.ace-icon.fa.fa-floppy-o.bigger-160
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Save
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Save
                       span.badge.badge-transparent
                         i.light-red.ace-icon.fa.fa-asterisk
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     button.btn.btn-app.btn-light.btn-xs
                       i.ace-icon.fa.fa-print.bigger-160
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Print
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Print
                     a.btn.btn-app.btn-yellow.btn-xs(href='#')
                       i.ace-icon.fa.fa-shopping-cart.bigger-160
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Shop
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Shop
                     .btn-group
                       button.btn.btn-app.btn-pink.btn-xs
                         i.ace-icon.fa.fa-share.bigger-175
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Share
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | Share
                       button.btn.btn-app.btn-pink.btn-xs.dropdown-toggle(data-toggle='dropdown')
                         span.bigger-110.ace-icon.fa.fa-caret-down.icon-only
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       ul.dropdown-menu.dropdown-pink
                         li
                           a(href='#') Action
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         li
                           a(href='#') Another action
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         li
                           a(href='#') Something else here
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         li.divider
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         li
                           a(href='#') Separated link
                     // /.btn-group
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 .space
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 .row
                   #default-buttons.col-sm-6
                     h3.row.header.smaller.lighter.purple
@@ -885,333 +640,208 @@ html(lang='en')
                       span.col-sm-6
                         label.pull-right.inline
                           small.muted.smaller-90 Border:
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           input#id-button-borders.ace.ace-switch.ace-switch-5(checked='', type='checkbox')
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.lbl.middle
                       // /.col
                     // /.row
                     p
                       button.btn Default 
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-primary Primary
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-info Info
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-success Success
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       button.btn.btn-warning Warning
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-danger Danger
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-inverse Inverse
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-pink Pink
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       button.btn.btn-purple Purple
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-yellow Yellow
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-grey Grey
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-light Light
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-link Link
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       button.btn.btn-white(type='button') White
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-white.btn-default(type='button') Default
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-white.btn-primary(type='button') Primary
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-white.btn-info(type='button') Info
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-white.btn-success(type='button') Success
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-white.btn-warning(type='button') Warning
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       button.btn.btn-white.btn-danger.btn-sm(type='button') Danger
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-white.btn-yellow.btn-sm(type='button') Yellow
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-white.btn-pink.btn-sm(type='button') Pink
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-white.btn-purple.btn-sm(type='button') Purple
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-white.btn-inverse.btn-sm(type='button') Inverse
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     h3.header.smaller.lighter.green Button with Icons
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       button.btn.btn-white.btn-info.btn-bold
                         i.ace-icon.fa.fa-floppy-o.bigger-120.blue
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Backup
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | Backup
                       button.btn.btn-white.btn-warning.btn-bold
                         i.ace-icon.fa.fa-trash-o.bigger-120.orange
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Delete
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | Delete
                       button.btn.btn-white.btn-default.btn-round
                         i.ace-icon.fa.fa-times.red2
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Cancel
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | Cancel
                     .hr.hr-dotted.hr-16
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       button.btn
                         i.ace-icon.fa.fa-pencil.align-top.bigger-125
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Default
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | Default
                       button.btn.btn-primary
                         i.ace-icon.fa.fa-flask.align-top.bigger-125
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Primary
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | Primary
                       button.btn.btn-info
                         | Info
                         i.ace-icon.fa.fa-print.align-top.bigger-125.icon-on-right
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       button.btn.btn-lg.btn-success
                         i.ace-icon.fa.fa-check
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Success
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | Success
                       button.btn.btn-sm.btn-warning
                         i.ace-icon.fa.fa-fire.bigger-110
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.bigger-110.no-text-shadow Warning
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-xs.btn-danger
                         i.ace-icon.fa.fa-bolt.bigger-110
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Danger
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | Danger
                         i.ace-icon.fa.fa-arrow-right.icon-on-right
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       button.btn.btn-info
                         i.ace-icon.fa.fa-signal.icon-only.bigger-150
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-warning.btn-xs
                         i.ace-icon.fa.fa-wrench.bigger-110.icon-only
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-danger.btn-sm
                         i.ace-icon.fa.fa-reply.icon-only
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-grey.btn-lg
                         i.ace-icon.fa.fa-trash-o.fa-2x.icon-only
                   // /.col
                   .col-sm-6
                     h3.header.smaller.lighter.red Button Sizing
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       button.btn.btn-minier.btn-yellow Minier
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-xs Mini
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-sm.btn-primary Small
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-info Default
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-lg.btn-success Large Size
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       button.btn.btn-warning.btn-xlg Larger Size
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-danger Default
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-sm.btn-inverse Small
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-xs.btn-pink Pink
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-minier.btn-purple Purple
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     h3.header.smaller.lighter.grey Disabled Buttons
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       button.btn.disabled Default 
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.disabled.btn-primary Primary
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.disabled.btn-info Info
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.disabled.btn-success Success
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     hr
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       button.btn.btn-danger.btn-block Block Button
                   // /.col
                 // /.row
                 hr
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 .row
                   .col-sm-6
                     h3.header.smaller.lighter.blue Button Groups
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .btn-group
                       button.btn(type='button') 1
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn(type='button') 2
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn(type='button') 3
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .btn-group
                       button.btn.btn-white.btn-sm.btn-primary(type='button') Left
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-white.btn-sm.btn-primary(type='button') Middle
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-white.btn-sm.btn-primary(type='button') Right
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .btn-toolbar
                       .btn-group
                         button.btn.btn-light 1
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         button.btn.btn-light 2
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         button.btn.btn-light 3
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         button.btn.btn-light 4
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       .btn-group.btn-corner
                         button.btn 5
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         button.btn 6
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         button.btn 7
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       .btn-group
                         button.btn.btn-grey 8
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .btn-group.btn-group-vertical
                       button.btn(type='button')
                         i.icon-only.ace-icon.fa.fa-align-left
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn(type='button')
                         i.icon-only.ace-icon.fa.fa-align-center
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn(type='button')
                         i.icon-only.ace-icon.fa.fa-align-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn(type='button')
                         i.icon-only.ace-icon.fa.fa-align-justify
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .space-6
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       button#loading-btn.btn.btn-success(type='button', data-loading-text='Loading...') Loading state
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-primary(type='button', data-toggle='button') Single Toggle
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-sm.btn-danger(type='button', data-toggle='button') Small
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       button.btn.btn-xs.btn-info(type='button', data-toggle='button') Mini
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     div
                       span Checkbox: &nbsp;
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       .btn-group(data-toggle='buttons')
                         label.btn.btn-sm
                           input(type='checkbox', value='1')
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           i.icon-only.ace-icon.fa.fa-bold.bigger-110
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         label.btn.btn-sm
                           input(type='checkbox', value='2')
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           i.icon-only.ace-icon.fa.fa-italic.bigger-110
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         label.btn.btn-sm
                           input(type='checkbox', value='3')
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           i.icon-only.ace-icon.fa.fa-underline.bigger-110
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     div
                       span Checkbox: &nbsp;
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       .btn-group.btn-overlap.btn-corner(data-toggle='buttons')
                         label.btn.btn-sm.btn-white.btn-info
                           input(type='checkbox', value='1')
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           i.icon-only.ace-icon.fa.fa-bold.bigger-110
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         label.btn.btn-sm.btn-white.btn-info
                           input(type='checkbox', value='2')
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           i.icon-only.ace-icon.fa.fa-italic.bigger-110
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         label.btn.btn-sm.btn-white.btn-info
                           input(type='checkbox', value='3')
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           i.icon-only.ace-icon.fa.fa-underline.bigger-110
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     div
                       span Radio: &nbsp;
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       .btn-group(data-toggle='buttons')
                         label.btn.btn-primary
                           input(type='radio', value='1')
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           i.icon-only.ace-icon.fa.fa-align-left
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         label.btn.btn-primary
                           input(type='radio', value='2')
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           i.icon-only.ace-icon.fa.fa-align-center
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         label.btn.btn-primary
                           input(type='radio', value='3')
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           i.icon-only.ace-icon.fa.fa-align-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       label.btn.btn-primary(data-toggle='button')
                         i.icon-only.ace-icon.fa.fa-align-justify
                   // /.span
                   .col-sm-6
                     h3.header.smaller.lighter.green Button Dropdown
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .btn-toolbar
                       .btn-group
                         button.btn.dropdown-toggle(data-toggle='dropdown')
                           | Action
                           span.ace-icon.fa.fa-caret-down.icon-on-right
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         ul.dropdown-menu.dropdown-default
                           li
                             a(href='#') Action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Another action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Something else here
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li.divider
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Separated link
                       // /.btn-group
@@ -1219,19 +849,14 @@ html(lang='en')
                         button.btn.btn-primary.btn-white.dropdown-toggle(data-toggle='dropdown')
                           | Action
                           i.ace-icon.fa.fa-angle-down.icon-on-right
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         ul.dropdown-menu
                           li
                             a(href='#') Action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Another action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Something else here
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li.divider
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Separated link
                       // /.btn-group
@@ -1239,43 +864,31 @@ html(lang='en')
                         button.btn.btn-sm.btn-danger.dropdown-toggle(data-toggle='dropdown')
                           | Danger
                           i.ace-icon.fa.fa-angle-down.icon-on-right
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         ul.dropdown-menu.dropdown-danger
                           li
                             a(href='#') Action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Another action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Something else here
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li.divider
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Separated link
                       // /.btn-group
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .space-4
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .btn-toolbar
                       .btn-group
                         button.btn.btn-warning.dropdown-toggle(data-toggle='dropdown')
                           | Warning
                           span.ace-icon.fa.fa-caret-down.icon-on-right
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         ul.dropdown-menu.dropdown-warning
                           li
                             a(href='#') Action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Another action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Something else here
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li.divider
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Separated link
                       // /.btn-group
@@ -1283,43 +896,31 @@ html(lang='en')
                         button.btn.btn-success.btn-lg.dropdown-toggle(data-toggle='dropdown')
                           | Success large
                           i.ace-icon.fa.fa-angle-down.icon-on-right
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         ul.dropdown-menu.dropdown-success.dropdown-menu-right
                           li
                             a(href='#') Action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Another action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Something else here
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li.divider
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Separated link
                       // /.btn-group
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .space-4
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .btn-toolbar
                       .btn-group
                         button.btn.btn-info.btn-sm.dropdown-toggle(data-toggle='dropdown')
                           | Info small
                           span.ace-icon.fa.fa-caret-down.icon-on-right
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         ul.dropdown-menu.dropdown-info.dropdown-menu-right
                           li
                             a(href='#') Action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Another action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Something else here
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li.divider
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Separated link
                       // /.btn-group
@@ -1327,300 +928,204 @@ html(lang='en')
                         button.btn.btn-inverse.btn-xs.dropdown-toggle(data-toggle='dropdown')
                           | Inverse mini
                           span.ace-icon.fa.fa-caret-down.icon-on-right
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         ul.dropdown-menu.dropdown-inverse
                           li
                             a(href='#') Action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Another action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Something else here
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li.divider
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Separated link
                       // /.btn-group
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     hr
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .btn-toolbar
                       .btn-group
                         button.btn Action
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         button.btn.dropdown-toggle(data-toggle='dropdown')
                           span.ace-icon.fa.fa-caret-down.icon-only
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         ul.dropdown-menu
                           li
                             a(href='#') Action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Another action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Something else here
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li.divider
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Separated link
                       // /.btn-group
                       .btn-group
                         button.btn.btn-sm.btn-yellow Some Action
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         button.btn.btn-sm.btn-yellow.dropdown-toggle(data-toggle='dropdown')
                           i.ace-icon.fa.fa-angle-down.icon-only
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         ul.dropdown-menu.dropdown-yellow
                           li
                             a(href='#') Action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Another action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Something else here
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li.divider
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Separated link
                       // /.btn-group
                       .btn-group.dropup
                         button.btn.btn-xs.btn-danger Danger
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         button.btn.btn-xs.btn-danger.dropdown-toggle(data-toggle='dropdown')
                           span.ace-icon.fa.fa-caret-down.icon-only
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         ul.dropdown-menu.dropdown-danger
                           li
                             a(href='#') Action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Another action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Something else here
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li.divider
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Separated link
                       // /.btn-group
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .space-2
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .btn-toolbar
                       .btn-group
                         button.btn.btn-lg.btn-warning Warning
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         button.btn.btn-lg.btn-warning.dropdown-toggle(data-toggle='dropdown')
                           span.ace-icon.fa.fa-caret-down.icon-only.smaller-90
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         ul.dropdown-menu.dropdown-warning
                           li
                             a(href='#') Action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Another action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Something else here
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li.divider
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Separated link
                       // /.btn-group
                       .btn-group
                         button.btn.btn-success Success
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         button.btn.btn-success.dropdown-toggle(data-toggle='dropdown')
                           span.ace-icon.fa.fa-caret-down.icon-only
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         ul.dropdown-menu.dropdown-success
                           li
                             a(href='#') Action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Another action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Something else here
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li.divider
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Separated link
                       // /.btn-group
                       .btn-group
                         button.btn.btn-info.btn-white Info
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         button.btn.btn-info.btn-white.dropdown-toggle(data-toggle='dropdown')
                           span.ace-icon.fa.fa-caret-down.icon-only
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         ul.dropdown-menu.dropdown-info.dropdown-menu-right
                           li
                             a(href='#') Action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Another action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Something else here
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li.divider
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Separated link
                       // /.btn-group
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .space-2
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .btn-toolbar
                       .btn-group
                         button.btn.btn-inverse Inverse
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         button.btn.btn-inverse.dropdown-toggle(data-toggle='dropdown')
                           span.ace-icon.fa.fa-caret-down.icon-only
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         ul.dropdown-menu.dropdown-inverse
                           li
                             a(href='#') Action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Another action
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Something else here
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li.divider
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           li
                             a(href='#') Separated link
                       // /.btn-group
                   // /.span
                 // /.row
                 hr
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 .row
                   .col-sm-6
                     h3.header.smaller.lighter.green Lables &amp; Badges
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       span.label Default
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.label.label-success.arrowed Success
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.label.label-warning
                         i.ace-icon.fa.fa-exclamation-triangle.bigger-120
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Warning
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | Warning
                       span.label.label-danger.arrowed-in Danger
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.label.label-info.arrowed-in-right.arrowed Info
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.label.label-inverse Inverse
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       span.label.label-white.middle Default
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.label.label-success.label-white.middle Success
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.label.label-warning.label-white.middle
                         i.ace-icon.fa.fa-exclamation-triangle.bigger-120
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Warning
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | Warning
                       span.label.label-danger.label-white.middle Danger
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.label.label-info.label-white.middle Info
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.label.label-purple.label-white.middle Inverse
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       span.badge 1
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.badge.badge-grey 1
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.badge.badge-success 2
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.badge.badge-warning 4
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.badge.badge-danger 6
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.badge.badge-info 8
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.badge.badge-purple 3
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.badge.badge-inverse 10
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.badge.badge-pink 11
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.badge.badge-yellow 2
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       span.label.label-lg.label-pink.arrowed-right Large
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.label.label-lg.label-yellow.arrowed-in.arrowed-in-right Yellow
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.label.label-lg.label-purple.arrowed Purple
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       span.label.label-xlg.label-primary.arrowed.arrowed-right Larger
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.label.label-xlg.label-grey.arrowed-in-right.arrowed-in Grey
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.label.label-xlg.label-light.arrowed-in-right Light
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
                       span.label.label-sm.label-primary.arrowed.arrowed-right Smaller
                   // /.span
                   .col-sm-6
                     h3.header.smaller.lighter.red Pagination
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     div
                       ul.pagination
                         li.disabled
                           a(href='#')
                             i.ace-icon.fa.fa-angle-double-left
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         li.active
                           a(href='#') 1
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         li
                           a(href='#') 2
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         li
                           a(href='#') 3
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         li
                           a(href='#') 4
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         li
                           a(href='#') 5
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         li
                           a(href='#')
                             i.ace-icon.fa.fa-angle-double-right
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     p
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     ul.pager
                       li.previous
                         a(href='#') &larr; Older
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       li.next
                         a(href='#') Newer &rarr;
                   // /.span
                 // /.row
                 hr
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 .row
                   .col-xs-12
                     h3.header.smaller.lighter.blue
@@ -1630,321 +1135,243 @@ html(lang='en')
                           | (see all icons
                           i.ace-icon.fa.fa-external-link
                           | )
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .col-xs-6.col-sm-3
                     ul.list-unstyled
                       li
                         i.ace-icon.fa.fa-adjust
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-adjust
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-adjust
                       li
                         i.ace-icon.fa.fa-asterisk
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-asterisk
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-asterisk
                       li
                         i.ace-icon.fa.fa-ban
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-ban
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-ban
                       li
                         i.ace-icon.fa.fa-bar-chart-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-bar-chart-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-bar-chart-o
                       li
                         i.ace-icon.fa.fa-barcode
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-barcode
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-barcode
                       li
                         i.ace-icon.fa.fa-flask
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-flask
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-flask
                       li
                         i.ace-icon.fa.fa-beer
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-beer
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-beer
                       li
                         i.ace-icon.fa.fa-bell-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-bell-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-bell-o
                       li
                         i.ace-icon.fa.fa-bell
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-bell
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-bell
                       li
                         i.ace-icon.fa.fa-bolt
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-bolt
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-bolt
                       li
                         i.ace-icon.fa.fa-book
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-book
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-book
                       li
                         i.ace-icon.fa.fa-bookmark
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-bookmark
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-bookmark
                       li
                         i.ace-icon.fa.fa-bookmark-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-bookmark-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-bookmark-o
                       li
                         i.ace-icon.fa.fa-briefcase
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-briefcase
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-briefcase
                       li
                         i.ace-icon.fa.fa-bullhorn
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-bullhorn
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-bullhorn
                       li
                         i.ace-icon.fa.fa-calendar
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-calendar
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-calendar
                       li
                         i.ace-icon.fa.fa-camera
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-camera
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-camera
                       li
                         i.ace-icon.fa.fa-camera-retro
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-camera-retro
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-camera-retro
                       li
                         i.ace-icon.fa.fa-certificate
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-certificate
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-certificate
                   .col-xs-6.col-sm-3
                     ul.list-unstyled
                       li
                         i.ace-icon.fa.fa-check-square-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-check-square-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-check-square-o
                       li
                         i.ace-icon.fa.fa-square-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-square-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-square-o
                       li
                         i.ace-icon.fa.fa-circle
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-circle
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-circle
                       li
                         i.ace-icon.fa.fa-circle-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-circle-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-circle-o
                       li
                         i.ace-icon.fa.fa-cloud
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-cloud
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-cloud
                       li
                         i.ace-icon.fa.fa-cloud-download
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-cloud-download
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-cloud-download
                       li
                         i.ace-icon.fa.fa-cloud-upload
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-cloud-upload
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-cloud-upload
                       li
                         i.ace-icon.fa.fa-coffee
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-coffee
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-coffee
                       li
                         i.ace-icon.fa.fa-cog
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-cog
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-cog
                       li
                         i.ace-icon.fa.fa-cogs
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-cogs
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-cogs
                       li
                         i.ace-icon.fa.fa-comment
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-comment
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-comment
                       li
                         i.ace-icon.fa.fa-comment-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-comment-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-comment-o
                       li
                         i.ace-icon.fa.fa-comments
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-comments
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-comments
                       li
                         i.ace-icon.fa.fa-comments-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-comments-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-comments-o
                       li
                         i.ace-icon.fa.fa-credit-card
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-credit-card
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-credit-card
                       li
                         i.ace-icon.fa.fa-tachometer
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-tachometer
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-tachometer
                       li
                         i.ace-icon.fa.fa-desktop
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-desktop
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-desktop
                       li
                         i.ace-icon.fa.fa-arrow-circle-o-down
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-arrow-circle-o-down
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-arrow-circle-o-down
                       li
                         i.ace-icon.fa.fa-download
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-download
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-download
                   .col-xs-6.col-sm-3
                     ul.list-unstyled
                       li
                         i.ace-icon.fa.fa-pencil-square-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-pencil-square-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-pencil-square-o
                       li
                         i.ace-icon.fa.fa-envelope
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-envelope
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-envelope
                       li
                         i.ace-icon.fa.fa-envelope-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-envelope-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-envelope-o
                       li
                         i.ace-icon.fa.fa-exchange
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-exchange
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-exchange
                       li
                         i.ace-icon.fa.fa-exclamation-circle
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-exclamation-circle
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-exclamation-circle
                       li
                         i.ace-icon.fa.fa-external-link
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-external-link
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-external-link
                       li
                         i.ace-icon.fa.fa-eye-slash
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-eye-slash
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-eye-slash
                       li
                         i.ace-icon.fa.fa-eye
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-eye
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-eye
                       li
                         i.ace-icon.fa.fa-video-camera
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-video-camera
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-video-camera
                       li
                         i.ace-icon.fa.fa-fighter-jet
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-fighter-jet
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-fighter-jet
                       li
                         i.ace-icon.fa.fa-film
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-film
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-film
                       li
                         i.ace-icon.fa.fa-filter
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-filter
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-filter
                       li
                         i.ace-icon.fa.fa-fire
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-fire
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-fire
                       li
                         i.ace-icon.fa.fa-flag
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-flag
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-flag
                       li
                         i.ace-icon.fa.fa-folder
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-folder
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-folder
                       li
                         i.ace-icon.fa.fa-folder-open
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-folder-open
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-folder-open
                       li
                         i.ace-icon.fa.fa-folder-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-folder-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-folder-o
                       li
                         i.ace-icon.fa.fa-folder-open-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-folder-open-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-folder-open-o
                       li
                         i.ace-icon.fa.fa-cutlery
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-cutlery
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-cutlery
                   .col-xs-6.col-sm-3
                     ul.list-unstyled
                       li
                         i.ace-icon.fa.fa-gift
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-gift
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-gift
                       li
                         i.ace-icon.fa.fa-glass
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-glass
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-glass
                       li
                         i.ace-icon.fa.fa-globe
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-globe
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-globe
                       li
                         i.ace-icon.fa.fa-users
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-users
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-users
                       li
                         i.ace-icon.fa.fa-hdd-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-hdd-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-hdd-o
                       li
                         i.ace-icon.fa.fa-headphones
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-headphones
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-headphones
                       li
                         i.ace-icon.fa.fa-heart
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-heart
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-heart
                       li
                         i.ace-icon.fa.fa-heart-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-heart-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-heart-o
                       li
                         i.ace-icon.fa.fa-home
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-home
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-home
                       li
                         i.ace-icon.fa.fa-inbox
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-inbox
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-inbox
                       li
                         i.ace-icon.fa.fa-info-circle
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-info-circle
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-info-circle
                       li
                         i.ace-icon.fa.fa-key
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-key
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-key
                       li
                         i.ace-icon.fa.fa-leaf
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-leaf
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-leaf
                       li
                         i.ace-icon.fa.fa-laptop
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-laptop
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-laptop
                       li
                         i.ace-icon.fa.fa-gavel
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-gavel
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-gavel
                       li
                         i.ace-icon.fa.fa-lemon-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-lemon-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-lemon-o
                       li
                         i.ace-icon.fa.fa-lightbulb-o
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-lightbulb-o
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-lightbulb-o
                       li
                         i.ace-icon.fa.fa-lock
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-lock
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-lock
                       li
                         i.ace-icon.fa.fa-unlock
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fa-unlock
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | fa-unlock
                 hr
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 .row
                   .col-xs-12
                     h3.header.smaller.lighter.blue
@@ -1954,318 +1381,242 @@ html(lang='en')
                           | (see all icons
                           i.ace-icon.fa.fa-external-link
                           | )
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .col-xs-6.col-sm-3
                     ul.list-unstyled
                       li
                         i.ace-icon.glyphicon.glyphicon-asterisk
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-asterisk
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-asterisk
                       li
                         i.ace-icon.glyphicon.glyphicon-plus
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-plus
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-plus
                       li
                         i.ace-icon.glyphicon.glyphicon-euro
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-euro
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-euro
                       li
                         i.ace-icon.glyphicon.glyphicon-minus
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-minus
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-minus
                       li
                         i.ace-icon.glyphicon.glyphicon-cloud
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-cloud
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-cloud
                       li
                         i.ace-icon.glyphicon.glyphicon-envelope
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-envelope
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-envelope
                       li
                         i.ace-icon.glyphicon.glyphicon-pencil
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-pencil
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-pencil
                       li
                         i.ace-icon.glyphicon.glyphicon-glass
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-glass
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-glass
                       li
                         i.ace-icon.glyphicon.glyphicon-music
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-music
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-music
                       li
                         i.ace-icon.glyphicon.glyphicon-search
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-search
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-search
                       li
                         i.ace-icon.glyphicon.glyphicon-heart
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-heart
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-heart
                       li
                         i.ace-icon.glyphicon.glyphicon-star
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-star
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-star
                       li
                         i.ace-icon.glyphicon.glyphicon-star
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-star-empty
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-star-empty
                       li
                         i.ace-icon.glyphicon.glyphicon-user
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-user
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-user
                       li
                         i.ace-icon.glyphicon.glyphicon-film
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-film
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-film
                       li
                         i.ace-icon.glyphicon.glyphicon-th
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-th-large
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-th-large
                       li
                         i.ace-icon.glyphicon.glyphicon-th
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-th
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-th
                       li
                         i.ace-icon.glyphicon.glyphicon-th
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-th-list
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-th-list
                       li
                         i.ace-icon.glyphicon.glyphicon-ok
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-ok
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-ok
                   .col-xs-6.col-sm-3
                     ul.list-unstyled
                       li
                         i.ace-icon.glyphicon.glyphicon-remove
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-remove
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-remove
                       li
                         i.ace-icon.glyphicon.glyphicon-zoom-in
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-zoom-in
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-zoom-in
                       li
                         i.ace-icon.glyphicon.glyphicon-zoom-out
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-zoom-out
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-zoom-out
                       li
                         i.ace-icon.glyphicon.glyphicon-off
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-off
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-off
                       li
                         i.ace-icon.glyphicon.glyphicon-signal
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-signal
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-signal
                       li
                         i.ace-icon.glyphicon.glyphicon-cog
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-cog
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-cog
                       li
                         i.ace-icon.glyphicon.glyphicon-trash
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-trash
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-trash
                       li
                         i.ace-icon.glyphicon.glyphicon-home
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-home
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-home
                       li
                         i.ace-icon.glyphicon.glyphicon-file
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-file
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-file
                       li
                         i.ace-icon.glyphicon.glyphicon-time
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-time
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-time
                       li
                         i.ace-icon.glyphicon.glyphicon-road
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-road
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-road
                       li
                         i.ace-icon.glyphicon.glyphicon-download
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-download-alt
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-download-alt
                       li
                         i.ace-icon.glyphicon.glyphicon-download
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-download
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-download
                       li
                         i.ace-icon.glyphicon.glyphicon-upload
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-upload
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-upload
                       li
                         i.ace-icon.glyphicon.glyphicon-inbox
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-inbox
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-inbox
                       li
                         i.ace-icon.glyphicon.glyphicon-play
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-play-circle
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-play-circle
                       li
                         i.ace-icon.glyphicon.glyphicon-repeat
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-repeat
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-repeat
                       li
                         i.ace-icon.glyphicon.glyphicon-refresh
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-refresh
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-refresh
                       li
                         i.ace-icon.glyphicon.glyphicon-list
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-list-alt
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-list-alt
                   .col-xs-6.col-sm-3
                     ul.list-unstyled
                       li
                         i.ace-icon.glyphicon.glyphicon-lock
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-lock
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-lock
                       li
                         i.ace-icon.glyphicon.glyphicon-flag
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-flag
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-flag
                       li
                         i.ace-icon.glyphicon.glyphicon-headphones
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-headphones
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-headphones
                       li
                         i.ace-icon.glyphicon.glyphicon-volume-off
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-volume-off
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-volume-off
                       li
                         i.ace-icon.glyphicon.glyphicon-volume-down
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-volume-down
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-volume-down
                       li
                         i.ace-icon.glyphicon.glyphicon-volume-up
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-volume-up
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-volume-up
                       li
                         i.ace-icon.glyphicon.glyphicon-qrcode
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-qrcode
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-qrcode
                       li
                         i.ace-icon.glyphicon.glyphicon-barcode
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-barcode
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-barcode
                       li
                         i.ace-icon.glyphicon.glyphicon-tag
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-tag
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-tag
                       li
                         i.ace-icon.glyphicon.glyphicon-tags
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-tags
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-tags
                       li
                         i.ace-icon.glyphicon.glyphicon-book
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-book
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-book
                       li
                         i.ace-icon.glyphicon.glyphicon-bookmark
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-bookmark
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-bookmark
                       li
                         i.ace-icon.glyphicon.glyphicon-print
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-print
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-print
                       li
                         i.ace-icon.glyphicon.glyphicon-camera
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-camera
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-camera
                       li
                         i.ace-icon.glyphicon.glyphicon-font
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-font
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-font
                       li
                         i.ace-icon.glyphicon.glyphicon-bold
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-bold
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-bold
                       li
                         i.ace-icon.glyphicon.glyphicon-italic
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-italic
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-italic
                       li
                         i.ace-icon.glyphicon.glyphicon-text-height
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-text-height
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-text-height
                       li
                         i.ace-icon.glyphicon.glyphicon-text-width
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-text-width
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-text-width
                   .col-xs-6.col-sm-3
                     ul.list-unstyled
                       li
                         i.ace-icon.glyphicon.glyphicon-align-left
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-align-left
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-align-left
                       li
                         i.ace-icon.glyphicon.glyphicon-align-center
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-align-center
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-align-center
                       li
                         i.ace-icon.glyphicon.glyphicon-align-right
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-align-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-align-right
                       li
                         i.ace-icon.glyphicon.glyphicon-align-justify
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-align-justify
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-align-justify
                       li
                         i.ace-icon.glyphicon.glyphicon-list
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-list
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-list
                       li
                         i.ace-icon.glyphicon.glyphicon-indent-left
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-indent-left
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-indent-left
                       li
                         i.ace-icon.glyphicon.glyphicon-indent-right
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-indent-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-indent-right
                       li
                         i.ace-icon.glyphicon.glyphicon-facetime-video
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-facetime-video
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-facetime-video
                       li
                         i.ace-icon.glyphicon.glyphicon-picture
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-picture
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-picture
                       li
                         i.ace-icon.glyphicon.glyphicon-map-marker
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-map-marker
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-map-marker
                       li
                         i.ace-icon.glyphicon.glyphicon-adjust
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-adjust
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-adjust
                       li
                         i.ace-icon.glyphicon.glyphicon-tint
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-tint
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-tint
                       li
                         i.ace-icon.glyphicon.glyphicon-edit
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-edit
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-edit
                       li
                         i.ace-icon.glyphicon.glyphicon-share
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-share
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-share
                       li
                         i.ace-icon.glyphicon.glyphicon-check
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-check
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-check
                       li
                         i.ace-icon.glyphicon.glyphicon-move
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-move
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-move
                       li
                         i.ace-icon.glyphicon.glyphicon-step-backward
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-step-backward
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-step-backward
                       li
                         i.ace-icon.glyphicon.glyphicon-fast-backward
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-fast-backward
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | glyphicon-fast-backward
                       li
                         i.ace-icon.glyphicon.glyphicon-backward
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;glyphicon-backward
+                        | glyphicon-backward
                 // PAGE CONTENT ENDS
               // /.col
             // /.row
@@ -2276,38 +1627,30 @@ html(lang='en')
           .footer-content
             span.bigger-120
               span.blue.bolder Ace
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Application &copy; 2013-2014
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp; &nbsp;
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              | Application &copy; 2013-2014
+            | &nbsp; &nbsp;
             span.action-buttons
               a(href='#')
                 i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               a(href='#')
                 i.ace-icon.fa.fa-facebook-square.text-primary.bigger-150
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               a(href='#')
                 i.ace-icon.fa.fa-rss-square.orange.bigger-150
-      | &#x9;&#x9;&#x9;
       a#btn-scroll-up.btn-scroll-up.btn.btn-sm.btn-inverse(href='#')
         i.ace-icon.fa.fa-angle-double-up.icon-only.bigger-110
     // /.main-container
     // basic scripts
     //if !IE
-    | &#x9;&#x9;
     script(src='assets/js/jquery-2.1.4.min.js')
     // <![endif]
     //if IE
       script(src='assets/js/jquery-1.11.3.min.js')
-    | &#x9;&#x9;
     script(type='text/javascript').
       if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-    | &#x9;&#x9;
     script(src='assets/js/bootstrap.min.js')
     // page specific plugin scripts
     // ace scripts
     script(src='assets/js/ace-elements.min.js')
-    | &#x9;&#x9;
     script(src='assets/js/ace.min.js')
     // inline scripts related to this page
     script(type='text/javascript').

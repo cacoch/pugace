@@ -2,17 +2,12 @@ doctype html
 html(lang='en')
   head
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    | &#x9;&#x9;
     meta(charset='utf-8')
-    | &#x9;&#x9;
     title Form Wizard - Ace Admin
-    | &#x9;&#x9;
     meta(name='description', content='and Validation')
-    | &#x9;&#x9;
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
     // bootstrap & fontawesome
     link(rel='stylesheet', href='assets/css/bootstrap.min.css')
-    | &#x9;&#x9;
     link(rel='stylesheet', href='assets/font-awesome/4.5.0/css/font-awesome.min.css')
     // page specific plugin styles
     link(rel='stylesheet', href='assets/css/select2.min.css')
@@ -22,9 +17,7 @@ html(lang='en')
     link#main-ace-style.ace-main-stylesheet(rel='stylesheet', href='assets/css/ace.min.css')
     //if lte IE 9
       link.ace-main-stylesheet(rel='stylesheet', href='assets/css/ace-part2.min.css')
-    | &#x9;&#x9;
     link(rel='stylesheet', href='assets/css/ace-skins.min.css')
-    | &#x9;&#x9;
     link(rel='stylesheet', href='assets/css/ace-rtl.min.css')
     //if lte IE 9
       link(rel='stylesheet', href='assets/css/ace-ie.min.css')
@@ -34,98 +27,72 @@ html(lang='en')
     // HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries
     //if lte IE 8
       script(src='assets/js/html5shiv.min.js')
-      | &#x9;&#x9;
       script(src='assets/js/respond.min.js')
-  | &#x9;
   body.no-skin
     #navbar.navbar.navbar-default.ace-save-state
       #navbar-container.navbar-container.ace-save-state
         button#menu-toggler.navbar-toggle.menu-toggler.pull-left(type='button', data-target='#sidebar')
           span.sr-only Toggle sidebar
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           span.icon-bar
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           span.icon-bar
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           span.icon-bar
-        | &#x9;&#x9;&#x9;&#x9;
         .navbar-header.pull-left
           a.navbar-brand(href='index.html')
             small
               i.fa.fa-leaf
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ace Admin
-        | &#x9;&#x9;&#x9;&#x9;
+              | Ace Admin
         .navbar-buttons.navbar-header.pull-right(role='navigation')
           ul.nav.ace-nav
             li.grey.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 i.ace-icon.fa.fa-tasks
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.badge.badge-grey 4
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.dropdown-menu-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-close
                 li.dropdown-header
                   i.ace-icon.fa.fa-check
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;4 Tasks to complete
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | 4 Tasks to complete
                 li.dropdown-content
                   ul.dropdown-menu.dropdown-navbar
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Software Update
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 65%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini
                           .progress-bar(style='width:65%')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Hardware Upgrade
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 35%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini
                           .progress-bar.progress-bar-danger(style='width:35%')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Unit Testing
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 15%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini
                           .progress-bar.progress-bar-warning(style='width:15%')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Bug Fixes
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 90%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini.progress-striped.active
                           .progress-bar.progress-bar-success(style='width:90%')
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li.dropdown-footer
                   a(href='#')
                     | See tasks with details
                     i.ace-icon.fa.fa-arrow-right
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             li.purple.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 i.ace-icon.fa.fa-bell.icon-animated-bell
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.badge.badge-important 8
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.dropdown-menu-right.dropdown-navbar.navbar-pink.dropdown-menu.dropdown-caret.dropdown-close
                 li.dropdown-header
                   i.ace-icon.fa.fa-exclamation-triangle
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;8 Notifications
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | 8 Notifications
                 li.dropdown-content
                   ul.dropdown-menu.dropdown-navbar.navbar-pink
                     li
@@ -133,630 +100,449 @@ html(lang='en')
                         .clearfix
                           span.pull-left
                             i.btn.btn-xs.no-hover.btn-pink.fa.fa-comment
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New Comments
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | New Comments
                           span.pull-right.badge.badge-info +12
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         i.btn.btn-xs.btn-primary.fa.fa-user
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Bob just signed up as an editor ...
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | Bob just signed up as an editor ...
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left
                             i.btn.btn-xs.no-hover.btn-success.fa.fa-shopping-cart
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New Orders
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | New Orders
                           span.pull-right.badge.badge-success +8
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left
                             i.btn.btn-xs.no-hover.btn-info.fa.fa-twitter
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Followers
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Followers
                           span.pull-right.badge.badge-info +11
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li.dropdown-footer
                   a(href='#')
                     | See all notifications
                     i.ace-icon.fa.fa-arrow-right
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             li.green.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 i.ace-icon.fa.fa-envelope.icon-animated-vertical
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.badge.badge-success 5
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.dropdown-menu-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-close
                 li.dropdown-header
                   i.ace-icon.fa.fa-envelope-o
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;5 Messages
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | 5 Messages
                 li.dropdown-content
                   ul.dropdown-menu.dropdown-navbar
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar.png', alt="Alex's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Alex:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ciao sociis natoque penatibus et auctor ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Ciao sociis natoque penatibus et auctor ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span a moment ago
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar3.png', alt="Susan's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Susan:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Vestibulum id ligula porta felis euismod ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Vestibulum id ligula porta felis euismod ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 20 minutes ago
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar4.png', alt="Bob's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Bob:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nullam quis risus eget urna mollis ornare ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Nullam quis risus eget urna mollis ornare ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 3:15 pm
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar2.png', alt="Kate's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Kate:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ciao sociis natoque eget urna mollis ornare ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Ciao sociis natoque eget urna mollis ornare ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 1:33 pm
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar5.png', alt="Fred's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Fred:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Vestibulum id penatibus et auctor  ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Vestibulum id penatibus et auctor  ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 10:09 am
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li.dropdown-footer
                   a(href='inbox.html')
                     | See all messages
                     i.ace-icon.fa.fa-arrow-right
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             li.light-blue.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 img.nav-user-photo(src='assets/images/avatars/user.jpg', alt="Jason's Photo")
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.user-info
                   small Welcome,
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Jason
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Jason
                 i.ace-icon.fa.fa-caret-down
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.user-menu.dropdown-menu-right.dropdown-menu.dropdown-yellow.dropdown-caret.dropdown-close
                 li
                   a(href='#')
                     i.ace-icon.fa.fa-cog
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Settings
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    | Settings
                 li
                   a(href='profile.html')
                     i.ace-icon.fa.fa-user
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Profile
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    | Profile
                 li.divider
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li
                   a(href='#')
                     i.ace-icon.fa.fa-power-off
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Logout
+                    | Logout
       // /.navbar-container
-    | &#x9;&#x9;
     #main-container.main-container.ace-save-state
       script(type='text/javascript').
         try{ace.settings.loadState('main-container')}catch(e){}
-      | &#x9;&#x9;&#x9;
       #sidebar.sidebar.responsive.ace-save-state
         script(type='text/javascript').
           try{ace.settings.loadState('sidebar')}catch(e){}
-        | &#x9;&#x9;&#x9;&#x9;
         #sidebar-shortcuts.sidebar-shortcuts
           #sidebar-shortcuts-large.sidebar-shortcuts-large
             button.btn.btn-success
               i.ace-icon.fa.fa-signal
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             button.btn.btn-info
               i.ace-icon.fa.fa-pencil
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             button.btn.btn-warning
               i.ace-icon.fa.fa-users
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             button.btn.btn-danger
               i.ace-icon.fa.fa-cogs
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           #sidebar-shortcuts-mini.sidebar-shortcuts-mini
             span.btn.btn-success
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             span.btn.btn-info
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             span.btn.btn-warning
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             span.btn.btn-danger
         // /.sidebar-shortcuts
         ul.nav.nav-list
           li
             a(href='index.html')
               i.menu-icon.fa.fa-tachometer
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Dashboard 
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-desktop
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text
                 | UI &amp; Elements
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a.dropdown-toggle(href='#')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Layouts
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Layouts
                   b.arrow.fa.fa-angle-down
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 b.arrow
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 ul.submenu
                   li
                     a(href='top-menu.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Top Menu
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Top Menu
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='two-menu-1.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Two Menus 1
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Two Menus 1
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='two-menu-2.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Two Menus 2
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Two Menus 2
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='mobile-menu-1.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Default Mobile Menu
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Default Mobile Menu
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='mobile-menu-2.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mobile Menu 2
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Mobile Menu 2
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='mobile-menu-3.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mobile Menu 3
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Mobile Menu 3
                     b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='typography.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Typography
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Typography
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='elements.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Elements
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Elements
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='buttons.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Buttons &amp; Icons
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Buttons &amp; Icons
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='content-slider.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Content Sliders
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Content Sliders
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='treeview.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Treeview
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Treeview
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='jquery-ui.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;jQuery UI
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | jQuery UI
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='nestable-list.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nestable Lists
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Nestable Lists
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a.dropdown-toggle(href='#')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Three Level Menu
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Three Level Menu
                   b.arrow.fa.fa-angle-down
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 b.arrow
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 ul.submenu
                   li
                     a(href='#')
                       i.menu-icon.fa.fa-leaf.green
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Item #1
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Item #1
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a.dropdown-toggle(href='#')
                       i.menu-icon.fa.fa-pencil.orange
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;4th level
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | 4th level
                       b.arrow.fa.fa-angle-down
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     b.arrow
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     ul.submenu
                       li
                         a(href='#')
                           i.menu-icon.fa.fa-plus.purple
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Add Product
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          | Add Product
                         b.arrow
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       li
                         a(href='#')
                           i.menu-icon.fa.fa-eye.pink
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;View Products
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          | View Products
                         b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-list
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Tables 
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='tables.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Simple &amp; Dynamic
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Simple &amp; Dynamic
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='jqgrid.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;jqGrid plugin
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | jqGrid plugin
                 b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li.active.open
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-pencil-square-o
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Forms 
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='form-elements.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Form Elements
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Form Elements
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='form-elements-2.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Form Elements 2
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Form Elements 2
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li.active
                 a(href='form-wizard.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Wizard &amp; Validation
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Wizard &amp; Validation
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='wysiwyg.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Wysiwyg &amp; Markdown
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Wysiwyg &amp; Markdown
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='dropzone.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Dropzone File Upload
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Dropzone File Upload
                 b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a(href='widgets.html')
               i.menu-icon.fa.fa-list-alt
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Widgets 
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a(href='calendar.html')
               i.menu-icon.fa.fa-calendar
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text
                 | Calendar
                 span.badge.badge-transparent.tooltip-error(title='2 Important Events')
                   i.ace-icon.fa.fa-exclamation-triangle.red.bigger-130
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a(href='gallery.html')
               i.menu-icon.fa.fa-picture-o
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Gallery 
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-tag
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  More Pages 
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='profile.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;User Profile
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | User Profile
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='inbox.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Inbox
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Inbox
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='pricing.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Pricing Tables
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Pricing Tables
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='invoice.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Invoice
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Invoice
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='timeline.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Timeline
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Timeline
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='search.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Search Results
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Search Results
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='email.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Email Templates
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Email Templates
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='login.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Login &amp; Register
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Login &amp; Register
                 b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-file-o
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text
                 | Other Pages
                 span.badge.badge-primary 5
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='faq.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;FAQ
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | FAQ
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='error-404.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Error 404
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Error 404
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='error-500.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Error 500
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Error 500
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='grid.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Grid
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Grid
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='blank.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Blank Page
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Blank Page
                 b.arrow
         // /.nav-list
         #sidebar-collapse.sidebar-toggle.sidebar-collapse
           i#sidebar-toggle-icon.ace-icon.fa.fa-angle-double-left.ace-save-state(data-icon1='ace-icon fa fa-angle-double-left', data-icon2='ace-icon fa fa-angle-double-right')
-      | &#x9;&#x9;&#x9;
       .main-content
         .main-content-inner
           #breadcrumbs.breadcrumbs.ace-save-state
             ul.breadcrumb
               li
                 i.ace-icon.fa.fa-home.home-icon
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 a(href='#') Home
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='#') Forms
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li.active Wizard &amp; Validation
             // /.breadcrumb
             #nav-search.nav-search
               form.form-search
                 span.input-icon
                   input#nav-search-input.nav-search-input(type='text', placeholder='Search ...', autocomplete='off')
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   i.ace-icon.fa.fa-search.nav-search-icon
             // /.nav-search
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           .page-content
             #ace-settings-container.ace-settings-container
               #ace-settings-btn.btn.btn-app.btn-xs.btn-warning.ace-settings-btn
                 i.ace-icon.fa.fa-cog.bigger-130
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               #ace-settings-box.ace-settings-box.clearfix
                 .pull-left.width-50
                   .ace-settings-item
                     .pull-left
                       select#skin-colorpicker.hide
                         option(data-skin='no-skin', value='#438EB9') #438EB9
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         option(data-skin='skin-1', value='#222A2D') #222A2D
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         option(data-skin='skin-2', value='#C6487E') #C6487E
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         option(data-skin='skin-3', value='#D0D0D0') #D0D0D0
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     span &nbsp; Choose Skin
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-navbar.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-navbar')  Fixed Navbar
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-sidebar.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-sidebar')  Fixed Sidebar
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-breadcrumbs.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-breadcrumbs')  Fixed Breadcrumbs
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-rtl.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-rtl')  Right To Left (rtl)
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-add-container.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-add-container')
                       | Inside
                       b .container
@@ -764,17 +550,12 @@ html(lang='en')
                 .pull-left.width-50
                   .ace-settings-item
                     input#ace-settings-hover.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-hover')  Submenu on Hover
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-compact.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-compact')  Compact Sidebar
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-highlight.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-highlight')  Alt. Active Item
                 // /.pull-left
               // /.ace-settings-box
@@ -784,31 +565,24 @@ html(lang='en')
                 | Form Wizard
                 small
                   i.ace-icon.fa.fa-angle-double-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and Validation
+                  | and Validation
             // /.page-header
             .row
               .col-xs-12
                 // PAGE CONTENT BEGINS
                 h4.lighter
                   i.ace-icon.fa.fa-hand-o-right.icon-animated-hand-pointer.blue
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   a.pink(href='#modal-wizard', data-toggle='modal')  Wizard Inside a Modal Box 
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 .hr.hr-18.hr-double.dotted
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 .widget-box
                   .widget-header.widget-header-blue.widget-header-flat
                     h4.widget-title.lighter New Item Wizard
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .widget-toolbar
                       label
                         small.green
                           b Validation
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         input#skip-validation.ace.ace-switch.ace-switch-4(type='checkbox')
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.lbl.middle
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .widget-body
                     .widget-main
                       #fuelux-wizard-container
@@ -816,389 +590,245 @@ html(lang='en')
                           ul.steps
                             li.active(data-step='1')
                               span.step 1
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               span.title Validation states
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             li(data-step='2')
                               span.step 2
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               span.title Alerts
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             li(data-step='3')
                               span.step 3
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               span.title Payment Info
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             li(data-step='4')
                               span.step 4
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               span.title Other Info
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         hr
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .step-content.pos-rel
                           .step-pane.active(data-step='1')
                             h3.lighter.block.green Enter the following information
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             form#sample-form.form-horizontal
                               .form-group.has-warning
                                 label.col-xs-12.col-sm-3.control-label.no-padding-right(for='inputWarning') Input with warning
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-5
                                   span.block.input-icon.input-icon-right
                                     input#inputWarning.width-100(type='text')
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     i.ace-icon.fa.fa-leaf
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .help-block.col-xs-12.col-sm-reset.inline  Warning tip help! 
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group.has-error
                                 label.col-xs-12.col-sm-3.col-md-3.control-label.no-padding-right(for='inputError') Input with error
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-5
                                   span.block.input-icon.input-icon-right
                                     input#inputError.width-100(type='text')
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     i.ace-icon.fa.fa-times-circle
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .help-block.col-xs-12.col-sm-reset.inline  Error tip help! 
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group.has-success
                                 label.col-xs-12.col-sm-3.control-label.no-padding-right(for='inputSuccess') Input with success
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-5
                                   span.block.input-icon.input-icon-right
                                     input#inputSuccess.width-100(type='text')
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     i.ace-icon.fa.fa-check-circle
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .help-block.col-xs-12.col-sm-reset.inline  Success tip help! 
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group.has-info
                                 label.col-xs-12.col-sm-3.control-label.no-padding-right(for='inputInfo') Input with info
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-5
                                   span.block.input-icon.input-icon-right
                                     input#inputInfo.width-100(type='text')
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     i.ace-icon.fa.fa-info-circle
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .help-block.col-xs-12.col-sm-reset.inline  Info tip help! 
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group
                                 label.col-xs-12.col-sm-3.control-label.no-padding-right(for='inputError2') Input with error
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-5
                                   span.input-icon.block
                                     input#inputError2.width-100(type='text')
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     i.ace-icon.fa.fa-times-circle.red
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .help-block.col-xs-12.col-sm-reset.inline  Error tip help! 
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             form#validation-form.form-horizontal.hide(method='get')
                               .form-group
                                 label.control-label.col-xs-12.col-sm-3.no-padding-right(for='email') Email Address:
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-9
                                   .clearfix
                                     input#email.col-xs-12.col-sm-6(type='email', name='email')
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .space-2
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group
                                 label.control-label.col-xs-12.col-sm-3.no-padding-right(for='password') Password:
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-9
                                   .clearfix
                                     input#password.col-xs-12.col-sm-4(type='password', name='password')
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .space-2
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group
                                 label.control-label.col-xs-12.col-sm-3.no-padding-right(for='password2') Confirm Password:
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-9
                                   .clearfix
                                     input#password2.col-xs-12.col-sm-4(type='password', name='password2')
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .hr.hr-dotted
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group
                                 label.control-label.col-xs-12.col-sm-3.no-padding-right(for='name') Company Name:
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-9
                                   .clearfix
                                     input#name.col-xs-12.col-sm-5(type='text', name='name')
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .space-2
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group
                                 label.control-label.col-xs-12.col-sm-3.no-padding-right(for='phone') Phone Number:
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-9
                                   .input-group
                                     span.input-group-addon
                                       i.ace-icon.fa.fa-phone
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     input#phone(type='tel', name='phone')
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .space-2
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group
                                 label.control-label.col-xs-12.col-sm-3.no-padding-right(for='url') Company URL:
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-9
                                   .clearfix
                                     input#url.col-xs-12.col-sm-8(type='url', name='url')
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .hr.hr-dotted
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group
                                 label.control-label.col-xs-12.col-sm-3.no-padding-right Subscribe to
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-9
                                   div
                                     label
                                       input.ace(name='subscription', value='1', type='checkbox')
-                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                       span.lbl  Latest news and announcements
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   div
                                     label
                                       input.ace(name='subscription', value='2', type='checkbox')
-                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                       span.lbl  Product offers and discounts
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .space-2
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group
                                 label.control-label.col-xs-12.col-sm-3.no-padding-right Gender
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-9
                                   div
                                     label.line-height-1.blue
                                       input.ace(name='gender', value='1', type='radio')
-                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                       span.lbl  Male
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   div
                                     label.line-height-1.blue
                                       input.ace(name='gender', value='2', type='radio')
-                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                       span.lbl  Female
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .hr.hr-dotted
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group
                                 label.control-label.col-xs-12.col-sm-3.no-padding-right(for='state') State
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-9
                                   select#state.select2(name='state', data-placeholder='Click to Choose...')
                                     option(value='') &nbsp;
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='AL') Alabama
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='AK') Alaska
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='AZ') Arizona
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='AR') Arkansas
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='CA') California
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='CO') Colorado
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='CT') Connecticut
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='DE') Delaware
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='FL') Florida
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='GA') Georgia
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='HI') Hawaii
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='ID') Idaho
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='IL') Illinois
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='IN') Indiana
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='IA') Iowa
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='KS') Kansas
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='KY') Kentucky
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='LA') Louisiana
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='ME') Maine
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='MD') Maryland
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='MA') Massachusetts
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='MI') Michigan
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='MN') Minnesota
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='MS') Mississippi
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='MO') Missouri
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='MT') Montana
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='NE') Nebraska
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='NV') Nevada
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='NH') New Hampshire
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='NJ') New Jersey
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='NM') New Mexico
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='NY') New York
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='NC') North Carolina
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='ND') North Dakota
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='OH') Ohio
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='OK') Oklahoma
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='OR') Oregon
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='PA') Pennsylvania
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='RI') Rhode Island
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='SC') South Carolina
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='SD') South Dakota
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='TN') Tennessee
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='TX') Texas
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='UT') Utah
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='VT') Vermont
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='VA') Virginia
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='WA') Washington
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='WV') West Virginia
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='WI') Wisconsin
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     option(value='WY') Wyoming
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .space-2
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group
                                 label.control-label.col-xs-12.col-sm-3.no-padding-right(for='platform') Platform
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-9
                                   .clearfix
                                     select#platform.input-medium(name='platform')
                                       option(value='') ------------------
-                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                       option(value='linux') Linux
-                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                       option(value='windows') Windows
-                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                       option(value='mac') Mac OS
-                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                       option(value='ios') iOS
-                                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                       option(value='android') Android
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .space-2
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group
                                 label.control-label.col-xs-12.col-sm-3.no-padding-right(for='comment') Comment
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 .col-xs-12.col-sm-9
                                   .clearfix
                                     textarea#comment.input-xlarge(name='comment')
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .space-8
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .form-group
                                 .col-xs-12.col-sm-4.col-sm-offset-3
                                   label
                                     input#agree.ace(name='agree', type='checkbox')
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                     span.lbl  I accept the policy
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .step-pane(data-step='2')
                             div
                               .alert.alert-success
                                 button.close(type='button', data-dismiss='alert')
                                   i.ace-icon.fa.fa-times
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 strong
                                   i.ace-icon.fa.fa-check
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Well done!
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;You successfully read this important alert message.
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  | Well done!
+                                | You successfully read this important alert message.
                                 br
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-danger
                                 button.close(type='button', data-dismiss='alert')
                                   i.ace-icon.fa.fa-times
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 strong
                                   i.ace-icon.fa.fa-times
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Oh snap!
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Change a few things up and try submitting again.
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  | Oh snap!
+                                | Change a few things up and try submitting again.
                                 br
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-warning
                                 button.close(type='button', data-dismiss='alert')
                                   i.ace-icon.fa.fa-times
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 strong Warning!
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Best check yo self, you&apos;re not looking too good.
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                | Best check yo self, you&apos;re not looking too good.
                                 br
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-info
                                 button.close(type='button', data-dismiss='alert')
                                   i.ace-icon.fa.fa-times
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 strong Heads up!
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;This alert needs your attention, but it&apos;s not super important.
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                | This alert needs your attention, but it&apos;s not super important.
                                 br
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .step-pane(data-step='3')
                             .center
                               h3.blue.lighter This is step 3
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .step-pane(data-step='4')
                             .center
                               h3.green Congrats!
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Your product is ready to ship! Click finish to continue!
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              | Your product is ready to ship! Click finish to continue!
                       hr
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       .wizard-actions
                         button.btn.btn-prev
                           i.ace-icon.fa.fa-arrow-left
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Prev
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          | Prev
                         button.btn.btn-success.btn-next(data-last='Finish')
                           | Next
                           i.ace-icon.fa.fa-arrow-right.icon-on-right
                     // /.widget-main
                   // /.widget-body
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 #modal-wizard.modal
                   .modal-dialog
                     .modal-content
@@ -1207,53 +837,39 @@ html(lang='en')
                           ul.steps
                             li.active(data-step='1')
                               span.step 1
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               span.title Validation states
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             li(data-step='2')
                               span.step 2
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               span.title Alerts
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             li(data-step='3')
                               span.step 3
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               span.title Payment Info
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             li(data-step='4')
                               span.step 4
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               span.title Other Info
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .modal-body.step-content
                           .step-pane.active(data-step='1')
                             .center
                               h4.blue Step 1
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .step-pane(data-step='2')
                             .center
                               h4.blue Step 2
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .step-pane(data-step='3')
                             .center
                               h4.blue Step 3
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .step-pane(data-step='4')
                             .center
                               h4.blue Step 4
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       .modal-footer.wizard-actions
                         button.btn.btn-sm.btn-prev
                           i.ace-icon.fa.fa-arrow-left
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Prev
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          | Prev
                         button.btn.btn-success.btn-sm.btn-next(data-last='Finish')
                           | Next
                           i.ace-icon.fa.fa-arrow-right.icon-on-right
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         button.btn.btn-danger.btn-sm.pull-left(data-dismiss='modal')
                           i.ace-icon.fa.fa-times
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Cancel
+                          | Cancel
                 // PAGE CONTENT ENDS
               // /.col
             // /.row
@@ -1264,49 +880,36 @@ html(lang='en')
           .footer-content
             span.bigger-120
               span.blue.bolder Ace
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Application &copy; 2013-2014
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp; &nbsp;
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              | Application &copy; 2013-2014
+            | &nbsp; &nbsp;
             span.action-buttons
               a(href='#')
                 i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               a(href='#')
                 i.ace-icon.fa.fa-facebook-square.text-primary.bigger-150
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               a(href='#')
                 i.ace-icon.fa.fa-rss-square.orange.bigger-150
-      | &#x9;&#x9;&#x9;
       a#btn-scroll-up.btn-scroll-up.btn.btn-sm.btn-inverse(href='#')
         i.ace-icon.fa.fa-angle-double-up.icon-only.bigger-110
     // /.main-container
     // basic scripts
     //if !IE
-    | &#x9;&#x9;
     script(src='assets/js/jquery-2.1.4.min.js')
     // <![endif]
     //if IE
       script(src='assets/js/jquery-1.11.3.min.js')
-    | &#x9;&#x9;
     script(type='text/javascript').
       if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-    | &#x9;&#x9;
     script(src='assets/js/bootstrap.min.js')
     // page specific plugin scripts
     script(src='assets/js/wizard.min.js')
-    | &#x9;&#x9;
     script(src='assets/js/jquery.validate.min.js')
-    | &#x9;&#x9;
     script(src='assets/js/jquery-additional-methods.min.js')
-    | &#x9;&#x9;
     script(src='assets/js/bootbox.js')
-    | &#x9;&#x9;
     script(src='assets/js/jquery.maskedinput.min.js')
-    | &#x9;&#x9;
     script(src='assets/js/select2.min.js')
     // ace scripts
     script(src='assets/js/ace-elements.min.js')
-    | &#x9;&#x9;
     script(src='assets/js/ace.min.js')
     // inline scripts related to this page
     script(type='text/javascript').

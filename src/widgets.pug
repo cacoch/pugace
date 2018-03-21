@@ -2,17 +2,12 @@ doctype html
 html(lang='en')
   head
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    | &#x9;&#x9;
     meta(charset='utf-8')
-    | &#x9;&#x9;
     title Widgets - Ace Admin
-    | &#x9;&#x9;
     meta(name='description', content='Draggabble Widget Boxes with Persistent Position and State')
-    | &#x9;&#x9;
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
     // bootstrap & fontawesome
     link(rel='stylesheet', href='assets/css/bootstrap.min.css')
-    | &#x9;&#x9;
     link(rel='stylesheet', href='assets/font-awesome/4.5.0/css/font-awesome.min.css')
     // page specific plugin styles
     link(rel='stylesheet', href='assets/css/jquery-ui.custom.min.css')
@@ -22,9 +17,7 @@ html(lang='en')
     link#main-ace-style.ace-main-stylesheet(rel='stylesheet', href='assets/css/ace.min.css')
     //if lte IE 9
       link.ace-main-stylesheet(rel='stylesheet', href='assets/css/ace-part2.min.css')
-    | &#x9;&#x9;
     link(rel='stylesheet', href='assets/css/ace-skins.min.css')
-    | &#x9;&#x9;
     link(rel='stylesheet', href='assets/css/ace-rtl.min.css')
     //if lte IE 9
       link(rel='stylesheet', href='assets/css/ace-ie.min.css')
@@ -34,98 +27,72 @@ html(lang='en')
     // HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries
     //if lte IE 8
       script(src='assets/js/html5shiv.min.js')
-      | &#x9;&#x9;
       script(src='assets/js/respond.min.js')
-  | &#x9;
   body.no-skin
     #navbar.navbar.navbar-default.ace-save-state
       #navbar-container.navbar-container.ace-save-state
         button#menu-toggler.navbar-toggle.menu-toggler.pull-left(type='button', data-target='#sidebar')
           span.sr-only Toggle sidebar
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           span.icon-bar
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           span.icon-bar
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           span.icon-bar
-        | &#x9;&#x9;&#x9;&#x9;
         .navbar-header.pull-left
           a.navbar-brand(href='index.html')
             small
               i.fa.fa-leaf
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ace Admin
-        | &#x9;&#x9;&#x9;&#x9;
+              | Ace Admin
         .navbar-buttons.navbar-header.pull-right(role='navigation')
           ul.nav.ace-nav
             li.grey.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 i.ace-icon.fa.fa-tasks
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.badge.badge-grey 4
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.dropdown-menu-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-close
                 li.dropdown-header
                   i.ace-icon.fa.fa-check
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;4 Tasks to complete
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | 4 Tasks to complete
                 li.dropdown-content
                   ul.dropdown-menu.dropdown-navbar
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Software Update
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 65%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini
                           .progress-bar(style='width:65%')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Hardware Upgrade
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 35%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini
                           .progress-bar.progress-bar-danger(style='width:35%')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Unit Testing
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 15%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini
                           .progress-bar.progress-bar-warning(style='width:15%')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left Bug Fixes
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           span.pull-right 90%
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .progress.progress-mini.progress-striped.active
                           .progress-bar.progress-bar-success(style='width:90%')
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li.dropdown-footer
                   a(href='#')
                     | See tasks with details
                     i.ace-icon.fa.fa-arrow-right
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             li.purple.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 i.ace-icon.fa.fa-bell.icon-animated-bell
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.badge.badge-important 8
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.dropdown-menu-right.dropdown-navbar.navbar-pink.dropdown-menu.dropdown-caret.dropdown-close
                 li.dropdown-header
                   i.ace-icon.fa.fa-exclamation-triangle
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;8 Notifications
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | 8 Notifications
                 li.dropdown-content
                   ul.dropdown-menu.dropdown-navbar.navbar-pink
                     li
@@ -133,627 +100,447 @@ html(lang='en')
                         .clearfix
                           span.pull-left
                             i.btn.btn-xs.no-hover.btn-pink.fa.fa-comment
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New Comments
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | New Comments
                           span.pull-right.badge.badge-info +12
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         i.btn.btn-xs.btn-primary.fa.fa-user
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Bob just signed up as an editor ...
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        | Bob just signed up as an editor ...
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left
                             i.btn.btn-xs.no-hover.btn-success.fa.fa-shopping-cart
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New Orders
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | New Orders
                           span.pull-right.badge.badge-success +8
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a(href='#')
                         .clearfix
                           span.pull-left
                             i.btn.btn-xs.no-hover.btn-info.fa.fa-twitter
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Followers
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Followers
                           span.pull-right.badge.badge-info +11
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li.dropdown-footer
                   a(href='#')
                     | See all notifications
                     i.ace-icon.fa.fa-arrow-right
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             li.green.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 i.ace-icon.fa.fa-envelope.icon-animated-vertical
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.badge.badge-success 5
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.dropdown-menu-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-close
                 li.dropdown-header
                   i.ace-icon.fa.fa-envelope-o
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;5 Messages
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | 5 Messages
                 li.dropdown-content
                   ul.dropdown-menu.dropdown-navbar
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar.png', alt="Alex's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Alex:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ciao sociis natoque penatibus et auctor ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Ciao sociis natoque penatibus et auctor ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span a moment ago
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar3.png', alt="Susan's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Susan:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Vestibulum id ligula porta felis euismod ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Vestibulum id ligula porta felis euismod ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 20 minutes ago
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar4.png', alt="Bob's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Bob:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nullam quis risus eget urna mollis ornare ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Nullam quis risus eget urna mollis ornare ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 3:15 pm
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar2.png', alt="Kate's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Kate:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ciao sociis natoque eget urna mollis ornare ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Ciao sociis natoque eget urna mollis ornare ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 1:33 pm
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     li
                       a.clearfix(href='#')
                         img.msg-photo(src='assets/images/avatars/avatar5.png', alt="Fred's Avatar")
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         span.msg-body
                           span.msg-title
                             span.blue Fred:
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Vestibulum id penatibus et auctor  ...
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Vestibulum id penatibus et auctor  ...
                           span.msg-time
                             i.ace-icon.fa.fa-clock-o
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span 10:09 am
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li.dropdown-footer
                   a(href='inbox.html')
                     | See all messages
                     i.ace-icon.fa.fa-arrow-right
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             li.light-blue.dropdown-modal
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 img.nav-user-photo(src='assets/images/avatars/user.jpg', alt="Jason's Photo")
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 span.user-info
                   small Welcome,
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Jason
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Jason
                 i.ace-icon.fa.fa-caret-down
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               ul.user-menu.dropdown-menu-right.dropdown-menu.dropdown-yellow.dropdown-caret.dropdown-close
                 li
                   a(href='#')
                     i.ace-icon.fa.fa-cog
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Settings
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    | Settings
                 li
                   a(href='profile.html')
                     i.ace-icon.fa.fa-user
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Profile
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    | Profile
                 li.divider
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 li
                   a(href='#')
                     i.ace-icon.fa.fa-power-off
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Logout
+                    | Logout
       // /.navbar-container
-    | &#x9;&#x9;
     #main-container.main-container.ace-save-state
       script(type='text/javascript').
         try{ace.settings.loadState('main-container')}catch(e){}
-      | &#x9;&#x9;&#x9;
       #sidebar.sidebar.responsive.ace-save-state
         script(type='text/javascript').
           try{ace.settings.loadState('sidebar')}catch(e){}
-        | &#x9;&#x9;&#x9;&#x9;
         #sidebar-shortcuts.sidebar-shortcuts
           #sidebar-shortcuts-large.sidebar-shortcuts-large
             button.btn.btn-success
               i.ace-icon.fa.fa-signal
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             button.btn.btn-info
               i.ace-icon.fa.fa-pencil
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             button.btn.btn-warning
               i.ace-icon.fa.fa-users
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             button.btn.btn-danger
               i.ace-icon.fa.fa-cogs
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           #sidebar-shortcuts-mini.sidebar-shortcuts-mini
             span.btn.btn-success
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             span.btn.btn-info
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             span.btn.btn-warning
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             span.btn.btn-danger
         // /.sidebar-shortcuts
         ul.nav.nav-list
           li
             a(href='index.html')
               i.menu-icon.fa.fa-tachometer
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Dashboard 
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-desktop
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text
                 | UI &amp; Elements
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a.dropdown-toggle(href='#')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Layouts
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Layouts
                   b.arrow.fa.fa-angle-down
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 b.arrow
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 ul.submenu
                   li
                     a(href='top-menu.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Top Menu
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Top Menu
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='two-menu-1.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Two Menus 1
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Two Menus 1
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='two-menu-2.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Two Menus 2
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Two Menus 2
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='mobile-menu-1.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Default Mobile Menu
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Default Mobile Menu
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='mobile-menu-2.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mobile Menu 2
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Mobile Menu 2
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a(href='mobile-menu-3.html')
                       i.menu-icon.fa.fa-caret-right
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Mobile Menu 3
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Mobile Menu 3
                     b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='typography.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Typography
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Typography
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='elements.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Elements
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Elements
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='buttons.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Buttons &amp; Icons
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Buttons &amp; Icons
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='content-slider.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Content Sliders
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Content Sliders
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='treeview.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Treeview
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Treeview
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='jquery-ui.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;jQuery UI
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | jQuery UI
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='nestable-list.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nestable Lists
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Nestable Lists
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a.dropdown-toggle(href='#')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Three Level Menu
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Three Level Menu
                   b.arrow.fa.fa-angle-down
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 b.arrow
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 ul.submenu
                   li
                     a(href='#')
                       i.menu-icon.fa.fa-leaf.green
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Item #1
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | Item #1
                     b.arrow
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   li
                     a.dropdown-toggle(href='#')
                       i.menu-icon.fa.fa-pencil.orange
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;4th level
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      | 4th level
                       b.arrow.fa.fa-angle-down
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     b.arrow
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     ul.submenu
                       li
                         a(href='#')
                           i.menu-icon.fa.fa-plus.purple
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Add Product
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          | Add Product
                         b.arrow
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       li
                         a(href='#')
                           i.menu-icon.fa.fa-eye.pink
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;View Products
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          | View Products
                         b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-list
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Tables 
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='tables.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Simple &amp; Dynamic
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Simple &amp; Dynamic
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='jqgrid.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;jqGrid plugin
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | jqGrid plugin
                 b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-pencil-square-o
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Forms 
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='form-elements.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Form Elements
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Form Elements
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='form-elements-2.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Form Elements 2
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Form Elements 2
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='form-wizard.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Wizard &amp; Validation
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Wizard &amp; Validation
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='wysiwyg.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Wysiwyg &amp; Markdown
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Wysiwyg &amp; Markdown
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='dropzone.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Dropzone File Upload
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Dropzone File Upload
                 b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li.active
             a(href='widgets.html')
               i.menu-icon.fa.fa-list-alt
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Widgets 
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a(href='calendar.html')
               i.menu-icon.fa.fa-calendar
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text
                 | Calendar
                 span.badge.badge-transparent.tooltip-error(title='2 Important Events')
                   i.ace-icon.fa.fa-exclamation-triangle.red.bigger-130
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a(href='gallery.html')
               i.menu-icon.fa.fa-picture-o
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  Gallery 
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-tag
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text  More Pages 
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='profile.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;User Profile
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | User Profile
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='inbox.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Inbox
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Inbox
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='pricing.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Pricing Tables
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Pricing Tables
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='invoice.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Invoice
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Invoice
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='timeline.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Timeline
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Timeline
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='search.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Search Results
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Search Results
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='email.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Email Templates
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Email Templates
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='login.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Login &amp; Register
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Login &amp; Register
                 b.arrow
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           li
             a.dropdown-toggle(href='#')
               i.menu-icon.fa.fa-file-o
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               span.menu-text
                 | Other Pages
                 span.badge.badge-primary 5
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               b.arrow.fa.fa-angle-down
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             b.arrow
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
             ul.submenu
               li
                 a(href='faq.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;FAQ
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | FAQ
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='error-404.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Error 404
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Error 404
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='error-500.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Error 500
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Error 500
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='grid.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Grid
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Grid
                 b.arrow
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li
                 a(href='blank.html')
                   i.menu-icon.fa.fa-caret-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Blank Page
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | Blank Page
                 b.arrow
         // /.nav-list
         #sidebar-collapse.sidebar-toggle.sidebar-collapse
           i#sidebar-toggle-icon.ace-icon.fa.fa-angle-double-left.ace-save-state(data-icon1='ace-icon fa fa-angle-double-left', data-icon2='ace-icon fa fa-angle-double-right')
-      | &#x9;&#x9;&#x9;
       .main-content
         .main-content-inner
           #breadcrumbs.breadcrumbs.ace-save-state
             ul.breadcrumb
               li
                 i.ace-icon.fa.fa-home.home-icon
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                 a(href='#') Home
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               li.active Widgets
             // /.breadcrumb
             #nav-search.nav-search
               form.form-search
                 span.input-icon
                   input#nav-search-input.nav-search-input(type='text', placeholder='Search ...', autocomplete='off')
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   i.ace-icon.fa.fa-search.nav-search-icon
             // /.nav-search
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
           .page-content
             #ace-settings-container.ace-settings-container
               #ace-settings-btn.btn.btn-app.btn-xs.btn-warning.ace-settings-btn
                 i.ace-icon.fa.fa-cog.bigger-130
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               #ace-settings-box.ace-settings-box.clearfix
                 .pull-left.width-50
                   .ace-settings-item
                     .pull-left
                       select#skin-colorpicker.hide
                         option(data-skin='no-skin', value='#438EB9') #438EB9
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         option(data-skin='skin-1', value='#222A2D') #222A2D
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         option(data-skin='skin-2', value='#C6487E') #C6487E
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         option(data-skin='skin-3', value='#D0D0D0') #D0D0D0
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     span &nbsp; Choose Skin
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-navbar.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-navbar')  Fixed Navbar
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-sidebar.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-sidebar')  Fixed Sidebar
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-breadcrumbs.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-breadcrumbs')  Fixed Breadcrumbs
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-rtl.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-rtl')  Right To Left (rtl)
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-add-container.ace.ace-checkbox-2.ace-save-state(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-add-container')
                       | Inside
                       b .container
@@ -761,17 +548,12 @@ html(lang='en')
                 .pull-left.width-50
                   .ace-settings-item
                     input#ace-settings-hover.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-hover')  Submenu on Hover
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-compact.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-compact')  Compact Sidebar
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .ace-settings-item
                     input#ace-settings-highlight.ace.ace-checkbox-2(type='checkbox', autocomplete='off')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     label.lbl(for='ace-settings-highlight')  Alt. Active Item
                 // /.pull-left
               // /.ace-settings-box
@@ -781,7 +563,7 @@ html(lang='en')
                 | Widgets
                 small
                   i.ace-icon.fa.fa-angle-double-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Draggabble Widget Boxes with Persistent Position and State
+                  | Draggabble Widget Boxes with Persistent Position and State
             // /.page-header
             .row
               .col-xs-12
@@ -792,78 +574,52 @@ html(lang='en')
                       #widget-box-1.widget-box
                         .widget-header
                           h5.widget-title Default Widget Box
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbar
                             .widget-menu
                               a(href='#', data-action='settings', data-toggle='dropdown')
                                 i.ace-icon.fa.fa-bars
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               ul.dropdown-menu.dropdown-menu-right.dropdown-light-blue.dropdown-caret.dropdown-closer
                                 li
                                   a(data-toggle='tab', href='#dropdown1') Option#1
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 li
                                   a(data-toggle='tab', href='#dropdown2') Option#2
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a.orange2(href='#', data-action='fullscreen')
                               i.ace-icon.fa.fa-expand
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='reload')
                               i.ace-icon.fa.fa-refresh
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='collapse')
                               i.ace-icon.fa.fa-chevron-up
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='close')
                               i.ace-icon.fa.fa-times
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .widget-body
                           .widget-main
                             p.alert.alert-info
                               | Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur. Nulla fringilla eleifend consectetur.
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             p.alert.alert-success
                               | Raw denim you probably haven&apos;t heard of them jean shorts Austin.
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     #widget-container-col-2.col-xs-12.col-sm-6.widget-container-col
                       #widget-box-2.widget-box.widget-color-blue
                         .widget-header
                           h5.widget-title.bigger.lighter
                             i.ace-icon.fa.fa-table
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Tables &amp; Colors
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Tables &amp; Colors
                           .widget-toolbar.widget-toolbar-light.no-border
                             select#simple-colorpicker-1.hide
                               option(selected='', data-class='blue', value='#307ECC') #307ECC
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               option(data-class='blue2', value='#5090C1') #5090C1
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               option(data-class='blue3', value='#6379AA') #6379AA
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               option(data-class='green', value='#82AF6F') #82AF6F
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               option(data-class='green2', value='#2E8965') #2E8965
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               option(data-class='green3', value='#5FBC47') #5FBC47
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               option(data-class='red', value='#E2755F') #E2755F
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               option(data-class='red2', value='#E04141') #E04141
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               option(data-class='red3', value='#D15B47') #D15B47
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               option(data-class='orange', value='#FFC657') #FFC657
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               option(data-class='purple', value='#7E6EB0') #7E6EB0
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               option(data-class='pink', value='#CE6F9E') #CE6F9E
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               option(data-class='dark', value='#404040') #404040
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               option(data-class='grey', value='#848484') #848484
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               option(data-class='default', value='#EEE') #EEE
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .widget-body
                           .widget-main.no-padding
                             table.table.table-striped.table-bordered.table-hover
@@ -871,484 +627,351 @@ html(lang='en')
                                 tr
                                   th
                                     i.ace-icon.fa.fa-user
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;User
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    | User
                                   th
                                     i @
-                                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Email
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                    | Email
                                   th.hidden-480 Status
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               tbody
                                 tr
                                   td Alex
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   td
                                     a(href='#') alex@email.com
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   td.hidden-480
                                     span.label.label-warning Pending
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 tr
                                   td Fred
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   td
                                     a(href='#') fred@email.com
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   td.hidden-480
                                     span.label.label-success.arrowed-in.arrowed-in-right Approved
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 tr
                                   td Jack
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   td
                                     a(href='#') jack@email.com
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   td.hidden-480
                                     span.label.label-warning Pending
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 tr
                                   td John
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   td
                                     a(href='#') john@email.com
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   td.hidden-480
                                     span.label.label-inverse.arrowed Blocked
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 tr
                                   td James
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   td
                                     a(href='#') james@email.com
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   td.hidden-480
                                     span.label.label-info.arrowed-in.arrowed-in-right Online
                     // /.span
                   // /.row
                   .space-24
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .row
                     #widget-container-col-3.col-xs-12.col-sm-6.widget-container-col
                       #widget-box-3.widget-box.widget-color-orange.collapsed
                         .widget-header.widget-header-small
                           h6.widget-title
                             i.ace-icon.fa.fa-sort
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Small Header &amp; Collapsed
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            | Small Header &amp; Collapsed
                           .widget-toolbar
                             a(href='#', data-action='settings')
                               i.ace-icon.fa.fa-cog
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='reload')
                               i.ace-icon.fa.fa-refresh
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='collapse')
                               i.ace-icon.fa.fa-plus(data-icon-show='fa-plus', data-icon-hide='fa-minus')
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='close')
                               i.ace-icon.fa.fa-times
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .widget-body
                           .widget-main
                             p.alert.alert-info
                               | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     #widget-container-col-4.col-xs-12.col-sm-6.widget-container-col
                       #widget-box-4.widget-box
                         .widget-header.widget-header-large
                           h4.widget-title Big Header
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbar
                             a(href='#', data-action='settings')
                               i.ace-icon.fa.fa-cog
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='reload')
                               i.ace-icon.fa.fa-refresh
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='collapse')
                               i.ace-icon.fa.fa-chevron-up
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='close')
                               i.ace-icon.fa.fa-times
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .widget-body
                           .widget-main
                             p.alert.alert-info
                               | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .space-24
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .row
                     #widget-container-col-5.col-xs-12.col-sm-3.widget-container-col
                       #widget-box-5.widget-box
                         .widget-header
                           h5.widget-title.smaller With Label
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbar
                             span.label.label-success
                               | 16%
                               i.ace-icon.fa.fa-arrow-up
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .widget-body
                           .widget-main.padding-6
                             .alert.alert-info  Hello World! 
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     #widget-container-col-6.col-xs-12.col-sm-3.widget-container-col
                       #widget-box-6.widget-box.widget-color-dark.light-border
                         .widget-header
                           h5.widget-title.smaller With Badge
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbar
                             span.badge.badge-danger Alert
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .widget-body
                           .widget-main.padding-6
                             .alert.alert-info  Hello World! 
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     #widget-container-col-7.col-xs-12.col-sm-6.widget-container-col
                       #widget-box-7.widget-box.widget-color-dark
                         .widget-header.widget-header-small
                           h6.widget-title.smaller With Labels &amp; Badges
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbar.no-border
                             label
                               input.ace.ace-switch.ace-switch-3(type='checkbox')
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               span.lbl.middle
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbar
                             span.label.label-warning
                               | 1.2%
                               i.ace-icon.fa.fa-arrow-down
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             span.badge.badge-info info
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .widget-body
                           .widget-main
                             .alert.alert-info
                               | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .space
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .row
                     #widget-container-col-8.col-xs-12.col-sm-6.widget-container-col
                       #widget-box-8.widget-box.widget-color-dark
                         .widget-header
                           h5.widget-title.bigger.lighter With Toolbox
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbar
                             label
                               input#id-checkbox-vertical.ace.ace-checkbox-2(type='checkbox')
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               span.lbl.middle.padding-4  Vertical
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbar
                             .progress.progress-mini.progress-striped.active.pos-rel(style='width:60px;', data-percent='61%')
                               .progress-bar.progress-bar-danger(style='width:61%')
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .widget-body
                           #widget-toolbox-1.widget-toolbox
                             .btn-toolbar
                               .btn-group
                                 button.btn.btn-sm.btn-success.btn-white.btn-round
                                   i.ace-icon.fa.fa-check.bigger-110.green
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Approve
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  | Approve
                                 button.btn.btn-sm.btn-danger.btn-white.btn-round
                                   i.ace-icon.fa.fa-times.bigger-110.red2
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Reject
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  | Reject
                               .btn-group(data-toggle='buttons')
                                 label.btn.btn-sm.btn-default.btn-white.btn-round
                                   i.icon-only.ace-icon.fa.fa-bold.bigger-110
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   input(type='checkbox', value='1')
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 label.btn.btn-sm.btn-default.btn-white.btn-round
                                   i.icon-only.ace-icon.fa.fa-italic.bigger-110
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   input(type='checkbox', value='2')
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .btn-group(data-toggle='buttons')
                                 label.btn.btn-sm.btn-primary.btn-white.btn-round
                                   i.icon-only.ace-icon.fa.fa-align-left.bigger-110
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   input(type='radio', value='1')
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 label.btn.btn-sm.btn-primary.btn-white.btn-round
                                   i.icon-only.ace-icon.fa.fa-align-center.bigger-110
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   input(type='radio', value='2')
-                                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                 label.btn.btn-sm.btn-primary.btn-white.btn-round
                                   i.icon-only.ace-icon.fa.fa-align-right.bigger-110
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                                   input(type='radio', value='3')
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-main.padding-16
                             | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur. Nulla fringilla eleifend consectetur. Etiam justo nisl, gravida id egestas eu, eleifend vel metus. Pellentesque tellus ipsum, euismod in facilisis quis, aliquet quis sem.
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     #widget-container-col-9.col-xs-12.col-sm-6.widget-container-col
                       #widget-box-9.widget-box.widget-color-pink
                         .widget-header
                           h5.widget-title Bottom Toolbox (Footer)
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbar
                             a(href='#', data-action='collapse')
                               i._one.ace-icon.fa.fa-chevron-up.bigger-125
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbar.no-border
                             button.btn.btn-xs.btn-light.bigger
                               i.ace-icon.fa.fa-arrow-left
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Prev
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                              | Prev
                             button.btn.btn-xs.bigger.btn-yellow.dropdown-toggle(data-toggle='dropdown')
                               | Next
                               i.ace-icon.fa.fa-chevron-down.icon-on-right
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             ul.dropdown-menu.dropdown-yellow.dropdown-menu-right.dropdown-caret.dropdown-close
                               li
                                 a(href='#') Action
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               li
                                 a(href='#') Another action
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               li
                                 a(href='#') Something else here
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               li.divider
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               li
                                 a(href='#') Separated link
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .widget-body
                           .widget-main
                             p.alert.alert-info
                               | Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur. Nulla fringilla eleifend consectetur.
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             p.alert.alert-success
                               | Raw denim you probably haven&apos;t heard of them jean shorts Austin.
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbox.padding-8.clearfix
                             button.btn.btn-xs.btn-danger.pull-left
                               i.ace-icon.fa.fa-times
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               span.bigger-110 I don&apos;t accept
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             button.btn.btn-xs.btn-success.pull-right
                               span.bigger-110 I accept
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               i.ace-icon.fa.fa-arrow-right.icon-on-right
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .space
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .row
                     #widget-container-col-10.col-sm-6.widget-container-col
                       #widget-box-10.widget-box
                         .widget-header.widget-header-small
                           h5.widget-title.smaller Tabbed
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbar.no-border
                             ul#myTab.nav.nav-tabs
                               li.active
                                 a(data-toggle='tab', href='#home') Home
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               li
                                 a(data-toggle='tab', href='#profile') Profile
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               li
                                 a(data-toggle='tab', href='#info') Info
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .widget-body
                           .widget-main.padding-6
                             .tab-content
                               #home.tab-pane.in.active
                                 p Raw denim you probably haven&apos;t heard of them jean shorts Austin.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               #profile.tab-pane
                                 p
                                   | Food truck fixie locavore, accusamus mcsweeney&apos;s marfa nulla single-origin coffee squid.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               #info.tab-pane
                                 p
                                   | Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney&apos;s organic lomo retro fanny pack lo-fi farm-to-table readymade.
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     #widget-container-col-11.col-sm-6.widget-container-col
                       #widget-box-11.widget-box.widget-color-dark
                         .widget-header
                           h6.widget-title Scroll Content
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbar
                             a(href='#', data-action='settings')
                               i.ace-icon.fa.fa-cog
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='reload')
                               i.ace-icon.fa.fa-refresh
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='collapse')
                               i.ace-icon.fa.fa-chevron-up
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='close')
                               i.ace-icon.fa.fa-times
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a.orange2(href='#', data-action='fullscreen')
                               i.ace-icon.fa.fa-expand
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .widget-body
                           .widget-main.padding-4.scrollable(data-size='125')
                             .content
                               .alert.alert-info
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-danger
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-success
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-info
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-danger
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-success
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-info
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-danger
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-success
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-info
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-danger
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-success
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-info
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-danger
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-success
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-info
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-danger
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-success
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-info
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-success
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               .alert.alert-info
                                 | Lorem ipsum dolor sit amet, consectetur adipiscing.
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .space-24
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .row
                     #widget-container-col-12.col-sm-6.widget-container-col
                       #widget-box-12.widget-box.transparent
                         .widget-header
                           h4.widget-title.lighter Transparent Box
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbar.no-border
                             a(href='#', data-action='settings')
                               i.ace-icon.fa.fa-cog
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='reload')
                               i.ace-icon.fa.fa-refresh
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='collapse')
                               i.ace-icon.fa.fa-chevron-up
-                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                             a(href='#', data-action='close')
                               i.ace-icon.fa.fa-times
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .widget-body
                           .widget-main.padding-6.no-padding-left.no-padding-right
                             | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     #widget-container-col-13.col-sm-6.widget-container-col
                       #widget-box-13.widget-box.transparent
                         .widget-header
                           h4.widget-title.lighter Tabs With Scroll
-                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                           .widget-toolbar.no-border
                             ul#myTab2.nav.nav-tabs
                               li.active
                                 a(data-toggle='tab', href='#home2') Home
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               li
                                 a(data-toggle='tab', href='#profile2') Profile
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                               li
                                 a(data-toggle='tab', href='#info2') Info
-                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                         .widget-body
                           .widget-main.padding-12.no-padding-left.no-padding-right
                             .tab-content.padding-4
                               #home2.tab-pane.in.active
                                 .scrollable-horizontal(data-size='800')
                                   b Horizontal Scroll
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
+                                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
+                                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
                               #profile2.tab-pane
                                 .scrollable(data-size='100', data-position='left')
                                   b Scroll on Left
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
-                              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
+                                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
+                                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
                               #info2.tab-pane
                                 .scrollable(data-size='100')
                                   b Scroll # 3
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
-                                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
+                                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
+                                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
                   hr
-                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                   .text-center
                     button#reset-widgets.btn.btn-danger.btn-white.btn-bold.btn-round(type='reset') Reset Position/State
                 // PAGE CONTENT ENDS
@@ -1361,41 +984,32 @@ html(lang='en')
           .footer-content
             span.bigger-120
               span.blue.bolder Ace
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Application &copy; 2013-2014
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&nbsp; &nbsp;
-            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              | Application &copy; 2013-2014
+            | &nbsp; &nbsp;
             span.action-buttons
               a(href='#')
                 i.ace-icon.fa.fa-twitter-square.light-blue.bigger-150
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               a(href='#')
                 i.ace-icon.fa.fa-facebook-square.text-primary.bigger-150
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               a(href='#')
                 i.ace-icon.fa.fa-rss-square.orange.bigger-150
-      | &#x9;&#x9;&#x9;
       a#btn-scroll-up.btn-scroll-up.btn.btn-sm.btn-inverse(href='#')
         i.ace-icon.fa.fa-angle-double-up.icon-only.bigger-110
     // /.main-container
     // basic scripts
     //if !IE
-    | &#x9;&#x9;
     script(src='assets/js/jquery-2.1.4.min.js')
     // <![endif]
     //if IE
       script(src='assets/js/jquery-1.11.3.min.js')
-    | &#x9;&#x9;
     script(type='text/javascript').
       if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-    | &#x9;&#x9;
     script(src='assets/js/bootstrap.min.js')
     // page specific plugin scripts
     script(src='assets/js/jquery-ui.custom.min.js')
-    | &#x9;&#x9;
     script(src='assets/js/jquery.ui.touch-punch.min.js')
     // ace scripts
     script(src='assets/js/ace-elements.min.js')
-    | &#x9;&#x9;
     script(src='assets/js/ace.min.js')
     // inline scripts related to this page
     script(type='text/javascript').
