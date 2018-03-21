@@ -26,7 +26,7 @@ gulp.task('templates', function() {
         .src('./src/*.pug')
         .pipe(
             pug({
-		complileDebug : true,
+		compileDebug : true,
 		pretty : true    
             })
         )
@@ -51,5 +51,5 @@ gulp.task('default', [ 'templates', 'copy'], function() {
             'directory' : true
     });
 
-    gulp.watch('./app/*.pug', ['pug-watch']);
+    gulp.watch('./src/*.pug', ['pug-watch']);
 });
