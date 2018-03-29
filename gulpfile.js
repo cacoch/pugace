@@ -4,6 +4,14 @@ var pug = require('gulp-pug');
 
 var reload = browserSync.reload;
 
+/**
+ * copy dependencies to dist directory
+ */
+gulp.task('copy-deps', function() {
+	gulp.src(['node_modules/font-awesome/css/*.min.*', 'node_modules/font-awesome/fonts/fontawesome-webfont.*'], {base : 'node_modules/font-awesome'})
+	.pipe(gulp.dest('dist/assets/font-awesome/4.5.0'));
+
+});
 
 /**
  * copy assets to dist directory
@@ -45,7 +53,7 @@ gulp.task('pug-watch', ['templates'], function() {
 /**
  * Serve and watch the pug files for changes
  */
-gulp.task('default', [ 'templates', 'copy'], function() {
+gulp.task('default', [ 'templates', 'copy', 'copy-deps'], function() {
     browserSync({ server: 
 	    './dist',
             'directory' : true
