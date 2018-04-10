@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var pug = require('gulp-pug');
+var merge = require('merge-stream');
 
 var reload = browserSync.reload;
 
@@ -12,6 +13,14 @@ gulp.task('copy-deps', function() {
 	.pipe(gulp.dest('dist/assets/font-awesome/4.5.0'));
 
 });
+
+gulp.task('copy-vendor-files', function() {
+
+	var externalAssets =  gulp.src('externalAssets/*/**')
+		.pipe(gulp.dest('dist/assets'));
+	// return merge(cpy1, cpy2,...)	
+	return externalAssets;
+})
 
 /**
  * copy assets to dist directory
@@ -53,7 +62,7 @@ gulp.task('pug-watch', ['templates'], function() {
 /**
  * Serve and watch the pug files for changes
  */
-gulp.task('default', [ 'templates', 'copy', 'copy-deps'], function() {
+gulp.task('default', ['templates', 'copy', 'copy-deps', 'copy-vendor-files'], function() {
     browserSync({ server: 
 	    './dist',
             'directory' : true
